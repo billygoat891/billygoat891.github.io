@@ -1,0 +1,63 @@
+
+<PROPERTY NAME="lx_xmlfile"/>       <!-- r/w: The XML file -->
+<PROPERTY NAME="isDynamic"/>        <!-- r/o: Is ADAPT=1 in the XML? -->
+<PROPERTY NAME="async"/>            <!-- r/w: Should load be done async? -->
+<PROPERTY NAME="xsl"/>              <!-- r/w: The XSL to transform with -->
+
+<METHOD NAME="load"/>               <!-- Load XML, apply XSL -->
+
+<script language="jscript">
+var source;
+
+function load()
+{
+    source = new ActiveXObject("Microsoft.XMLDOM");
+    if (element.async != null)
+    {
+        source.async = true;
+        source.onreadystatechange = XMLReady;
+        source.load(lx_xmlfile);
+    }
+    else
+    {
+        source.async = false;
+        source.load(lx_xmlfile);
+        onXMLLoaded();
+    }
+}
+
+function XMLReady()
+{
+    if (source.readyState == 4)
+    {
+        onXMLLoaded();
+    }
+}
+
+// Once the XML is loaded, see if it is visible.  If so, then
+// do the XSL thing.
+
+function onXMLLoaded()
+{
+    element.isDynamic = false;
+    if (source.parseError.errorCode != 0)
+        element.innerText = source.parseError.reason;
+    else if (source.selectSingleNode("SECTION[@VISIBLE='1']"))
+    {
+        if (source.selectSingleNode("SECTION[@ADAPT='1']"))
+            element.isDynamic = true;
+
+        var result = source.transformNode(element.xsl);
+        if (element.debug)
+            element.innerText = result;
+        else
+            element.innerHTML = result;
+    }
+    else
+        element.innerText = "";
+
+
+    source = null;          // save memory
+}
+
+</script>

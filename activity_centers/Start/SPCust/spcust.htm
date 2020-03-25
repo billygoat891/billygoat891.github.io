@@ -1,0 +1,334 @@
+<HTML xmlns:spcust>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<HTA:APPLICATION
+    SINGLEINSTANCE="yes"
+    APPLICATIONNAME="{f14b8060-3ef5-11d3-85be-006097df8c11}"
+    WINDOWSTATE="maximize"
+>
+
+<title>Customize the Desktop</title>
+<link rel=stylesheet type="text/css" href="">
+
+<OBJECT id=ACHelp CLASSID="CLSID:f14b8060-3ef5-11d3-85be-006097df8c11">
+</OBJECT>
+
+<SCRIPT LANGUAGE="javascript">
+// As soon as possible, figure out what theme to use.  Do this even before
+// the page content loads to avoid flicker.
+document.styleSheets(0).href = "../startpage/scheme/" + ACHelp.desktopTheme + "/desktop.css";
+</SCRIPT>
+
+<STYLE type="text/css">
+spcust\:CUSTXML { behavior: url(custxml.htc); }
+spcust\:HOVER { behavior: url(hover.htc); }
+</STYLE>
+
+</head>
+
+<body>
+
+<div class="gradient1" style="position:absolute"></div>
+<div class="gradient2" style="position:absolute"></div>
+
+<SCRIPT LANGUAGE="jscript">
+function resetAll()
+{
+    loadThemes();
+    //idBrand.load();   // banner disabled for beta 1
+    idStartingPlaces.load();
+    idMyPrograms.load();
+    idMyFiles.load();
+}
+
+// BUGBUG make this a behavior someday
+function loadThemes()
+{
+    var sTheme = ACHelp.desktopTheme;
+    idThumbnail.src = "../startpage/scheme/" + sTheme + "/thumbnail.jpg";
+    idThumbnail.currentTheme = sTheme;
+    // BUGBUG temp hack assumes only two themes
+    if (sTheme == theme[1].value)
+        theme[1].checked = true;
+    else
+        theme[0].checked = true;
+}
+
+function SetAlignment()
+{
+    if (idTableMain.dir == "rtl")
+    {
+        idRightAlign.align = "left";
+    }
+
+}
+
+</SCRIPT>
+
+<SCRIPT FOR="window" EVENT="onload" LANGUAGE="jscript">
+resetAll();
+
+//HighlightTables();
+SetAlignment();
+
+/*
+ *  Debugging: Turn on borders for tables so we can see the layout.
+ */
+function HighlightTables()
+{
+    var a = document.all.tags("TABLE");
+    var i;
+    for (i = 0; i < a.length; i++) {
+        a(i).border = 1;
+    }
+    //document.dir = "rtl";
+}
+
+</SCRIPT>
+
+<SCRIPT DEFER LANGUAGE="jscript">
+function onThemeChange()
+{
+    var sTheme = event.srcElement.value;
+    idThumbnail.currentTheme = sTheme;
+    idThumbnail.src = "../startpage/scheme/" + sTheme + "/thumbnail.jpg";
+    idThumbnail.isdirty = true;
+}
+
+function saveThemes()
+{
+    ACHelp.desktopTheme = idThumbnail.currentTheme;
+    idThumbnail.isdirty = false;
+}
+
+function saveAll()
+{
+    saveThemes();
+    //idBrand.save();   // banner disabled for beta 1
+    idStartingPlaces.save();
+    idMyPrograms.save();
+    idMyFiles.save();
+    //document.styleSheets(0).href = "../startpage/scheme/" + ACHelp.desktopTheme + "/desktop.css";
+    ACHelp.ACSendDesktopSettingsChanged();
+    window.location.reload(); // temp hack - stylesheet problem
+}
+
+function closeAll()
+{
+    window.close();
+}
+</SCRIPT>
+
+<SCRIPT FOR="window" EVENT="onbeforeunload" LANGUAGE="jscript">
+    if (idThumbnail.isdirty ||
+        idStartingPlaces.isdirty ||
+        idMyPrograms.isdirty ||
+        idMyFiles.isdirty)
+    {
+        var L_CloseWarning2_Text = "Leaving this page will discard unsaved changes.";
+        event.returnValue = L_CloseWarning2_Text;
+    }
+</SCRIPT>
+
+<script language="javascript" FOR="document" EVENT="ondragstart">
+    return false;
+</script>
+
+<script language="javascript" FOR="document" EVENT="oncontextmenu">
+    return false;
+</script>
+
+<!-- Table layout:
+
+    +----------------------------------------------------------------+
+    |  Introduction                                                  |
+    +------------------+--------------------------+------------------+
+    | Themes           | Starting Places          | My Programs      |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    |                  |                          +------------------+
+    +------------------+                          | My Files         |
+    | Banner           |                          |                  |
+    | Search           |                          |                  |
+    |                  |                          |                  |
+    |                  |                          |                  |
+    +------------------+--------------------------+------------------+
+    |                            s p a c e r                         |
+    +----------------------------------------------------------------+
+    |                           buttons                              |
+    +----------------------------------------------------------------+
+
+  -->
+
+<TABLE id=idTableMain WIDTH=100%>
+<TR>
+<TD ROWSPAN=4 STYLE="width:46px"></TD>
+
+<TD COLSPAN=5>
+
+<!-- main heading and main heading title -->
+<span class="title"><id id=L_title>Customize your desktop</id></span><br><br>
+<span class="textPrimary"><id id=L_mainhead>Select the items
+that you want on your desktop.</id></span><br><br>
+
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH=1>
+  <TABLE HEIGHT=100% CELLSPACING=0 CELLPADDING=0><!-- left column -->
+  <COL>
+  <COL WIDTH=100%>
+  <TR>
+  <TD id=L_Themes COLSPAN=2 class="textPrimary">Themes</TD>
+  </TR>
+
+  <TR>
+  <TD COLSPAN=2 VALIGN=baseline align=left colspan=2>
+    <img ID=idThumbnail width="140" height="100">
+  </TD>
+  </TR>
+
+  <TR>
+  <TD VALIGN=baseline>
+    <input type="radio" name="theme" value="Default" onclick="onThemeChange()"></TD>
+  <TD id=L_Default class="textSecondary"
+      VALIGN=baseline>Default</TD>
+  </TR>
+
+  <TR>
+  <TD VALIGN=baseline>
+    <input type="radio" name="theme" value="Jump" onclick="onThemeChange()"></TD>
+  <TD id=L_Jump class="textSecondary"
+      VALIGN=baseline>Jump</TD>
+  </TR>
+
+<!-- lost for beta 1
+  <TR>
+  <TD></TD>
+  <TD class="textSecondary" VALIGN=baseline
+   ><A HREF=#><ID id=L_DownloadThemes>Get more themes from Web</ID></A></TD>
+  </TR>
+
+  <TR>
+  <TD></TD>
+  <TD class="textSecondary" VALIGN=baseline
+   ><A HREF=#><ID id=L_AddPhoto>Add a photo to the desktop</ID></A></TD>
+  </TR>
+
+-->
+
+  <TR>
+  <TD COLSPAN=2>
+<!-- Banner disabled for beta 1
+  <spcust:CUSTXML id=idBrand lx_xmlfile="../startpage/banner.xml">
+  </spcust:CUSTXML>
+-->
+  </TD>
+  </TR>
+
+<!-- Searching disabled for beta 1
+  <TR>
+  <TD></TD>
+  <TD class="textSecondary" VALIGN=baseline
+  ><A HREF=#><ID id=L_ChangeSearchEngine>Change search engine</ID></A></TD>
+  </TR>
+-->
+
+  <TR HEIGHT=100%><!-- fill -->
+  <TD></TD>
+  </TR>
+
+  </TABLE><!-- end left column -->
+
+</TD>
+
+<TD WIDTH=30></TD>
+
+<TD VALIGN=top>
+<!-- Starting Places -------------------------------------------------------->
+
+<spcust:CUSTXML id=idStartingPlaces
+  lx_xmlfile="../startpage/startpl.xml">
+</spcust:CUSTXML>
+
+</TD>
+
+<TD WIDTH=30></TD>
+
+<TD>
+<TABLE HEIGHT=100% WIDTH=100% CELLSPACING=0 CELLPADDING=0><!-- right column -->
+
+<TR>
+<TD id=idRightAlign ALIGN=right>
+<TABLE><TR><TD>
+<!-- My Programs ------------------------------------------------------------>
+
+<spcust:CUSTXML id=idMyPrograms
+          lx_xmlfile="../startpage/myprograms.xml">
+</spcust:CUSTXML>
+
+<P>
+<!-- My Files and Folders --------------------------------------------------->
+<spcust:CUSTXML id=idMyFiles
+          lx_xmlfile="../startpage/myfiles.xml">
+</spcust:CUSTXML>
+</TD></TR></TABLE>
+</TD>
+</TR>
+
+  <TR HEIGHT=100%><!-- fill -->
+  <TD></TD>
+  </TR>
+
+</TABLE><!-- end of right column -->
+</TD>
+</TR>
+
+<TR HEIGHT=20><TD COLSPAN=5></TD></TR>
+
+<TR><!-- buttons -->
+<TD COLSPAN=5 ALIGN=CENTER>
+  <spcust:HOVER classNormal="buttons" classHover="buttonsHover">
+    <BUTTON CLASS="buttons" ID=idButtons
+            onclick="saveAll()"
+    ><LABEL id=L_Save>Save</LABEL></BUTTON></spcust:HOVER>
+  <SPAN STYLE="width:4px"></SPAN>
+  <spcust:HOVER classNormal="buttons" classHover="buttonsHover">
+    <BUTTON CLASS="buttons" ID=idButtons
+            onclick="resetAll()"
+    ><LABEL id=L_Reset>Reset</LABEL></BUTTON></spcust:HOVER>
+  <SPAN STYLE="width:4px"></SPAN>
+  <spcust:HOVER classNormal="buttons" classHover="buttonsHover">
+    <BUTTON CLASS="buttons" ID=idButtons
+            onclick="closeAll()"
+    ><LABEL id=L_Exit>Exit</LABEL></BUTTON></spcust:HOVER>
+</TD>
+
+<!-- Make all the buttons the same width -->
+<SCRIPT>
+{
+    var i, maxWidth = 55;
+    for (i = 0; i < idButtons.length; i++) {
+        maxWidth = Math.max(idButtons[i].offsetWidth, maxWidth);
+    }
+    for (i = 0; i < idButtons.length; i++) {
+        idButtons[i].style.width = maxWidth;
+    }
+}
+</SCRIPT>
+
+</TR>
+</TABLE>
+
+</body>
+</html>

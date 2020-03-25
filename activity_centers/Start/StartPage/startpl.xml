@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="banner.xsl"?>
+<!DOCTYPE SECTION SYSTEM "start.dtd">
+
+<SECTION VISIBLE="1" STYLE="startpl" PRIMARY="1">
+    <HEAD>
+        <CLASS>startingplaces</CLASS>
+        <TITLE>Starting Places</TITLE>
+    </HEAD>
+    <ITEMS>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>E-mail</TEXT>
+           <SUBTEXT>Read and send messages</SUBTEXT>
+           <ICON>scheme/mail.gif</ICON>
+           <HREF>msimn.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>The Internet</TEXT>
+           <SUBTEXT>Search the Web, shop, and read news headlines</SUBTEXT>
+           <ICON>scheme/ie.gif</ICON>
+           <HREF>iexplore.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>Documents</TEXT>
+           <SUBTEXT>Write a letter, create a report, and draw a picture</SUBTEXT>
+           <ICON>scheme/documents.gif</ICON>
+           <HREF>wordpad.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>Music</TEXT>
+           <SUBTEXT>Play CDs and record music</SUBTEXT>
+           <ICON>scheme/music.gif</ICON>
+           <HREF>mediactr.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>Photos</TEXT>
+           <SUBTEXT>Edit and share pictures</SUBTEXT>
+           <ICON>scheme/photos.gif</ICON>
+           <HREF>photoctr.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>Games</TEXT>
+           <SUBTEXT>Play games and get game news</SUBTEXT>
+           <ICON>scheme/games.gif</ICON>
+           <HREF>gamectr.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="1">
+           <TEXT>Help and Support</TEXT>
+           <SUBTEXT>Find Help, fix a problem, and get technical support</SUBTEXT>
+           <ICON>scheme/help.gif</ICON>
+           <HREF>shell:windows\pchealth\helpctr\binaries\helpctr.exe</HREF>
+        </ITEM>
+        <ITEM LINKSTYLE="shellexec" VISIBLE="0">
+           <TEXT>Type a name here</TEXT>
+           <SUBTEXT>Type a description here</SUBTEXT>
+           <ICON>scheme/generic.gif</ICON>
+           <HREF></HREF>
+        </ITEM>
+    </ITEMS>
+
+    <LOC NAME="change">Change</LOC>
+    <LOC NAME="unused">&lt;unassigned&gt;</LOC>
+    <LOC NAME="newname">Type a name here</LOC>
+    <LOC NAME="cdtitle">Choose a Starting Place</LOC>
+    <LOC NAME="cddefext">*.exe;*.pif;*.com;*.bat;*.cmd</LOC>
+    <LOC NAME="cdcombo">|Programs|*.exe;*.pif;*.com;*.bat;*.cmd|All Files|*.*|</LOC>
+
+</SECTION>

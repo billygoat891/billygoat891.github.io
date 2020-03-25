@@ -1,0 +1,243 @@
+.gradient1 {            /* really just the dark orange swoosh at the bottom */
+ background: #FF945E;
+ position: absolute;
+ height: 76px;
+ width: expression(document.body.clientWidth);
+ left: 0px;
+ top: expression(document.body.clientHeight - 76);
+ z-index: -4;
+}
+
+.gradient2 {            /* nothing needed for this scheme */
+}
+
+.startimage1 {
+ background: transparent no-repeat url(image_anchorleft.gif) left 120px;
+ filter: expression(document.documentElement.dir == "rtl" ? "flipH" : "");
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ height: expression(document.body.clientHeight);
+ width: expression(document.body.clientWidth);
+ z-index: -2;
+}
+
+.startimage2 {
+ background: transparent no-repeat url(image_btmright.gif) bottom right;
+ position: absolute;
+ filter: expression(document.documentElement.dir == "rtl" ? "flipH" : "");
+ left: 0px;
+ top: 0px;
+ height: expression(document.body.clientHeight);
+ width: expression(document.body.clientWidth);
+ z-index: -2;
+}
+
+BODY {
+ margin-top: 0;
+ background: #FFCF6F;
+}
+
+.photo {
+    width: 174px;
+    height: 118px;
+    background: transparent no-repeat url(startphoto.gif);
+}
+
+.startplaceindent {
+    width: 110px;
+}
+
+.searcharea {
+    background: #76a5dd;
+}
+
+#Search .headerSecondary {
+    font-size: 16pt;
+    color: #2f3fa8;
+}
+
+.title {
+    color: black;
+    font-family: Trebuchet MS;
+    font-size: 17pt;
+    font-weight: bold;
+    line-height: 110%;
+}
+
+.startingplaces  {   /* style for starting places title only */
+    font-size : 17pt;
+    font-weight : bold;
+    font-family : Trebuchet MS;
+    color : #1B746B;
+    line-height : 110%;
+
+}
+
+.tasksPrimary  { /* style for active (linked) text that is a primary task. a primary task is active text that needs higher visual prominence */
+    font-family : Trebuchet MS;
+    font-size : 12pt;
+    font-weight : bold;
+    color : black;
+line-height : 110%;
+
+}
+
+.tasksSecondary  { /* style for active text that is secondary in the visual heirarchy of tasks */
+    font-size : 10pt;
+    font-weight : normal;
+    font-family : Arial;
+    color : black;
+line-height : 110%;
+}
+
+.taskAssociation  { /* this style is for the start page only. it refers to the application that is associated with a starting places task */
+    font-family : Arial;
+    font-size : 9pt;
+    font-weight : normal;
+    color : black;
+    margin-left: 20px;
+line-height : 110%;
+}
+
+.notifications  { /* style for notifications/messages that dynamically display on the start page */
+    font-family : Arial;
+    font-size : 9pt;
+    font-weight : normal;
+    color : red;
+line-height : 110%;
+}
+
+.new  { /* style for new text that appears when a new application is added to the start page */
+    font-family : Arial;
+    font-size : 9pt;
+    font-weight : normal;
+    color : red;
+line-height : 110%;
+}
+
+.headerPrimary  { /* style for headline text that is not active and needs higher visual prominence */
+    font-size : 12pt;
+    font-weight : bold;
+    font-family : Trebuchet MS;
+    color : #1B746B;
+    line-height : 110%;
+}
+
+
+.headerSecondary  { /* style for headline text that is not active and needs lesser visual prominence */
+    font-family : Trebuchet MS;
+    font-size : 11pt;
+    font-weight : bold;
+    color : #1B746B;
+line-height : 110%;
+}
+
+
+.textPrimary  {  /* style for content text that is not active and needs greater visual prominence */
+    font-family : Trebuchet MS;
+    font-size : 12pt;
+    font-weight : bold;
+line-height : 110%;
+    color : black;
+}
+
+.textSecondary  { /* style for content text that is not active and needs lesser visual prominence */
+    font-family : Arial;
+    font-size : 9pt;
+    font-weight : normal;
+line-height : 110%;
+    color : black;
+}
+
+.textTertiary { /* style for content text that is not active and needs least visual prominence */
+    font-family : Arial;
+    font-size : 8pt;
+    font-weight : normal;
+line-height : 110%;
+    color : black;
+}
+
+.textDisabled {    /* style for disabled items on Customize page */
+    text-decoration: none!important;
+    color: gray;
+}
+
+.textEnabled  {    /* style for enabled items on Customize page */
+}
+
+.contextMenu {
+    background-color: menu;
+    font-size : 10pt;
+    font-weight : normal;
+    font-family : verdana;
+    color : menutext;
+    border: solid 1;
+    padding: 2;
+    border-color: threedhighlight threeddarkshadow threeddarkshadow threedhighlight;
+}
+
+.menuItem {
+    cursor: default;
+    color : menutext;
+}
+
+.menuItemHot {
+    cursor: default;
+    background-color: highlight;
+    color : highlighttext;
+}
+
+A  {
+    text-decoration : none;
+    color: navy;
+
+}
+
+
+A:Active  {
+    text-decoration : none;
+}
+
+A:Hover  {
+    text-decoration : underline;
+}
+
+.buttons {
+    font-family : arial;
+    font-size : 10pt;
+    font-weight : normal;
+    line-height : 11pt;
+    color : FCEAC9;
+    background-color : #F77B00;
+    padding-top : 3;
+    padding-left : 8;
+    padding-right: 8;
+    margin-right : 8;
+}
+
+.buttonsHover  {
+    font-family : arial;
+    font-size : 10pt;
+    font-weight : normal;
+    line-height : 11pt;
+    color : F77B00;
+    background-color : #F7D18C;
+    padding-top : 3;
+    padding-left : 8;
+    padding-right: 8;
+    margin-right : 8;
+}
+
+.buttonsDisabled  {
+    font-family : arial;
+    font-size : 10pt;
+    font-weight : normal;
+    line-height : 11pt;
+	color: WHITE;
+    background-color : #cccccc;
+    padding-top : 3;
+    padding-left : 8;
+    padding-right: 8;
+    margin-right : 8;
+}

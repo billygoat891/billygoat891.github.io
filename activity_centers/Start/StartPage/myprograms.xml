@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="banner.xsl"?>
+<!DOCTYPE SECTION SYSTEM "start.dtd">
+<SECTION VISIBLE="1" STYLE="myprograms" ADAPT="1" MORETARGET="shell:programs">
+	<HEAD>
+		<CLASS>myprograms</CLASS>
+		<TITLE>Recent Programs</TITLE>
+		<CUSTTEXT>Show the programs I use most often</CUSTTEXT>
+	</HEAD>
+	<ITEMS>
+		<ITEM VISIBLE="1" NEW="1" LINKSTYLE="shellexec"><TEXT>Internet Explorer</TEXT>
+<HREF>shell:Start Menu\Programs\Internet Explorer.lnk</HREF>
+</ITEM>
+<ITEM VISIBLE="1" NEW="1" LINKSTYLE="shellexec"><TEXT>Outlook Express</TEXT>
+<HREF>shell:Start Menu\Programs\Outlook Express.lnk</HREF>
+</ITEM>
+<ITEM VISIBLE="1" NEW="1" LINKSTYLE="shellexec"><TEXT>Windows Media Player</TEXT>
+<HREF>shell:Start Menu\Programs\Windows Media Player.lnk</HREF>
+</ITEM>
+<ITEM VISIBLE="1" NEW="0" LINKSTYLE="shellexec"><TEXT>Programs</TEXT>
+<HREF>shell:Start Menu\Programs</HREF>
+</ITEM>
+<ITEM VISIBLE="0" NEW="0" LINKSTYLE="shellexec"><TEXT></TEXT>
+<HREF></HREF>
+</ITEM>
+<ITEM VISIBLE="0" NEW="0" LINKSTYLE="shellexec"><TEXT></TEXT>
+<HREF></HREF>
+</ITEM>
+</ITEMS>
+	<LOC NAME="new">...new</LOC>
+	<LOC NAME="more">more...</LOC>
+	<LOC NAME="change">Change</LOC>
+	<LOC NAME="cdtitle">Choose a Program</LOC>
+	<LOC NAME="cddefext">*.exe;*.pif;*.com;*.bat;*.cmd</LOC>
+	<LOC NAME="cdcombo">|Programs|*.exe;*.pif;*.com;*.bat;*.cmd|All Files|*.*|</LOC>
+</SECTION>

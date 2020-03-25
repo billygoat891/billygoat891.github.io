@@ -1,0 +1,473 @@
+<PROPERTY NAME="lx_xmlfile"/>
+<PROPERTY NAME="isdirty" get=get_isdirty />
+<METHOD NAME="load"/>
+<METHOD NAME="save"/>
+<METHOD NAME="changeApplication"/>
+<METHOD NAME="getLoc"/>
+<METHOD NAME="setDirty"/>
+
+<!--
+Parameters:
+    lx_xmlfile: Specifies the xml file
+
+Since we need to attach XML objects to each checkbox, we cannot use
+xsl.
+-->
+
+<script language="jscript">
+
+var g_aLoc;             // localizable strings
+var g_fPrimary;         // are we a "primary" section?
+var g_xml;              // the XML document itself
+
+// Perf is not an issue here, so go ahead and do it synchronously
+
+function load()
+{
+    element.innerHTML = "";
+
+    g_xml = new ActiveXObject("Microsoft.XMLDOM");
+    g_xml.async = false;
+    g_xml.load(lx_xmlfile);
+
+    // Once the XML is loaded, start spitting out the HTML.
+    // Note that we do this by explicitly generating elements rather
+    // than via innerHTML.  This is safer from a security standpoint,
+    // and it allows us to stash properties onto the elements once we've
+    // created them.
+
+    // We now reimplement the XSL manually (cbanner.xsl), except we
+    // also hang XML nodes off the elements.  Though if we're prototyping,
+    // continue to use the XSL so we can tweak it quickly.
+
+    if (element.proto)
+        loadXSL(g_xml);
+    else
+        loadScript(g_xml);
+}
+
+function loadXSL(xml)
+{
+    var xsl = new ActiveXObject("Microsoft.XMLDOM");
+    xsl.async = false;
+    xsl.load("cbanner.xsl");
+    element.innerHTML = xml.transformNode(xsl);
+}
+
+// We stash all the localization goo into an associative array.
+function initLocalization(root)
+{
+    var aLoc = new Array();
+    var q = g_xml.selectNodes("SECTION/LOC");
+    if (q)
+    {
+        var item;
+        while (item = q.nextNode())
+        {
+            aLoc[attributeText(item, "NAME")] = item.text;
+        }
+    }
+    return aLoc;
+}
+
+function loadScript(xml)
+{
+    var section, eAdapt, eDisplayName;
+    var node, e, tr, td, i;
+    var canEdit;
+
+    section = xml.documentElement;
+
+    g_aLoc = initLocalization(section);
+    g_fPrimary = attributeText(section, "PRIMARY") != "0";
+    canEdit = attributeText(section, "STYLE") == "startpl";
+
+    //  <TABLE BORDER="0" WIDTH="100%">
+    var table = appendElement(element, "TABLE", null, null);
+    table.border = 0;
+    table.width = "100%";
+    table.cellPadding = 0;
+    table.cellSpacing = 0;
+
+    //  <xsl:if test="SECTION/HEAD/TITLE">
+
+    node = xml.selectSingleNode("SECTION/HEAD/TITLE");
+    if (node)
+    {
+        //  <TR><TD VALIGN=baseline>
+
+        tr = table.insertRow();
+        td = tr.insertCell();
+        td.vAlign = "baseline";
+
+        //  <INPUT type="checkbox" value="checkbox" xmlNode=@node>
+        //  <xsl:if test="SECTION[@VISIBLE='1']">
+        //      <xsl:attribute name="checked"/>
+        //  </xsl:if>
+        //  </INPUT></TD>
+
+        appendInput(td, section, "VISIBLE");
+
+        //  <TD COLSPAN=2 VALIGN=baseline>
+
+        td = tr.insertCell();
+        td.colSpan = 2;
+        td.vAlign = "baseline";
+
+        //      <SPAN class="textPrimary">
+        //          <xsl:value-of select="SECTION/HEAD/TITLE"/>
+        //      </SPAN>
+        //  </TD>
+
+        // Note: Always textPrimary
+        appendElement(td, "SPAN", "textPrimary", node.text);
+
+        //  </xsl:if>
+    }
+
+    //  <xsl:if test="SECTION/HEAD/CUSTTEXT">
+
+    node = xml.selectSingleNode("SECTION/HEAD/CUSTTEXT");
+    if (node)
+    {
+        //  <TR><TD VALIGN=baseline>
+        tr = table.insertRow();
+        td = tr.insertCell();
+        td.vAlign = "baseline";
+
+        //  <INPUT type="checkbox" value="checkbox" xmlNode=@node>
+        //  <xsl:if test="SECTION[@ADAPT='1']">
+        //      <xsl:attribute name="checked"/>
+        //  </xsl:if>
+        //  </INPUT></TD>
+
+        eAdapt = appendInput(td, section, "ADAPT");
+        eAdapt.onclick = Adapt_onclickHandler;
+
+        //  <TD CLASS="textSecondary" COLSPAN=2 VALIGN=baseline>
+        td = tr.insertCell();
+        td.colSpan = 2;
+        td.vAlign = "baseline";
+        td.className = "textSecondary";
+
+        //  <xsl:value-of select="SECTION/HEAD/CUSTTEXT"/>
+            // Note! Always textSecondary, even for primary sections
+            appendText(td, node.text);
+        // </TD></TR>
+    }
+    //  </xsl:if>
+
+    //  <xsl:if test="SECTION[@SELECTIVE='1']">
+    if (xml.selectSingleNode("SECTION[@SELECTIVE='1']"))
+    {
+        //  <xsl:for-each select="SECTION/ITEMS/ITEM">
+        var q = xml.selectNodes("SECTION/ITEMS/ITEM");
+        if (q)
+        {
+            var item;
+            while (item = q.nextNode())
+            {
+                // skip if not CANPICK
+                if (attributeText(item, "CANPICK") == "0")
+                    continue;
+
+                //  <TR><TD VALIGN=baseline>
+                tr = table.insertRow();
+                td = tr.insertCell();
+                td.vAlign = "baseline";
+
+                //  <INPUT class="checkbox" type="checkbox">
+                //  <xsl:if test=".[@VISIBLE='1']">
+                //      <xsl:attribute name="checked"/>
+                //  </xsl:if>
+                //  </INPUT>
+
+                e = appendInput(td, item, "VISIBLE");
+                e.id = "_adaptive";
+
+                //  </TD>
+
+                //  <TD VALIGN=baseline>
+                td = tr.insertCell();
+                td.vAlign = "baseline";
+
+                //  <xsl:choose>
+                node = item.selectSingleNode("TEXT");
+
+                //      <SPAN CLASS="textSecondary">
+                //      <xsl:value-of select="TEXT"/>
+                //      </SPAN>
+
+                eDisplayName = appendElement(td, "SPAN", "textSecondary", null);
+                eDisplayName.xmlNode = node;
+                eDisplayName.id = "_adaptive";
+                reloadDisplayName(eDisplayName);
+
+                //  </TD>
+
+                if (!g_fPrimary)
+                {
+                    tr = table.insertRow();
+                    td = tr.insertCell();
+                    // </TR><TR><TD></TD>
+
+                }
+
+                // <TD VALIGN="bottom">
+                td = tr.insertCell();
+                td.vAlign = "bottom";
+
+                //  <SPAN CLASS="textSecondary">
+                //  <A HREF="javascript:" onclick="this.containingBehavior.changeApplication(this)">
+                //  <xsl:value-of select="/SECTION/LOC[@NAME='change']"/>
+                //  </A></SPAN>
+
+                e = appendElement(td, "SPAN", "textSecondary", null);
+                e = appendElement(e, "A", null, getLoc("change"));
+                e.href = "javascript:";
+
+                // SCRIPT WEIRDNESS!  You have to use an actual function
+                // instead of just assigning the script directly.
+                if (canEdit)
+                    e.onclick = Change_onclickHandlerEdit;
+                else
+                    e.onclick = Change_onclickHandler;
+
+                e.containingBehavior = element;
+                e.xmlNode = item;
+                e.eDisplayName = eDisplayName;
+                e.id = "_adaptive";
+
+                //  </TD></TR>
+            }
+        }
+
+        //  </xsl:for-each>
+        //  </TABLE>
+    }   //  </xsl:if>
+
+    // Initialize the state of the Adaptive section
+    if (eAdapt)
+        Adapt_initialize(element, eAdapt);
+
+    // Record the original values so we can see if they are dirty
+
+    var coll = element.all.tags("INPUT");
+    if (coll)
+    {
+        for (i = 0; i < coll.length; i++)
+        {
+            var e = coll.item(i);
+            if (e.type == "checkbox")
+                e.originalValue = e.checked;
+            else
+                e.originalValue = e.value;
+        }
+    }
+
+}
+
+function reloadDisplayName(e)
+{
+    var node = e.xmlNode;
+    e.innerText = node.text == g_aLoc["newname"] ? g_aLoc["unused"] : node.text;
+}
+
+function Change_onclickHandlerEdit()
+{
+    this.aLoc = g_aLoc;         // So dialog box can access localization
+    if (!this.disabled)
+    {
+        window.showModalDialog("custtask.htm", this,
+                               "dialogWidth:30em;dialogHeight:10em;help:no");
+        reloadDisplayName(this.eDisplayName);
+    }
+
+    event.cancelBubble = true;
+    event.returnValue = false;
+    return false;
+}
+
+
+function Change_onclickHandler()
+{
+    if (!this.disabled)
+        this.containingBehavior.changeApplication(this);
+
+    event.cancelBubble = true;
+    event.returnValue = false;
+    return false;
+}
+
+function Adapt_initialize(eBehavior, eAdapt)
+{
+    // Record the original class for each adaptive element so we know
+    // how to tweak it
+    var coll = eBehavior.all.item("_adaptive");
+    if (coll)
+    {
+        var i;
+        for (i = 0; i < coll.length; i++)
+        {
+            var e = coll.item(i);
+            e.classNameOrig = e.className;
+        }
+    }
+
+    Adapt_enableChildren(eBehavior, eAdapt);
+}
+
+function Adapt_enableChildren(eBehavior, input)
+{
+    var newClass = input.checked ? "textDisabled" : "textEnabled";
+    var coll = eBehavior.all.item("_adaptive");
+    if (coll)
+    {
+        var i;
+        for (i = 0; i < coll.length; i++)
+        {
+            var colInner, j, eInner;
+            var e = coll.item(i);
+
+            // Important for INPUT tags because "disabled" is how you get
+            // the check box to gray and go UI-inactive.
+            //
+            // Important for other tags because this is how we tell whether
+            // or not clicks should be ignored.
+
+            e.disabled = input.checked;
+
+            // And all tags get their class changed
+            e.className = e.classNameOrig + " " + newClass;
+        }
+    }
+}
+
+function Adapt_onclickHandler()
+{
+    Adapt_enableChildren(element, this);
+}
+
+// Create an element of type t, insert it inside the parent node,
+// give it optional class name c, set inner text to optional text.
+function appendElement(parent, t, c, text)
+{
+    var e = document.createElement(t);
+    if (c) e.className = c;
+    if (text) e.innerText = text;
+    parent.appendChild(e);
+    return e;
+}
+
+function appendText(parent, text)
+{
+    parent.insertAdjacentText("beforeEnd", text);
+}
+
+function getLoc(word)
+{
+    return g_aLoc[word];
+}
+
+function attributeText(xmlNode, a)
+{
+    return xmlNode.attributes.getNamedItem(a).text;
+}
+
+function appendInput(parent, xmlNode, attrName)
+{
+    var e = document.createElement("INPUT");
+    e.type = "checkbox";
+
+    parent.appendChild(e);
+
+    var attr = xmlNode.attributes.getNamedItem(attrName);
+    if (attr.text == "1")
+    {
+        // SCRIPT WEIRDNESS!  Checkboxes lose their state when they are
+        // added to the document, so we must fiddle the checked attribute
+        // *after* adding the node.
+        e.checked = true;
+    }
+
+    e.xmlNode = attr;           // The whole reason we're here!
+
+    return e;
+}
+
+function save()
+{
+    var coll = element.all.tags("INPUT");
+    var i;
+
+    for (i = 0; i < coll.length; i++)
+    {
+        var e = coll.item(i);
+        if (e.type == "checkbox")
+        {
+            e.originalValue = e.xmlNode.text = e.checked ? "1" : "0";
+        }
+        else
+        {
+            e.originalValue = e.xmlNode.text = e.value;
+        }
+    }
+
+    g_xml.save(lx_xmlfile);
+    element.isDirty = false;
+}
+
+function changeApplication(e)
+{
+    var xmlNode = e.xmlNode;
+    var node = xmlNode.selectSingleNode("HREF");
+    var newName =
+        ACHelp.ACGetOpenFileName(0x02105814,
+                                 ACHelp.ACShellURLToPath(node.text),
+                                 getLoc("cdtitle"),
+                                 ACHelp.ACShellURLToPath("shell:programfiles"),
+                                 getLoc("cddefext"),
+                                 getLoc("cdcombo"));
+
+    if (newName)
+    {
+        node.text = ACHelp.ACPathToShellURL(newName);
+        if (e.eDisplayName)
+        {
+            var s = ACHelp.ACAssocQueryString(0xC2, 4, newName);
+            e.eDisplayName.xmlNode.text = s;
+            reloadDisplayName(e.eDisplayName);
+        }
+    }
+}
+
+function get_isdirty()
+{
+    if (element.isDirty)
+        return true;
+
+    var coll = element.all.tags("INPUT");
+    if (coll)
+    {
+        for (i = 0; i < coll.length; i++)
+        {
+            var e = coll.item(i);
+            if (e.type == "checkbox")
+            {
+                if (e.originalValue != e.checked) return true;
+            }
+            else
+            {
+                if (e.originalValue != e.value) return true;
+            }
+        }
+    }
+    return false;
+}
+
+function setDirty()
+{
+    element.isDirty = true;
+}
+
+</script>
