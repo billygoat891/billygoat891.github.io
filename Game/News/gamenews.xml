@@ -1,0 +1,23 @@
+<GAMENEWS>
+    <SOURCE>
+	<URL>http://zone.msn.com/msn_magazi.asp</URL>
+	<LOGO>news\msn_gamezone.gif</LOGO>
+	<TEXT>See MSN's Gaming Zone Magazine for the latest tips for both online and offline gaming!</TEXT>
+    </SOURCE>           
+    <SOURCE>
+	<URL>http://www.msnbc.com/news/TECHKENT_front.asp</URL>
+	<LOGO>news\msnbc.gif</LOGO>
+	<TEXT>Join MSNBC's Steven Kent on Games and Stuff</TEXT>
+    </SOURCE>
+    <SOURCE>
+	<URL>http://www.gamespot.com</URL>
+	<LOGO>news\gamespot.gif</LOGO>
+	<TEXT>Where Gamer's Go to Know" from ZDNet</TEXT>
+    </SOURCE>
+    <SOURCE>
+	<URL>http://www.cdmag.com</URL>
+	<LOGO>news\cgo.gif</LOGO>
+	<TEXT>Computer Games Online's source for what's happening in games</TEXT>
+    </SOURCE>
+</GAMENEWS>
+  

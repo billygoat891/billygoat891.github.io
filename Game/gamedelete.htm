@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<LINK href="game.css" rel="stylesheet" type="text/css">
+
+<TITLE>Game Center Delete</TITLE>
+
+<OBJECT id="Shell" classid="CLSID:13709620-C279-11CE-A49E-4445535400"></OBJECT>
+<OBJECT id=GACAgent classid="CLSID:EEE23ED6-D23F-4A2E-8E2B-66E327538FB3"></OBJECT>
+
+<SCRIPT defer SRC="gamectr.js"></SCRIPT>
+<SCRIPT>
+
+//Define Localization Strings
+
+L_SortLRU_Text="Sorted by least recently played";
+L_SortSize_Text="Sorted by size, largest first";
+
+//End Localization Strings
+
+var g_GACAgent = GACAgent;
+
+function GoToDeleteLRU() {
+	//#define SORT_ALPHA    0
+	//#define SORT_MRU      1
+	//#define SORT_LRU	    2
+	//#define SORT_LARGEST  3
+	//#define SORT_SMALLEST 4
+
+    //We want sort alpha, so pass in a 0
+    g_GACAgent.GetGameData(2,0);
+    document.frames("idGameListIFrame").document.location.replace("UinstLRU.htm");
+    document.frames("idGameListIFrame").document.location.reload(true);
+    
+    GameSortLRUString="<A ID='idAGameSortAnchor' class='textSecondary'>" + L_SortLRU_Text + "</A>";
+    document.all.idAGameSortAnchor.outerHTML=GameSortLRUString;
+    return(false);
+}
+
+function GoToDeleteSize() {
+	//#define SORT_ALPHA    0
+	//#define SORT_MRU      1
+	//#define SORT_LRU	    2
+	//#define SORT_LARGEST  3
+	//#define SORT_SMALLEST 4
+
+    //We want sort MRU, so pass in a 1
+    g_GACAgent.GetGameData(4,0);
+    document.frames("idGameListIFrame").document.location.replace("UinstSize.htm");
+    document.frames("idGameListIFrame").document.location.reload(true);
+    
+    GameSortSizeString="<A ID='idAGameSortAnchor' class='textSecondary'>" + L_SortSize_Text + "</A>";
+    document.all.idAGameSortAnchor.outerHTML=GameSortSizeString;
+
+	return(false);
+}
+
+function ResizeIFrame()
+{
+	//Get the IFrame object
+	var a=document.all.tags("IFRAME");
+	//Get the cell object the IFrame Resides in
+	a(0).style.width = 20
+	a(0).style.height = 20;
+
+	var b=document.all.item("idIFrameCell");
+	
+	var width = b.offsetWidth;
+	var height = b.offsetHeight;
+	
+	height = height < 43 ? 0 : height - 43;
+
+	a(0).style.width = width;
+	a(0).style.height = height;
+
+	var c =  document.frames("idGameListIFrame").document.all.item("idCellLinkName");
+
+
+	for(var i=0; i < c.length; i++) {
+		var d = c(i);
+		var width = (width < 200) ? 100 : width - 100;
+		c(i).width = width;
+		d = c(i);
+	}
+
+}
+
+</SCRIPT>
+<SCRIPT FOR="window" EVENT="onload" >
+	//HighlightTables();
+	ResizeIFrame();
+	GoToDeleteLRU(); 
+</SCRIPT>
+
+</HEAD>
+
+<BODY ONRESIZE="ResizeIFrame();">
+<IMG class=backgroundimage src="images/game_stripes.gif">
+<TABLE id="PageContentTable" class="PageContentTable">
+    <!-- page title -->
+	<TR ID=PageTitleRow CLASS="PageTitleRow">
+      <TD CLASS="PageLeftSpacer">&nbsp;</TD><TD ID=PageTitleCell>
+           <SPAN class="title"><ID ID=idTitle>Remove games</ID></SPAN><BR><BR>
+      </TD>
+  </TR>
+  
+  <!-- main content -->
+  <TR ID=PageContentRow CLASS="PageContentRow">
+     <TD CLASS="PageLeftSpacer">&nbsp;</TD>
+     <TD ID=PageContentCell CLASS="PageContentCell">
+        <TABLE ID=ContentDividerTable CLASS="ContentDividerTable">
+          <TR ID=ContentDividerRow CLASS="ContentDividerRow">
+            <!-- task list -->
+            <TD ID=LeftContentCell CLASS="LeftContentCell">
+              <TABLE STYLE="HEIGHT: 100%; WIDTH: 100%">
+                <TBODY>
+				  <TR >
+                    <TD ID=TaskList1>
+                      <SPAN ID="idSpanTaskTitle" class="textPrimary"><ID ID="idTextTaskTitle">On the right, click a game to remove it</ID></SPAN><BR><BR><BR>
+					  <SPAN ID="idSpanOtherTasks" class="textPrimary"><ID ID="idTextOtherTasks">You can also</ID></SPAN><BR>
+					  <SPAN ID="idDeleteLRU" class="textSecondary"><A id="idARemoveLRU" onclick="return GoToDeleteLRU()" href=""><ID id="idTextDeleteLRU">View least recently played games</ID></A></SPAN><BR>
+					  <SPAN ID="idDeleteSize" class="textSecondary"><A id="idARemoveSize" onclick="return GoToDeleteSize()" href=""><ID id="idTextDeleteSize">View games by size, largest first</ID></A></SPAN><BR>
+					</TD>
+				  </TR>
+				</TBODY>
+			  </TABLE>
+			</TD><!-- End Left Content Cell -->
+            <TD ID=RightContentCell CLASS="RightContentCell">
+             <TABLE STYLE="HEIGHT: 100%; WIDTH: 100%">
+				<TBODY>
+                  <TR STYLE="HEIGHT: 100%; WIDTH: 100%" >
+                    <TD class="ListGameCell">
+		              <SPAN ID="idSpanGameSort" class="textSecondary"><A ID="idAGameSortAnchor" class="textSecondary"></A></SPAN><BR><BR>              	  
+					  <TABLE WIDTH="100%" HEIGHT="100%">
+					    <TBODY>
+						  <TR WIDTH="100%">
+						    <TD ID= "idIFrameCell" WIDTH="100%" HEIGHT="100%">
+							  <IFRAME ID="idGameListIFrame" class="GameFrame" FRAMEBORDER=0 src="uinstlru.htm"></IFRAME>
+						    </TD>
+						  </TR>
+						  <TR WIDTH="100%">
+						  	<TD WIDTH="100%" HEIGHT="20">
+							  <A ID="idACustomize" class="textTertiary" VALIGN="bottom"><SPAN ID="idSpanCustomize" class="InactiveLink"><ID ID="idTextCustomize">Customize this page</ID></SPAN></A>						    
+						    </TD>
+						  </TR>
+						</TBODY>
+					  </TABLE>
+                    </TD>  
+                  </TR>
+                </TBODY>
+			  </TABLE>
+            </TD><!-- End Rignt Content Cell -->
+          </TR><!-- End ContentDividerRow-->
+        </TABLE><!-- End ContentDividerTable-->
+      </TD><!-- End PageContentCell-->
+   </TR><!-- End PageContentRow -->
+  
+ </TR>
+ 
+</TABLE>
+
+</BODY>
+
+</HTML>

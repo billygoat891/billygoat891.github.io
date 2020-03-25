@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<LINK href="game.css" rel="stylesheet" type="text/css">
+
+<TITLE>Game Center Home</TITLE>
+<STYLE>
+
+</STYLE>
+<OBJECT id="Shell" classid="CLSID:13709620-C279-11CE-A49E-4445535400"></OBJECT>
+<OBJECT id="xmldso" classid="clsid:550dda30-0541-11d2-9ca9-0060b0ec3d39" height=0 width=0></OBJECT>   
+
+<SCRIPT defer SRC="gamectr.js"></SCRIPT>
+
+<SCRIPT>
+function ResizeIFrame()
+{
+	//Get the IFrame object
+	var a=document.all.tags("IFRAME");
+	//Get the cell object the IFrame Resides in
+	a(0).style.width = 20;
+	a(0).style.height = 20;
+
+	var b=document.all.item("idIFrameCell");
+	
+	var width = b.offsetWidth;
+	var height = b.offsetHeight;
+	
+	height = height < 43 ? 0 : height - 43;
+
+	a(0).style.width = width;
+	a(0).style.height = height;
+
+	var c =  document.frames("idGameNewsIFrame").document.all.item("idCellLinkName");
+
+
+	for(var i=0; i < c.length; i++) {
+		var d = c(i);
+		var width = (width < 200) ? 100 : width - 100;
+		c(i).width = width;
+		d = c(i);
+	}
+
+}
+
+function SelectSiteOfDay(){
+    
+  //start by getting count of records
+	var rootElem=xmldso.XMLDocument.documentElement;
+	var rootChild=rootElem.childNodes;
+	var childNum=rootChild.length;
+        
+	//Now get date
+	var currDate = new Date();
+	var dateno=currDate.getDate();
+	//Note:  Can only have 365 elements in list, one for each day
+	var index = dateno % childNum;
+		
+	//Go to first record
+	xmldso.recordset.MoveFirst();
+	//Now go to record related to day
+	for (var i = 0; i < index; i++) {
+		xmldso.recordset.MoveNext();
+	}
+}
+
+function LaunchWebFromClick(CurCell) {
+	//xmldso.recordset.AbsolutePosition = CurCell.recordNumber;
+	var navweb = xmldso.recordset("URL");
+	shellExec(navweb, true);
+}	
+
+</SCRIPT>
+<SCRIPT FOR="window" EVENT="onload">
+	//HighlightTables();
+	var xmlDso = xmldso.XMLDocument;
+    xmlDso.load("news/isvnews.xml");
+	SelectSiteOfDay();
+	ResizeIFrame();
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY ONRESIZE="ResizeIFrame();">
+<IMG class=backgroundimage src="images/game_stripes.gif">
+<TABLE id="PageContentTable" class="PageContentTable">
+  <!-- page title -->
+  <TR ID=PageTitleRow CLASS="PageTitleRow">
+    <TD CLASS="PageLeftSpacer">&nbsp;</TD><TD ID=PageTitleCell>
+      <SPAN ID="idSpanTitle" class="title"><ID ID="idTextTitle">Read game news</ID></SPAN><BR><BR>
+    </TD>
+  </TR><!-- main content -->
+  
+  <TR ID=PageContentRow CLASS="PageContentRow">
+    <TD CLASS="PageLeftSpacer">&nbsp;</TD>
+    <TD ID=PageContentCell CLASS="PageContentCell">
+      <TABLE ID=ContentDividerTable CLASS="ContentDividerTable">
+        <TR ID=ContentDividerRow CLASS="ContentDividerRow">
+          <!-- task list -->
+          <TD ID=LeftContentCell CLASS="LeftContentCell">
+            <TABLE STYLE="HEIGHT:100%; WIDTH:100%">
+              <TBODY>
+				<TR >
+                  <TD ID=TaskList1>
+                    <SPAN ID="idSpanGSOD" class="textPrimary"><ID ID="idTextGSOD">Game site of the day</ID></SPAN><BR>
+					<SPAN ID="ISVSite" class="textSecondary" datasrc="#xmldso" datafld="TEXT"></SPAN><BR>
+					<A onclick="LaunchWebFromClick(this)"><IMG align=left datasrc="#xmldso" datafld="LOGO" src=""></A>
+                  </TD>
+                </TR>
+              </TBODY>
+			</TABLE>
+          </TD><!-- End Left Content Cell -->
+          <TD ID=RightContentCell CLASS="RightContentCell">
+             <TABLE STYLE="HEIGHT:100%; WIDTH:100%">
+				<TBODY>
+                  <TR STYLE="HEIGHT:100%; WIDTH:100%" >
+                    <TD class="ListGameCell">
+		              <SPAN ID="idSpanTextNews" class="textPrimary"><A ID="idATextNews" class="textPrimary"><ID id="idTextNews">Click a news source</ID></A></SPAN><BR><BR>              	  
+					  <TABLE WIDTH="100%" HEIGHT="100%">
+					    <TBODY>
+						  <TR WIDTH="100%">
+						    <TD ID= "idIFrameCell" WIDTH="100%" HEIGHT="100%">
+							  <IFRAME ID="idGameNewsIFrame" class="GameFrame" FRAMEBORDER=0 src="newslist.htm"></IFRAME>
+						    </TD>
+						  </TR>
+						  <TR WIDTH="100%">
+						  	<TD WIDTH="100%" HEIGHT="20"><!--<A ID="Customize" class="textTertiary" VALIGN="bottom"><SPAN class="InactiveLink">Customize this page</SPAN></A>-->						    
+						    </TD>
+						  </TR>
+						</TBODY>
+					  </TABLE>
+                    </TD>  
+                  </TR>
+                </TBODY>
+			  </TABLE>
+            </TD><!-- End Rignt Content Cell -->
+          </TR><!-- End ContentDividerRow-->
+        </TABLE><!-- End ContentDividerTable-->
+      <TD><!-- End PageContentCell-->
+   <TR><!-- End PageContentRow -->
+   </TR>
+ </TABLE>
+
+</BODY>
+
+</HTML>
