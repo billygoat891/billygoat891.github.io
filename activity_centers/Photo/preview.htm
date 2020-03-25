@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE>Preview Place</TITLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+
+<SCRIPT FOR=WebBrowser EVENT=DocumentComplete>
+    FolderViewEvents.SetFolderView(WebBrowser.Document);
+</SCRIPT>
+
+<script FOR=FolderViewEvents EVENT="DefaultVerbInvoked">
+    return false;
+</script>
+
+<script for=window event=onload>
+</script>
+
+<OBJECT ID=FolderViewEvents CLASSID="CLSID:9BA05971-F6A8-11CF-A442-00A0C90A8F39">
+</OBJECT>
+
+<object id=Command classid="clsid:B005E690-678D-11d1-B758-00A0C90564FE" style=display:none>
+</object>
+
+</HEAD>
+
+<BODY>
+<!-- background image -->
+<IMG SRC="images/stripes.gif" CLASS="backgroundimage">
+
+<!-- page content -->
+<TABLE CLASS="PageContentTable">
+    <!-- logo -->
+    <TR CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD CLASS="title"><ID id="PageTitle">Pictures you have selected so far</ID></TD>
+    </TR>
+
+    <!-- main content -->
+    <TR CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD CLASS="PageContentCell">
+            <TABLE CLASS="ContentDividerTable">
+                <TR CLASS="ContentDividerRow">
+                    <!-- tasks -->
+                    <TD CLASS="LeftContentCell">
+                        <TABLE STYLE="height:100%">
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary"><ID ID=Description>These are the pictures you have selected for your album so far.  Click on any pictures you would like to remove from album.</ID></SPAN><BR>
+                                </TD>
+                            </TR>
+
+                            <TR>
+                                <TD>
+                                    <TABLE ID=TaskList STYLE="width:100%;">
+                                        <!-- this table will be filled dynamically during onload -->
+                                        <!-- the first row of the table is used as a templated to fill the remainder -->
+                                        <TR>
+                                            <TD STYLE="padding-bottom: 12;">
+                                            </TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD CLASS="RightContentCell" id=NamespaceArea>
+                        <OBJECT ID=WebBrowser CLASS=WebBrowserFull CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" HEIGHT=100% WIDTH=100%>
+                            <PARAM NAME="NoWebView" VALUE="1">      <!-- turn off webview in defview -->
+                            <PARAM NAME="HideFileNames" VALUE="1">  <!-- hide filenames in defview -->
+                            <PARAM NAME="NoClientEdge" VALUE="1">   <!-- flat edge around defview (not working?) -->
+                            <PARAM NAME="ViewID" VALUE="{8BEBB290-52D0-11d0-B7F4-00C04FD706EC}">  <!-- thumbnail view -->
+                            <PARAM NAME="Location" VALUE="::{e17d4fc0-5564-11d1-83f2-00a0c90dc849}">
+                            <PARAM NAME="SingleClick" VALUE="1">
+                            <PARAM NAME="SingleSelection" VALUE="1">
+                            <PARAM NAME="NoFolders" VALUE="1">
+                        </OBJECT>
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

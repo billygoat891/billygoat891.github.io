@@ -1,0 +1,326 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE>Scan your picture</TITLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+<SCRIPT DEFER LANGUAGE="JavaScript">
+
+var g_bScanningInProgress = false;
+
+var g_strDisplayName;
+var g_strDeviceId = "";
+var g_strFriendlyName;
+
+var g_template; // this is to work around wierd DOM bug
+
+// initialize the page before it is transitioned to with a different device selected
+function OnBeforePlaceTransition(From, To)
+{
+    if ((To == "scanner") && (g_strDeviceId != external.Property("SelectedWiaDeviceId")))
+    {
+        // get selected WIA device parameters
+        g_strDisplayName = external.Property("SelectedWiaDeviceDisplayName");
+        g_strDeviceId = external.Property("SelectedWiaDeviceId");
+        g_strFriendlyName = external.Property("SelectedWiaDeviceFriendlyName");
+
+        // initialize scanner page
+        oScanner.SetDeviceId(g_strDeviceId);
+        txtDestFileName.value = oScanner.CurrentDestination;
+
+        EnumScannerIntents(oScanner, tbIntents, g_template);
+        if (oScanner.IntentCount >= 1)
+            oScanner.SetIntent(0);
+
+        DoPreview();
+    }
+}
+
+function EnumScannerIntents(oScanner, parent, template)
+{
+    // remove existing intents
+    var intents = parent.childNodes;
+    var count = intents.length;
+    var i;
+
+    for (i = count - 1; i >= 0; i--)
+    {
+        intents.item(i).removeNode(true);
+    }
+
+    // generate new intents
+    count = oScanner.IntentCount;
+    for (i = 0; i < count; i++)
+    {
+        AddScannerIntent(parent, template, oScanner.IntentName(i), i);
+    }
+}
+
+function AddScannerIntent(parent, template, name, index)
+{
+    // create a node for the intent by cloing the template
+    var node = template.cloneNode(true);
+    parent.appendChild(node);
+
+    // initialize the new node
+    var rbtn = node.all.tags("INPUT").item(0);
+    rbtn.id = "intent" + index;
+    rbtn.setAttribute("index", index);
+    rbtn.onclick = SetIntent;
+    rbtn.checked = (index == 0) ? true : false;
+
+    var lbl = node.all.tags("LABEL").item(0);
+    lbl.htmlFor = "intent" + index;
+    lbl.innerText = name;
+}
+
+function SetIntent()
+{
+    oScanner.SetIntent(this.getAttribute("index"));
+}
+
+function DoPreview()
+{
+    oScanner.DoPreview();
+}
+
+function DoBrowseForDestination()
+{
+    oScanner.CurrentDestination = txtDestFileName.value;
+    oScanner.DoBrowseForDestination();
+    txtDestFileName.value = oScanner.CurrentDestination;
+}
+
+function DoScan()
+{
+    // In case the user has typed in a file name, we want to use that name
+    oScanner.CurrentDestination = txtDestFileName.value;
+    oScanner.DoScan();
+
+}
+
+function DoAdvancedOptions()
+{
+    if (!g_bScanningInProgress)
+        oScanner.DoAdvancedOptions();
+
+    return false;
+}
+
+var L_str1_Text = "Please wait while this scan is cancelled...";
+
+function DoCancel()
+{
+    if (g_bScanningInProgress)
+    {
+        window.status = L_str1_Text;
+        oScanner.DoCancel();
+    }
+    else
+    {
+        GoTo("Back");
+    }
+}
+
+// enable/disable input controls for/during scanning
+function EnableScanControls(bEnable)
+{
+    g_bScanningInProgress = !bEnable;
+
+    oScanner.disabled = !bEnable;
+    btnPreview.disabled = !bEnable;
+    btnScan.disabled = !bEnable;
+    txtDestFileName.disabled = !bEnable;
+    // btnBrowse.disabled = !bEnable;
+    // DoAdvancedOptionsButton.disabled = !bEnable;
+
+    EnableIntents( bEnable );
+}
+
+// Disable or enable the intents
+function EnableIntents( bEnable )
+{
+    var intents = tbIntents.childNodes;
+    var count = intents.length;
+
+    for (var i = 0; i < count; i++)
+    {
+        intents.item(i).disable = !bEnable;
+    }
+}
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript" FOR="oScanner" EVENT="TransferBegin(bPreview)">
+
+    var L_str2_Text = "Starting scan...";
+    status = L_str2_Text;
+
+    // disable controls during scanning
+    EnableScanControls(false);
+
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript" FOR="oScanner" EVENT="TransferProgress(bPreview,nPercent)">
+
+    var L_str3_Text = "Scanning is ";
+    var L_str4_Text = "% complete.";
+
+    if (nPercent != 0)
+    {
+        var str = L_str3_Text + nPercent + L_str4_Text;
+        status = str;
+    }
+
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript" FOR="oScanner" EVENT="TransferEnd(bPreview,bSuccess)">
+    // report status
+    var L_str5_Text = "Scanning completed successfully";
+    var L_str6_Text = "An error occurred during scanning";
+
+    if (bSuccess)
+    {
+        status = L_str5_Text;
+    }
+    else
+    {
+        status = L_str6_Text;
+    }
+
+    // enable controls for next scan
+    EnableScanControls(true);
+
+    // if this is a scan, transition to my pictures place
+    if (!bPreview)
+    {
+        // navigate browser control in namespace panel into destination folder
+        var strDestFilePath = txtDestFileName.value;
+        var strDestFolderPath = strDestFilePath.substr(0, strDestFilePath.lastIndexOf("\\") + 1);
+        var oBrowser = external.panels.panel("Namespace").content.all.WebBrowser;
+        oBrowser.Navigate(strDestFolderPath);
+
+        // then go the my pictures page to edit/view it
+        GoTo('My Pictures');
+    }
+
+    // Get possibly incremented filename, if this was not a preview scan
+    txtDestFileName.value = oScanner.CurrentDestination;
+</SCRIPT>
+
+<SCRIPT for=window event=onload>
+    g_template = trIntentTemplate;
+    external.event.registerSink("Place.BeginTransition", OnBeforePlaceTransition, false);
+    // HighlightTables();
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<!-- background image -->
+<IMG ID=HomePageImage SRC="images/stripes.gif" CLASS="backgroundimage">
+
+<!-- page content -->
+<TABLE ID=PageContentTable CLASS="PageContentTable">
+    <!-- logo -->
+    <TR ID=PageTitleRow CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD><TD ID=PageTitleCell CLASS="title"><ID id="PageTitle">Scan your picture</ID></TD>
+    </TR>
+
+    <!-- main content -->
+    <TR ID=PageContentRow CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD ID=PageContentCell CLASS="PageContentCell">
+            <TABLE ID=ContentDividerTable CLASS="ContentDividerTable">
+                <TR ID=ContentDividerRow CLASS="ContentDividerRow">
+                    <!-- tasks -->
+                    <TD ID=LeftContentCell CLASS="LeftContentCell">
+                        <TABLE>
+                            <TR><!-- scanning procedure -->
+                                <TD>
+                                    <SPAN CLASS="textPrimary"><ID id="cmdtitle">To scan a picture:</ID></SPAN><P>
+                                    <TABLE CLASS="textSecondary">
+                                        <TR>
+                                            <TD ID=aaa>1.</td>
+                                            <TD ID=idStep1>
+                                                <ID ID=idIntentsText  CLASS="textPrimary">Select the kind of picture you want to scan:</ID><BR>
+                                                <!-- scanner intents enumeration -->
+                                                <DIV><!-- template -->
+                                                    <TABLE STYLE="display:none">
+                                                        <TBODY>
+                                                            <TR ID="trIntentTemplate">
+                                                                <TD STYLE="vertical-align: middle"><INPUT TYPE=RADIO NAME="intent" /></TD>
+                                                                <TD STYLE="vertical-align: middle"><LABEL CLASS="textTertiary"></LABEL></TD>
+                                                            </TR>
+                                                        </TBODY>
+                                                    </TABLE>
+                                                </DIV>
+                                                <DIV><!-- intents -->
+                                                    <TABLE>
+                                                        <TBODY ID="tbIntents">
+                                                        </TBODY>
+                                                    </TABLE>
+                                                </DIV>
+                                                <P ID=idText1>If you want to see what your scanned picture will look like, click <B>Preview.</B><P>
+                                            </TD>
+                                        <TR>
+                                        </TR>
+                                            <TD id=bbb>2.</TD>
+                                            <TD ID=idStep2>
+                                                To scan your picture, click <B>Scan.</B><p>
+                                            </TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+                            <TR><!-- scan target path -->
+                                <TD>
+                                    <TABLE>
+                                        <TR>
+                                            <TD COLSPAN=2><LABEL ID=idDestLabel CLASS="textPrimary" FOR=txtDestFileName ACCESSKEY="A">Your picture will be saved <U>a</U>s:</LABEL></TD>
+                                        </TR>
+                                        <TR>
+                                            <TD COLSPAN=2><INPUT TYPE=TEXT ID=txtDestFileName MAXLENGTH=255 STYLE="width:100%" /></TD>
+                                        </TR>
+                                        <TR>
+                                            <TD STYLE="width:99%"></TD>
+                                            <TD NOWRAP><span CLASS="textSecondary"><A ID=lnkBrowse ONCLICK="DoBrowseForDestination(); return false;" ACCESSKEY="H" HREF=""><ID ID=idText2>C<U>h</U>oose a different folder...</ID></A></SPAN></TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+                            <TR><!-- the three button row: preview, scan, cancel -->
+                                <TD>
+                                    <TABLE>
+                                        <TR>
+                                            <TD><BUTTON ID=btnPreview ACCESSKEY="P" ONCLICK="DoPreview();"><U>P</U>review</BUTTON></TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD><BUTTON ID=btnScan    ACCESSKEY="S" ONCLICK="DoScan();"><U>S</U>can</BUTTON></TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD><BUTTON ID=btnCancel  ACCESSKEY="C" ONCLICK="DoCancel();"><U>C</U>ancel</BUTTON></TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+                            
+                            <TR><!-- advanced options link -->
+                                <TD ID=idAdvOptions>
+                                    <BR>
+                                    <SPAN CLASS="textSecondary">
+                                        <A ID=lnkAdvOptions HREF="" ONCLICK="DoAdvancedOptions(); return false;" ACCESSKEY="O"><ID ID=idText3>More scanning <U>o</U>ptions...</ID></A>
+                                    </SPAN>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD ID=tdRightPanel CLASS="RightContentCell">
+                        <OBJECT ID=oScanner CLASSID="CLSID:36A6F26E-2BBE-45E7-9392-6878A2DF9F73" STYLE="height:100%; width:100%; margin:2">
+                        </OBJECT>
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

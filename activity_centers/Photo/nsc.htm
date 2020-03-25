@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE></TITLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+<SCRIPT>
+    var g_iCurPicture;
+    var g_items;    
+    var L_NewFolder_TEXT = "Choose a different folder";
+
+    function BrowseForFolder()
+    {
+        var folder = external.shell.BrowseForFolder(0, L_NewFolder_TEXT, 96);
+
+        if (folder)
+        {
+            external.event.fire("BrowseToFolder", folder);
+        }
+
+        return false;
+    }
+    
+    function ShowImage()
+    {
+        if (g_items)
+        {
+            var item = g_items.Item(g_iCurPicture);
+            var i = g_iCurPicture + 1;
+
+            if (item)
+                Preview.Show(item);
+            Counter.innerHTML = i + " of " + g_items.Count;
+        }
+    }
+    
+    function PrevImage()
+    {
+        if (g_iCurPicture > 0)
+        {
+            g_iCurPicture--;
+            ShowImage();
+        }
+    }
+
+    function NextImage()
+    {
+        if (g_items)
+        {
+            if (g_iCurPicture < g_items.Count - 1) // > --  just to avoid different color in a stupid editor...
+            {
+                g_iCurPicture++;
+                ShowImage();
+            }
+        }
+    }
+
+    //function BodyReadyStateChange()
+    //{
+    //}
+    //document.onreadystatechange = BodyReadyStateChange;
+
+</SCRIPT>
+
+<!--
+<SCRIPT language="JavaScript" for="NameSpace" event="SelectionChange">
+    if (NameSpace)
+    {
+        var item = NameSpace.selectedItem;
+        
+        g_iCurPicture = 0;
+        g_items = null;
+        if (item && item.IsFolder)
+        {
+            var folder = item.GetFolder;
+
+            if (folder)
+            {
+                g_items = folder.Items();
+            }
+        }
+        
+        ShowImage();
+    }
+</SCRIPT>
+-->
+<SCRIPT language="JavaScript" for="NameSpace" event="Initialized">
+        NameSpace.Expand("shell:::{F775911B-B24C-4f45-83F0-C227CFBFFA2F}\\My Pictures", 1);
+</script>
+</HEAD>
+
+<BODY style="background-color: #B8DEF9">
+    <TABLE WIDTH=100% HEIGHT=100%>
+        <TR HEIGHT=50%>
+            <TD WIDTH=100%>
+                <OBJECT ID=NameSpace CLASSID="clsid:55136805-B2DE-11D1-B9F2-00A0C98BC547" WIDTH=100% HEIGHT=100%>
+                    <PARAM NAME="root" VALUE="shell:::{F775911B-B24C-4f45-83F0-C227CFBFFA2F}">
+                    <PARAM NAME="mode" VALUE="9">
+                    <PARAM NAME="flags" VALUE="67">
+                    <PARAM NAME="enumoptions" VALUE="32"> <!-- folders only -->
+                    <PARAM NAME="columns" VALUE="name;create">
+                </OBJECT>
+            </TD>
+        </TR>
+        <TR>
+            <TD>
+                <BR>
+                <SPAN  CLASS="textSecondary">
+                <A HREF="" ID=DifferentFolder ONCLICK="return BrowseForFolder();"><ID ID=idText1>Choose a different folder</ID></A><BR>
+                </SPAN>
+                <BR>
+            </TD>
+        </TR>
+<!-- doesn't appear needed any more
+        <TR HEIGHT=40%>
+            <TD HEIGHT=100%>
+                <TABLE HEIGHT=100%>
+                    <TR HEIGHT=99%>
+                        <TD colspan=2>
+                            <OBJECT ID=Preview CLASSID="CLSID:50F16B26-467E-11D1-8271-00C04FC3183B" HEIGHT=100%>
+                                <PARAM NAME="Toolbar" VALUE="0">
+                            </OBJECT>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>
+                            <SPAN ID=Counter CLASS="textSecondary"></SPAN>
+                        </TD>
+                        <TD ALIGN="right">
+                            <BUTTON ID=Prev ONCLICK="PrevImage()" NAME="Previous image"> &lt </BUTTON>
+                            <BUTTON ID=Next ONCLICK="NextImage()" NAME="Next image"> &gt </BUTTON>
+                        </TD>
+                    </TR>
+                </TABLE>
+            </TD>
+        </TR>
+-->
+    </TABLE>
+</BODY>
+</HTML>
+

@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE></TITLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+<SCRIPT>
+    ThisPlace = "View Pictures";
+    ThisPanel = "Folder2";
+    external.event.RegisterSink("BrowseToFolder", OnBrowseToFolder, false);
+
+    function OpenFolder()
+    {
+        var folder = external.panels.panel("NSC").content.NameSpace.SelectedItem;
+        GotoFolder(folder);
+        return false;
+    }
+
+    function Done()
+    {
+        GoTo("Email Album");
+        return false;
+    }
+
+    function OnBrowseToFolder(folder)
+    {
+        if ( external.places.currentPlace.name == ThisPlace )
+            GotoFolder(folder);
+    }
+
+    function GotoFolder(folder)
+    {
+        if (folder)
+        {
+            var doc = external.panels.panel("Namespace").content;
+            var wb  = doc.WebBrowser;
+            
+            wb.Navigate2(folder);
+            AddToRecentPictures(folder);
+            GoTo("My Pictures");
+        }
+    }
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<!-- background image -->
+<IMG ID=HomePageImage SRC="images/stripes.gif" CLASS="backgroundimage">
+<IMG ID=HomePageImage2 SRC="images/camera.gif" CLASS="backgroundimage">
+
+<!-- page content -->
+<TABLE ID=PageContentTable CLASS="PageContentTable">
+    <!-- logo -->
+    <TR CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD CLASS="title" id="PageTitle">View your pictures</TD>
+    </TR>
+
+    <!-- main content -->
+    <TR ID=PageContentRow CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD ID=PageContentCell CLASS="PageContentCell">
+            <TABLE ID=ContentDividerTable CLASS="ContentDividerTable">
+                <TR ID=ContentDividerRow CLASS="ContentDividerRow">
+                    <!-- task list -->
+                    <TD ID=LeftContentCell CLASS="LeftContentCell">
+                        <TABLE STYLE="height:100%; width:100%">
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <ID ID=Instruction1>To see the pictures in a folder, click the folder that contains the pictures you want to see and click <B>Open.</B></ID>
+                                        <P>
+                                    </SPAN>
+                                    <SPAN CLASS="textSecondary">
+                                        <BUTTON ONCLICK="return OpenFolder();"><ID ID=Task1>Open</ID></BUTTON><BR>
+                                    </SPAN>
+                                    <BR>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD CLASS=RightContentCell id=Master STYLE="behavior: url(..\common\master.htc);" slave="NSC">
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,475 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE>Photo Center Home</TITLE>
+<STYLE>
+.clsPreview
+{
+    width:  80;
+    height: 80;
+}
+
+<!-- Gray out beta2 functionality -->
+<!-- Fix onclick and add HREF="" to items below -->
+#fromcd,
+#idAlbum,
+#fromother,
+#customize
+{ 
+    color : gray; 
+    text-decoration : none;
+    font-weight : normal;
+}
+</STYLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+<SCRIPT>
+    function EnumWIADevices(parent, oWIADeviceList, template)
+    {
+        var count = oWIADeviceList.Count;
+
+        for ( var i = 0; i < count; i++ )
+        {
+            // create a node for each device
+            var node = template.cloneNode(true);
+            parent.appendChild(node);
+
+            // set the new node's attributes
+            var link = node.all.tags("A").item(0);  // we assume there is only one A tag
+            var device = oWIADeviceList.Device(i);
+            link.setAttribute("device", device);
+            link.onclick = GoToDevice;
+            link.innerText = device.FriendlyName;
+        }
+    }
+
+    // for localization
+    var L_CamErr_Text = "Please check that your camera is connected, turned on and is set to connect to the computer.";
+    var L_PlcErr_Text = "The place does not exist yet.";
+
+    // go to the selected WIA device page ( scanner or camera )
+    function GoToDevice()
+    {
+        var device = this.device;
+        var place = device.Type;
+
+        if (place.toLowerCase() == "unknown")
+        {
+            var type = pchelp.GetDeviceType(device);
+            if ( type == 1)
+                place = "camera";
+            else if (type == 2)
+                place = "scanner";
+            else
+                return false;
+        }
+
+        if (external.places.place(place))
+        {
+            // if it is a camera, check whether it is still plugged
+            if (place == "camera")
+            {
+                try
+                {
+                    var shell = new ActiveXObject("Shell.Application");
+                    var folder = shell.NameSpace(device.ParsingName);
+                    if (folder == null)
+                        throw L_CamErr_Text;
+                }
+                catch (e)
+                {
+                    alert(L_CamErr_Text);
+                    return false;
+                }                  
+            }
+            
+            // pass the parameters to the device page
+            external.Property("SelectedWiaDeviceDisplayName") = device.ParsingName;
+            external.Property("SelectedWiaDeviceId") = device.DeviceId;
+            external.Property("SelectedWiaDeviceFriendlyName") = device.FriendlyName;
+
+            GoTo(place);
+        }
+        else
+        {
+            alert(L_PlcErr_Text);
+        }
+
+        return false;
+    }
+
+    // enumerate image folders in shell:recent
+    // preview the first image file of the first image folder
+    function EnumPicFolders(parent, template, oPreview)
+    {
+        var shell = new ActiveXObject("Shell.Application");
+        var folder = shell.NameSpace("SHELL:RECENT");
+        var items = folder.Items();
+        var count = items.Count;
+        var nPicFolders = 0;
+        var item;
+
+        // add picture folders in recent folder to the page
+        for ( var i = 0; i < count && nPicFolders < 5; i++ )
+        {
+            item = items.Item(i);
+            
+            // resolve link
+            if (item.IsLink)
+                item = item.GetLink.Target;
+
+            if (item.IsFolder && IsPicFolder(item.GetFolder))
+            {
+                AddPicFolder(parent, template, item);
+                nPicFolders++;
+            }
+        }
+
+        // if there is no picture folder in shell:recent, add My Pictures folder to it
+        if (nPicFolders == 0)
+        {
+            folder = shell.NameSpace("Shell:My Pictures");
+            item = folder.self;
+
+            AddToRecentPictures(item);
+            AddPicFolder(parent, template, item);
+        }
+
+        // show preview of the first image file of the first picture folder
+        var node = parent.firstChild;
+        if (node)
+            node.all.idLink1.focus();
+    }
+
+    // create a new picture folder node by Cloning the template,
+    // initialize the new node with the picture folder shell folder item,
+    // and append it to parent
+    function AddPicFolder(parent, template, item)
+    {
+        var node = template.cloneNode(true);
+
+        var str = "<OBJECT CLASSID='CLSID:844F4806-E8A8-11d2-9652-00C04FC30871' ID=oFldrIcon>" + 
+                      "<PARAM name='view' value='Small Icon'/>" + 
+                      "<PARAM name='clickStyle' value='1'/>" +
+                      "<PARAM name='advproperty' value='false'/>" + 
+                  "</OBJECT>" +
+                  "&nbsp; &nbsp;" +
+                  "<SPAN ID=idName></SPAN>";
+
+        var link1 = node.all.idLink1;
+        link1.innerHTML = str;
+        link1.all.oFldrIcon.item = item;
+        link1.all.idName.innerText = item.Name;
+        link1.setAttribute("fldritm", item);
+        link1.onclick = GoToPicFolder;
+        link1.onfocus = PreviewPicFolder;
+        link1.onmouseover = PreviewPicFolder;
+
+        var link2 = node.all.idLink2;
+        link2.innerText = GetDate(item);
+        link2.setAttribute("fldritm", item);
+        link2.onclick = GoToPicFolder;
+        link2.onfocus = PreviewPicFolder;
+        link2.onmouseover = PreviewPicFolder;
+
+        parent.appendChild(node);
+    }
+
+    function GetDate(item)
+    {
+        var text = "";
+
+        try 
+        {
+            text = item.GetFolder.ParentFolder.GetDetailsOf(item, 6);
+            if (text == "")
+                throw "error";
+
+            var date = new Date(text);
+            text = date.getMonth() + 1 + "/";
+            text += date.getDate() + "/";
+            text += date.getFullYear();
+
+            if (text.indexOf("NaN") != -1)
+                throw "error";
+        }
+        catch (e)
+        {
+            // return empty string for error case;
+            text = "";
+        }
+
+        return text;
+    }
+
+    // show preview of the first image file in the folder
+    function PreviewPicFolder()
+    {
+        var fldritm = this.fldritm;
+        var fldr = fldritm.GetFolder;
+        var items = fldr.Items();
+        var count = items.Count;
+
+        for ( var i = 0; i < count; i++ )
+        {
+            var item = items.Item(i);
+            var ext = GetFileExtension(item.Path);
+
+            if (IsImageFile(ext))
+            {
+                idMyPicPreviewObject.displayFile(item.Path);
+                break;
+            }
+        }
+        idMyPicPreviewName.innerText = fldr.Title;
+
+        // cancel default behavior
+        return false;
+    }
+
+    function GoToPicFolder()
+    {
+        // navigate browser control in namespace panel into destination folder
+        var fldritm = this.fldritm;
+        var oBrowser = external.panels.panel("Namespace").content.all.WebBrowser;
+        oBrowser.Navigate2(fldritm);
+
+        // then go the my pictures page to edit/view pictures in the folder
+        GoTo('My Pictures');
+
+        // cancel default behavior
+        return false;
+    }
+
+    // return true if this folder contains at least one image file
+    function IsPicFolder(fldr)
+    {
+        var items = fldr.Items();
+        var count = items.Count;
+
+        for (var i = 0; i < count; i++)
+        {
+            var item = items.Item(i);
+            var ext = GetFileExtension(item.Path);
+
+            if (IsImageFile(ext))
+                return true;
+        }
+
+        return false;
+    }
+
+    function EmailPictures()
+    {
+        external.Property("Email Start Place") = "Home";
+        GoTo('Choose Folder');
+    }
+
+</SCRIPT>
+
+<SCRIPT FOR=window EVENT=onload>
+  EnumWIADevices(spanWIADeviceList, oWIADeviceList, WIADeviceTemplate);
+  EnumPicFolders(idPicFolderList, idPicFolderTemplate, idMyPicPreviewObject);
+
+//  HighlightTables();
+
+  // hackhack: force load of select pictures panel until mars transitioncomplete gets fixed
+  var dummy = external.panels.panel("Select").content;
+  dummy = external.panels.panel("Namespace").content;
+  dummy = external.panels.panel("Email").content;
+  dummy = external.panels.panel("scanner").content;
+  dummy = external.panels.panel("camera").content;
+  dummy = null;
+</SCRIPT>
+
+<OBJECT ID=pchelp CLASSID="CLSID:CC45F2CA-3DA7-432E-8812-35DD451F5D99"></OBJECT>
+
+</HEAD>
+
+<BODY>
+
+<!-- background image -->
+
+<IMG ID=HomePageImage SRC="images/stripes.gif" CLASS="backgroundimage">
+<IMG ID=HomePageImage SRC="images/camera.gif" CLASS="backgroundimage">
+
+<!-- page content -->
+<TABLE ID=PageContentTable CLASS="PageContentTable">
+    <!-- page title -->
+    <TR ID=PageTitleRow CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD><TD ID=PageTitleCell>
+            <SPAN CLASS="banner"><ID ID=idBanner>Photos</ID></SPAN>
+            <BR><BR>
+            <SPAN class="title"><ID ID=idTitle>What do you want to do?</ID></SPAN>
+        </TD>
+    </TR>
+
+    <!-- main content -->
+    <TR ID=PageContentRow CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD ID=PageContentCell CLASS="PageContentCell">
+            <TABLE ID=ContentDividerTable CLASS="ContentDividerTable">
+                <TR ID=ContentDividerRow CLASS="ContentDividerRow">
+                    <!-- task list -->
+                    <TD ID=LeftContentCell CLASS="LeftContentCell">
+                        <TABLE STYLE="width:100%; height:100%">
+                            <TR STYLE="width: 100%">
+                                <TD>
+                                    <!-- Get new pictures -->
+                                    <TABLE STYLE="width:100%;">
+                                        <TR>
+                                            <TD ID=TaskList1 STYLE="padding-bottom: 12;">
+                                                <!-- task title -->
+                                                <SPAN CLASS="textPrimary"><ID ID="tasktitle">Get new pictures</ID></SPAN><BR>
+
+                                                <!-- WIA device list -->
+                                                <SPAN ID="spanWIADeviceList">
+                                                    <OBJECT ID="oWIADeviceList" CLASSID="CLSID:a2eca620-098d-48bf-a4af-a4a375c8888e" STYLE="display:none"></OBJECT>
+                                                    <SPAN STYLE="display:none">
+                                                        <SPAN ID="WIADeviceTemplate" CLASS="textSecondary">
+                                                            <A HREF="" ID=wiadevice ONCLICK="return false;"></A><BR>
+                                                        </SPAN>
+                                                    </SPAN>
+                                                </SPAN>
+
+                                                <!-- Non WIA device MRU list -->
+                                                <SPAN CLASS="textSecondary"><A ID=fromcd ONCLICK="return false;"><ID ID=idTextCDROM>CD ROM</ID></A><BR></SPAN>
+
+                                                <!-- Generic other sources -->
+                                                <!-- only static text for B1 -->
+                                                <SPAN CLASS="textSecondary"><A ID=fromother ONCLICK="return false;"><ID ID=idTextOther>Other sources</ID></A></SPAN><BR>
+                                            </TD>
+                                        </TR>
+                                    </TABLE>
+
+                                    <!-- Share my pictures -->
+                                    <TABLE ID=TaskList STYLE="width:100%;">
+                                        <TR>
+                                            <TD STYLE="padding-bottom: 12;">
+                                                <SPAN CLASS="textPrimary"><ID ID=idShareTitle>Share my pictures</ID></SPAN><BR>
+                                                <SPAN CLASS="textSecondary">
+                                                    <A ID=idEmail HREF="" ONCLICK="EmailPictures(); return false;"><ID ID=idShareItem1>E-mail pictures to family and friends</ID></A><BR>
+                                                </SPAN>
+                                                <SPAN CLASS="textSecondary">
+                                                    <A ID=idAlbum ONCLICK="return false;"><ID ID=idShareItem2>Create a photo album and share it</ID></A><BR>
+                                                </SPAN>
+                                            </TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+
+                            <!-- the search box (lines with * have comments.  Put comment markers back when this is enabled)
+                            <TR STYLE="width: 100%;">
+                                <TD STYLE="vertical-align: bottom">
+                                    * BUGBUG: setting the background-image from the CSS file isn't working
+                                    <TABLE CLASS="search" STYLE="background-image: url('images/searchbox.gif');">
+                                        <TR>
+                                            <TD>&nbsp</TD> * to leave space for text "search"
+                                        </TR>
+                                        <TR>
+                                            <TD COLSPAN=2><INPUT id=text1 TYPE=TEXT SIZE=32 STYLE="font-size:8pt"></INPUT></TD>
+                                        </TR>
+                                        <TR>
+                                            <TD><INPUT id=radio1 TYPE=RADIO NAME=SearchChoice>Internet</INPUT></TD>
+                                            <TD><INPUT id=radio2 TYPE=RADIO NAME=SearchChoice>Files and Folders</INPUT></TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+                            -->
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD ID=RightContentCell CLASS="RightContentCell" STYLE="background-color: #B8DEF9;">
+                        <TABLE STYLE="width:100%; height:100%;">
+                            <!-- Picture Folder MRU -->
+                            <TR CLASS="headerSecondary">
+                                <TD COLSPAN=2 id=shoebox1>View or edit pictures</TD>
+                            </TR>
+                            <TR>
+                                <!-- preview area -->
+                                <TD style="width: 120;">
+                                    <OBJECT ID=idMyPicPreviewObject CLASS=clsPreview CLASSID="CLSID:71650000-E8A8-11d2-9652-00C04FC30871"></OBJECT><br>
+                                    <SPAN CLASS="textTertiary" ID=idMyPicPreviewName></SPAN>
+                                </TD>
+                                <!-- MRU list -->
+                                <TD style="width: 100%">
+                                    <TABLE style="width: 100%">
+                                        <THEAD>
+                                        </THEAD>
+                                        <TBODY ID=idPicFolderList>
+                                        </TBODY>
+                                        <TFOOT>
+                                            <TR CLASS="textTertiary">
+                                                <TD ID=idName colspan=2 style="padding: 0 15;"><A ID=idLink1 HREF="" onclick="return GoTo('View Pictures')">More...</A></TD>
+                                            </TR>
+                                        </TFOOT>
+                                    </TABLE>
+                                    <!-- My Pictures item template -->
+                                    <TABLE STYLE="display:none">
+                                        <TBODY>
+                                            <TR ID=idPicFolderTemplate CLASS="textTertiary">
+                                                <TD ID=idName style="width: 60%; padding: 0 15;"><A ID=idLink1 HREF=""></A></TD>
+                                                <TD ID=idTime style="width: 40%"><A ID=idLink2 HREF=""></A></TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+
+                            <!-- My Albums, beta 2 
+                            <TR>
+                                <TD CLASS="textTertiary" style="padding-top: 10; padding-left: 15">
+                                    <IMG SRC="images/photofolder.jpg" CLASS=clsPreView BORDER=0>
+                                    <BR CLEAR=ALL><ID id=temp1>Hawaii</ID>
+                                </TD>
+                                <TD>&nbsp;&nbsp;</TD>
+                                <TD>
+                                    <TABLE>
+                                        <TR CLASS="headerSecondary">
+                                            <TD COLSPAN=4><ID ID=idTaskTitle>View My Albums</ID></TD>
+                                        </TR>
+                                        <TR CLASS="textTertiary">
+                                            <TD><ID ID=idTextAlbum1>Trip to Hawaii</ID></TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD><ID ID=idTextType1>Slide show</ID></TD>
+                                        </TR>
+                                        <TR CLASS="textTertiary">
+                                            <TD><ID id=task4>Amanda's grad...</ID></TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD><ID id=task5>Album</ID></TD>
+                                        </TR>
+                                        <TR CLASS="textTertiary">
+                                            <TD><ID id=task7>New Years 98</ID></TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD>&nbsp;</TD>
+                                            <TD><ID id=task8>Contact sheet</ID></TD>
+                                        </TR>
+                                    </TABLE>
+                                </TD>
+                            </TR>
+                            -->
+
+                            <TR STYLE="width:100%; height:100%;">
+                                <TD STYLE="width:100%; height:100%;" colspan=2>
+                                    &nbsp;
+                                </TD>
+                            </TR>
+                            <!-- customize link -->
+                            <TR>
+                                <TD colspan=2>
+                                    <A CLASS="textTertiary" ID=customize><ID ID=customize>Customize this page</ID></A>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

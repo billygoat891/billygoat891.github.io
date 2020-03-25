@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE>My Albums</TITLE>
+</HEAD>
+
+<BODY>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+
+<!-- background image -->
+
+<IMG SRC="images/stripes.gif" CLASS="backgroundimage">
+
+
+<!-- page content -->
+<TABLE CLASS="PageContentTable">
+    <!-- logo -->
+    <TR CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD><TD CLASS="title"><ID id="PageTitle">My Albums</ID></TD>
+    </TR>
+
+    <!-- main content -->
+    <TR CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD CLASS="PageContentCell">
+            <TABLE CLASS="ContentDividerTable">
+                <TR CLASS="ContentDividerRow">
+                    <!-- tasks -->
+                    <TD CLASS="LeftContentCell">
+                        <TABLE STYLE="height:100%">
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textPrimary"><ID id=taskcreate>Create a new album</ID></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=createweb ONCLICK="return GoTo('')" HREF=""><ID id=subtaskcreate1>Create a photo album on the web</ID></A></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=createemail ONCLICK="return GoTo('')" HREF=""><ID id=subtaskcreate2>Create a photo album to email</ID></A></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=createprint ONCLICK="return GoTo('')" HREF=""><ID id=subtaskcreate3>Create a photo album to print</ID></A></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=createalbum ONCLICK="return GoTo('')" HREF=""><ID id=subtaskcreate4>Create a photo album for your computer</ID></A></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=createslideshow ONCLICK="return GoTo('')" HREF=""><ID id=subtaskcreate5>Create a slideshow for your computer</ID></A></SPAN><BR>
+                                </TD>
+                            </TR>
+
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textPrimary"><ID id=taskexist>Work with existing albums</ID></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=editalbum ONCLICK="return GoTo('')" HREF=""><ID id=subtaskexist1>Edit an album</ID></A></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=sendalbum ONCLICK="return GoTo('')" HREF=""><ID id=subtaskexist2>Send a link to an album on the web to a friend</ID></A></SPAN><BR>
+                                    <SPAN CLASS="textSecondary"><A id=deletealbum ONCLICK="return GoTo('')" HREF=""><ID id=subtaskexist3>Delete an album</ID></A></SPAN><BR>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD CLASS="RightContentCell">
+                        <TABLE>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="headerSecondary"><ID id=taskview>View Albums</ID></SPAN><BR>
+                                    <SPAN CLASS="textTertiary" NOWRAP><ID id=subtaskview1>Click on an album below to view</ID></SPAN><P>
+                                    <IMG SRC="images/album.bmp" BORDER=0 WIDTH=350 HEIGHT=200/>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="headerSecondary"><ID id=taskalbums>My Albums</ID></SPAN><BR>
+                                    <SPAN CLASS="textTertiary" NOWRAP><ID id=taskwebsite>The New Baby &nbsp &nbsp Website</ID></SPAN><BR>
+                                    <BR>
+                                    <SPAN CLASS="textTertiary" NOWRAP><ID id=more>more...</ID></SPAN><BR>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

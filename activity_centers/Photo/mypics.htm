@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE>My Pictures Place</TITLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+<SCRIPT>
+    ThisPlace = "My Pictures";
+    ThisPanel = "MyPics";
+
+    function EmailPictures()
+    {
+        var folder = external.panels.panel("Namespace").content.WebBrowser.Document.Folder;
+
+        if (folder)
+        {
+            var doc = external.panels.panel("Select").content;
+            var wb  = doc.WebBrowser;
+            
+            wb.Navigate2(folder);
+            AddToRecentPictures(folder.Self);
+            GoTo("Select Pictures");
+        }
+        external.Property("Email Start Place") = "My Pictures";
+        GoTo("Select Pictures");
+    }
+</SCRIPT>
+
+<STYLE>
+<!-- Gray out beta2 functionality -->
+<!-- Fix onclick and add HREF="" to items below -->
+#beta2view,
+#beta2organize,
+#beta2print,
+#beta2web
+{ 
+    color : gray; 
+    text-decoration : none;
+    font-weight : normal;
+}
+</STYLE>
+</HEAD>
+
+<BODY>
+
+<!-- background image -->
+
+<IMG SRC="images/stripes.gif" CLASS="backgroundimage">
+
+<!-- page content -->
+<TABLE CLASS="PageContentTable">
+    <!-- page title -->
+    <TR CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp;</TD>
+        <TD CLASS="title" ID=PageTitleCell>What do you want to do with your pictures?</TD>
+    </TR>
+
+    <!-- main content -->
+    <TR CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp;</TD>
+        <TD CLASS="PageContentCell">
+            <TABLE CLASS="ContentDividerTable">
+                <TR CLASS="ContentDividerRow">
+                    <!-- tasks -->
+                    <TD CLASS="LeftContentCell">
+                        <TABLE id=TaskList STYLE="width:100%">
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <A id=beta2view ONCLICK="return false;GoTo('View Pictures')"><ID id=taskView>View as slideshow</ID></A>
+                                    </SPAN><BR>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD STYLE="vertical-align: top; ">
+                                    <SPAN CLASS="textSecondary" >
+                                        <A ONCLICK="return GoTo('Main Edit')" HREF=""><ID id=taskEdit>Edit pictures</ID></A>
+                                    </SPAN><BR>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <A id=beta2organize ONCLICK="return false;GoTo('Choose Folder')"><ID id=taskOrganize>Organize pictures</ID></A>
+                                    </SPAN><BR>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <A ONCLICK="EmailPictures(); return false;" HREF=""><ID id=taskEmail>E-mail pictures</ID></A>
+                                    </SPAN><BR>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <A id=beta2web ONCLICK="return GoTo('Choose Folder')"><ID id=taskAlbum>Create web photo album</ID></A>
+                                    </SPAN><BR>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <A id=beta2print ONCLICK="return false;GoTo('Choose Folder')"><ID id=taskPrint>Print pictures</ID></A>
+                                    </SPAN><BR><BR>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="textSecondary">
+                                        <A ONCLICK="return GoTo('Home')" HREF=""><ID id=taskReturn>Return to Photos Home</ID></A>
+                                    </SPAN><BR>
+                                </TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD CLASS="RightContentCell" id=Master STYLE="behavior: url(..\common\master.htc);" slave="Namespace">
+                    </TD>
+                  </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

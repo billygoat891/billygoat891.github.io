@@ -1,0 +1,234 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" HREF="photo.css" TYPE="text/css">
+<TITLE>Get pictures from your camera</TITLE>
+<SCRIPT DEFER SRC="photoctr.js"></SCRIPT>
+<SCRIPT DEFER LANGUAGE="javascript">
+ThisPlace = "camera";
+ThisPanel = "camera";
+
+var g_oShell = new ActiveXObject("Shell.Application");
+var g_oBrowser;  // this can't be initialized during on load
+
+var g_strDisplayName = "";
+var g_strDeviceId = "";
+var g_strFriendlyName = "";
+
+var g_bCanDelete = false;
+
+// navigate browser control in Namespace panel into selected camera folder
+function OnBeforePlaceTransition(From, To)
+{
+    if (To == "camera")
+    {
+        // get camera parameters 
+        g_strDisplayName = external.Property("SelectedWiaDeviceDisplayName");
+        g_strDeviceId = external.Property("SelectedWiaDeviceId");
+        g_strFriendlyName = external.Property("SelectedWiaDeviceFriendlyName");
+
+        // navigate browser control into camera namespace
+        g_oBrowser = external.panels.panel("Namespace").content.all.WebBrowser;
+        g_oBrowser.Navigate(g_strDisplayName);
+
+        // set delete pictures from camera checkbox
+        var folder = g_oShell.NameSpace(g_strDisplayName);
+        g_bCanDelete = SupportDelete(folder);
+        cbDelete.checked = g_bCanDelete;
+        cbDelete.disable = !g_bCanDelete;
+    }
+}
+
+// check whether a folder supports delete, 
+// ie, all items in the folder have delete verb
+function SupportDelete(folder)
+{
+    var items = folder.Items();
+    var count = items.Count;
+
+    for ( var i = 0; i < count; i++ )
+    {
+        var item = items.Item(i);
+        if ( !HasVerb(item, "Delete") )
+            return false;
+    }
+
+    return true;
+}
+
+// check whether a folder item has the specified verb ( case insensitive )
+function HasVerb(item, verb)
+{
+    var verbs = item.Verbs();
+    var count = verbs.Count;
+
+    for ( var i = 0; i < count; i++ )
+    {
+        var tmpverb = verbs.Item(i);
+        var name = RemoveChar(tmpverb.Name, "&");
+
+        if (verb.toLowerCase() == name.toLowerCase())
+           return true;
+   }
+
+   return false;
+}
+
+// remove character chr from string str
+function RemoveChar(str, chr)
+{
+    var arr = str.split(chr);
+    var ret = "";
+
+    for ( var i = 0; i < arr.length; i++ )
+        ret += arr[i];
+
+    return ret;
+}
+</SCRIPT>
+
+<SCRIPT for=window event=onload>
+    external.event.registerSink("Place.BeginTransition", OnBeforePlaceTransition, false);
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript">
+var L_ErrorMsg_TEXT = "Operation failed!";
+var L_InvalidPath_Text = "Invalid path!";
+var L_CamErr_Text = "Please check that your camera is connected, turned on and is set to connect to the computer.";
+
+function GetPictures()
+{
+    var srcfldr = g_oBrowser.Document.Folder;
+    var dstfldr = g_oShell.NameSpace("shell:My Pictures");
+
+    // if user specified a destination folder, try to use it
+    if (txtDestFolder.value != "")
+    {
+        try
+        {
+            dstfldr.NewFolder(txtDestFolder.value);
+            var dstfldritem = dstfldr.ParseName(txtDestFolder.value);
+            dstfldr = dstfldritem.GetFolder;
+        }
+        catch (e)
+        {
+            // user typed in an invalid path, force retry
+            alert(L_InvalidPath_Text);
+            txtDestFolder.select();
+            txtDestFolder.focus();
+
+            return false;
+        }
+    }
+
+    /*
+    // if the camera is no longer plugged and in connect mode, 
+    // pop up error message and go back to home page
+    if (!CheckPath(srcfldr.Self.Path, L_CamErr_Text))
+    {
+        external.places.transitionTo("Home");
+        return false;
+    }
+    */
+
+    if ((srcfldr != null) && (dstfldr != null))
+    {
+        // copy/move pictures from camera
+        // bugbug: camera namespace extension does not support move yet
+        dstfldr.CopyHere(srcfldr.Items());
+        if (cbDelete.checked)
+            srcfldr.Items().InvokeVerbEx("Delete");
+
+        // navigate browser control into destination folder
+        g_oBrowser.Navigate2(dstfldr.Self);
+        
+        // add destination folder to picture folder MRU
+        AddToRecentPictures(dstfldr.Self);
+
+        // go to my pictures page to edit/view it
+        // don't add camera page to travel log
+        external.places.transitionTo("My Pictures");
+    }
+    else
+    {
+        // this should never happen
+        alert(L_ErrorMsg_TEXT);
+    }
+
+    return false;
+}
+
+// check whether the specified path is valid
+function CheckPath(path, errmsg)
+{
+    // make sure the camera is still plugged and in connect mode
+    try
+    {
+        var folder = g_oShell.NameSpace(path);
+        if (folder == null)
+            throw errmsg
+    }
+    catch (e)
+    {
+        alert(errmsg);
+        return false;
+    }
+
+    return true;
+}
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<!-- background image -->
+<IMG SRC="images/stripes.gif" CLASS="backgroundimage">
+
+<!-- page content -->
+<TABLE CLASS="PageContentTable">
+    <!-- logo -->
+    <TR CLASS="PageTitleRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD CLASS="title" ID="PageTitle">Get pictures from your camera</TD>
+    </TR>
+
+    <!-- main content -->
+    <TR CLASS="PageContentRow">
+        <TD CLASS="PageLeftSpacer">&nbsp</TD>
+        <TD CLASS="PageContentCell">
+            <TABLE CLASS="ContentDividerTable">
+                <TR CLASS="ContentDividerRow">
+                    <!-- tasks -->
+                    <TD CLASS="LeftContentCell">
+                        <TABLE CLASS="textSecondary">
+                            <TR>
+                                <TD CLASS="textPrimary"  ID="CommandTitle"COLSPAN=2>To copy pictures to your computer:<p></TD>
+                            </TR>
+                            <TR>
+                                <TD id=aaa>1.</td>
+                                <td ID=step1>Type a name for the folder where you want to save your pictures:<P>
+                                    <INPUT ID=txtDestFolder TYPE=TEXT MAXSIZE=255 STYLE="width:80%"/><P>
+                                </td>
+                            </tr>
+                            <tr>
+                                <TD id=bbb>2.</td>
+                                <td ID=step2>Click <B>Get Pictures.</B><P>
+                                    <BUTTON ID=btnGetPictures ONCLICK="GetPictures();" ACCESSKEY="G"><U>G</U>et Pictures</BUTTON><p>
+                                </TD>
+                            </TR>
+                            <TR>
+                                <TD><INPUT ID=cbDelete TYPE=CHECKBOX /></TD>
+                                <TD><LABEL ID=idText1 FOR=cbDelete CLASS="textSecondary" ACCESSKEY="D"><U>D</U>elete pictures from camera after copying them to my computer</LABEL></TD>
+                            </TR>
+                        </TABLE>
+                    </TD>
+
+                    <!-- other content -->
+                    <TD CLASS="RightContentCell" id=Master STYLE="behavior: url(..\common\master.htc);" slave="Namespace">
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>
