@@ -1,0 +1,11 @@
+<!--
+    CSS Template for Millennium Activity Center
+-->
+
+body {
+    behavior: url(..\common\ActDead.htc);
+}
+
+p, td {
+    cursor: default;
+}

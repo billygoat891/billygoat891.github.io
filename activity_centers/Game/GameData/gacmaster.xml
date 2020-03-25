@@ -1,0 +1,623 @@
+<GACMASTER>
+<GAMEPUBLISHERS>
+
+	<PUBLISHER>
+		<INDEX>XXX</INDEX> 
+		<COMPANY>Acclaim Entertainment</COMPANY>
+		<URL>http://www.acclaim.net</URL> 
+		<STATUS>valid</STATUS> 
+	</PUBLISHER>
+
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Abe's Oddysey</COMPANY>			<URL>http://www.digitald.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Broderbund Software</COMPANY>		<URL>http://www.broderbund.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BullFrog</COMPANY>				<URL>http://www.bullfrog.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Eidos Interactive</COMPANY>		<URL>http://www.eidos.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Electronic Arts</COMPANY>			<URL>http://www.ea.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>HeadGames</COMPANY>				<URL>http://www.headgames.net</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>I-Magic Games</COMPANY>			<URL>http://www.imagicgames.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Jane's Combat Simulations</COMPANY><URL>http://www.janes.ea.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>LucasArts</COMPANY>				<URL>http://www.lucasarts.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Maxis</COMPANY>					<URL>http://www.maxis.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MicroProse</COMPANY>				<URL>http://www.microprose.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Microsoft Games</COMPANY>			<URL>http://www.microsoft.com/games</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Psygnosis</COMPANY>				<URL>http://www.psygnosis.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>SegaSoft</COMPANY>				<URL>http://www.segasoft.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sierra</COMPANY>					<URL>http://www.sierra.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Westwood</COMPANY>				<URL>http://www.westwood.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Interplay Sports</COMPANY>		<URL>http://www.interplaysports.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>3DO</COMPANY>						<URL>http://www.3DO.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>EA SPORTS</COMPANY>				<URL>http://www.easports.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>OT Sports</COMPANY>				<URL>http://www.otsports.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dynamix</COMPANY>					<URL>http://www.dynamix.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Orbital Studios</COMPANY>			<URL>http://www.orbitalsi.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Fox Interactive</COMPANY>			<URL>http://www.foxinteractive.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Razorworks</COMPANY>				<URL>http://www.razorworks.com</URL> <STATUS>valid</STATUS> </PUBLISHER>
+	 <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>--untested--</COMPANY>			<URL>http://www.foobar.com</URL> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>21st Century Entertainment</COMPANY>		<URL>http://www.21stcent.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>AbleSoft, Inc.</COMPANY>		<URL>http://www.mmi.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Accolade</COMPANY>		<URL>http://www.accolade.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Activision</COMPANY>		<URL>http://www.activision.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Addiction Interactive</COMPANY>		<URL>http://www.addiction.se</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Adrenalin Interactive</COMPANY>		<URL>http://www.adrenalin.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Advanced Idea Machines</COMPANY>		<URL>http://www.xmission.com/~aimgames</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Advanced Productions, Inc. (API)</COMPANY>		<URL>http://www.apigames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Adventure Soft</COMPANY>		<URL>http://www.adventuresoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Aegis Simulation Technologies</COMPANY>		<URL>http://www.aegistech.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Aftermath Media</COMPANY>		<URL>http://www.aftermathmedia.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Alea Enterprises</COMPANY>		<URL>http://www.aleaenterprises.com/petmatch/default.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Alien Software</COMPANY>		<URL>http://www.aliensoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Alive Software</COMPANY>		<URL>http://www.alivesoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Altor Systems Inc.</COMPANY>		<URL>http://www.altorsys.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ambertec</COMPANY>		<URL>http://www.ambertec.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ambrosia Software</COMPANY>		<URL>http://www.ambrosiasw.com/http://www.ambrosiasw.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>American Interactive Pictures</COMPANY>		<URL>http://www.aipictures.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Amigatek Espana S.L.</COMPANY>		<URL>http://www.amigatek.com/http://www.amigatek.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Anarchy Entertainment</COMPANY>		<URL>http://www.anarchyent.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Andrade Arts</COMPANY>		<URL>http://www.andradearts.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Aneiva</COMPANY>		<URL>http://www.cydoniagame.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Angel Studios</COMPANY>		<URL>http://www.angel.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>AnimaTek, Inc.</COMPANY>		<URL>http://www.animatek.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Anomaly Software, Inc.</COMPANY>		<URL>http://www.anomalygames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Anonymes Informatique</COMPANY>		<URL>http://www.anonymes.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Any Channel</COMPANY>		<URL>http://www.anychannel.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Apogee Software</COMPANY>		<URL>http://www.apogee1.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Argonaut</COMPANY>		<URL>http://www.argonaut.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Argos Gameware</COMPANY>		<URL>http://www.gameware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Aros Magic</COMPANY>		<URL>http://www.arosmagic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>ASC Head Games</COMPANY>		<URL>http://www.ascgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>ASCII Entertainment Software</COMPANY>		<URL>http://www.asciient.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Aspyr Media, Inc.</COMPANY>		<URL>http://www.aspyr.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Atari Games Inc.</COMPANY>		<URL>http://www.atarigames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Atlus Software, Inc.</COMPANY>		<URL>http://www.atlus.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Atomic Games</COMPANY>		<URL>http://www.atomic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Attention To Detail</COMPANY>		<URL>http://www.atd.co.uk/index.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Audiogenic Software</COMPANY>		<URL>http://www.audiogenic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Avalanche Software</COMPANY>		<URL>http://www.avalanchesoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Awesome Developments</COMPANY>		<URL>http://www.awesome.uk.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BadgerCom Software</COMPANY>		<URL>http://www.badgercom.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Balmoral Software</COMPANY>		<URL>http://www.balmoralsoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Berkeley Systems</COMPANY>		<URL>http://www.berksys.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Bethesda Softworks</COMPANY>		<URL>http://www.bethsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Beyond Reality Ltd.</COMPANY>		<URL>http://www.beyond-reality.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Beyond Virtual Media</COMPANY>		<URL>http://www.beyondvirtual.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BFM Software</COMPANY>		<URL>http://www.bfmsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Big Time Software</COMPANY>		<URL>http://www.bigtimesoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BioWare Corp.</COMPANY>		<URL>http://www.bioware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Black Dragon Productions, Inc</COMPANY>		<URL>http://www.blackdragon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Blackmoon Development</COMPANY>		<URL>http://www.converted2.com/bmd</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Bleem</COMPANY>		<URL>http://www.bleem.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Blizzard Entertainment</COMPANY>		<URL>http://www.blizzard.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Blue Byte Software</COMPANY>		<URL>http://www.bluebyte.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BMG Interactive</COMPANY>		<URL>http://www.bmginteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BMP-Data</COMPANY>		<URL>http://www.bmp.dk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Bomico</COMPANY>		<URL>http://www.bomico.de</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Boss Game Studios</COMPANY>		<URL>http://www.bossgame.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BrainTainment</COMPANY>		<URL>http://www.brain.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BraSoft</COMPANY>		<URL>http://www.brasoft.com.br</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Bridge Base, Inc.</COMPANY>		<URL>http://www.bridgebase.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BridgeWare</COMPANY>		<URL>http://www.bridgebuff.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Brutus</COMPANY>		<URL>http://www.cam.org/~bigjeff/Brutus.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Buka Entertainment</COMPANY>		<URL>http://www.buka.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Bungie Software</COMPANY>		<URL>http://www.bungie.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Butt Monkey Software</COMPANY>		<URL>http://www.buttmonkey.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>BW Software</COMPANY>		<URL>http://www.nilenet.com/~ericd</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>C&amp;M Studios</COMPANY>		<URL>http://cmstudios.simplenet.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CameraGames Inc.</COMPANY>		<URL>http://www.cameragames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Capcom</COMPANY>		<URL>http://www.capcom.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Caravan</COMPANY>		<URL>http://www.caravan.fr</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Carr Software</COMPANY>		<URL>http://www.carrsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Catware</COMPANY>		<URL>http://www.catware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cavedog Entertainment</COMPANY>		<URL>http://www.cavedog.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CDV Software</COMPANY>		<URL>http://www.cdv.de</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cerberus Development</COMPANY>		<URL>http://www.cerbdev.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Changeling, Inc.</COMPANY>		<URL>http://www.changeling.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Chaos Software</COMPANY>		<URL>http://www.mbnet.mb.ca/chaos</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cheapware</COMPANY>		<URL>http://www.cheapware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Chrome Tiger Software</COMPANY>		<URL>http://www.chrometiger.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cinematix Studios, Inc</COMPANY>		<URL>http://www.cinematix.com/home.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Citadel Softworx</COMPANY>		<URL>http://www.citadelsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CJ Games, Inc.</COMPANY>		<URL>http://www.geocities.com/SiliconValley/Lakes/2983/index.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>clickBOOM</COMPANY>		<URL>http://www.clickboom.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Codemasters Software Company Limited</COMPANY>		<URL>http://www.codemasters.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CogniToy</COMPANY>		<URL>http://www.cognitoy.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Colossus</COMPANY>		<URL>http://www.colossus.demon.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CompuGames Software</COMPANY>		<URL>http://www.compugames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Computer One Network</COMPANY>		<URL>http://www.computerone.it</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Contango, Inc</COMPANY>		<URL>http://www.contango.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Core Concepts, Inc.</COMPANY>		<URL>http://www.coregames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CounterActive Software</COMPANY>		<URL>http://www.pacific.net/~countact</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Crack dot Com</COMPANY>		<URL>http://www.crack.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Creative Extremes</COMPANY>		<URL>http://www.extremes.co.nz</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Crimson Productions</COMPANY>		<URL>http://www.crimson.ca</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Crysalis Software</COMPANY>		<URL>http://www.crysalis.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Crystal Dynamics</COMPANY>		<URL>http://www.crystald.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CW Software</COMPANY>		<URL>http://www.nccn.net/~cwsoft</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cyan, Inc.</COMPANY>		<URL>http://www.cyan.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cyberflix Inc.</COMPANY>		<URL>http://www.cyberflix.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cyberlife Technology Ltd.</COMPANY>		<URL>http://www.cyberlife.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Cyberlore Studios, Inc.</COMPANY>		<URL>http://www.cyberlore-studios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>CyberPunk Software</COMPANY>		<URL>http://members.aol.com/cyberpsoft/cyberps.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dadgum Games</COMPANY>		<URL>http://www.dadgum.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Darwin 3D</COMPANY>		<URL>http://www.darwin3d.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Data Flash</COMPANY>		<URL>http://www.dataflash.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DC Software</COMPANY>		<URL>http://web2.airmail.net/davidh1/index.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Deadly Games</COMPANY>		<URL>http://www.deadlygames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Delta Tao Software</COMPANY>		<URL>http://www.deltatao.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Devil's Thumb Entertainment</COMPANY>		<URL>http://www.devilsthumb.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digi4Fun USA</COMPANY>		<URL>http://www.digi4fun.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DigiCraft Software</COMPANY>		<URL>http://www.alphalink.com.au/~leigh/digicraft.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Anvil</COMPANY>		<URL>http://www.digitalanvil.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Delirium</COMPANY>		<URL>http://home.earthlink.net/~roam_one</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Dialect</COMPANY>		<URL>http://www.digitald.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Empires Inc.</COMPANY>		<URL>http://www.digitalempires.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Image Design</COMPANY>		<URL>http://www.did.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Knights, Inc.</COMPANY>		<URL>http://www.digitalknights.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Nightmares</COMPANY>		<URL>http://www.informatik.uni-oldenburg.de/~miha</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Osmosis</COMPANY>		<URL>http://www.digitalosmosis.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Platoon</COMPANY>		<URL>http://www.digitalplatoon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Thunder, Inc.</COMPANY>		<URL>http://www.digitalthunder.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Digital Werks</COMPANY>		<URL>http://www.virtualhawaii.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DigiTar Corporation</COMPANY>		<URL>http://www.hooked.net/users/williams/digitar.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dong Seo Interactive, Inc.</COMPANY>		<URL>http://www.dsnet.co.kr</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dot Products Ltd</COMPANY>		<URL>http://www.dotproducts.ltd.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Double</COMPANY>		<URL>http://www.pcv-soft.com/double</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Double Aught Software, Inc.</COMPANY>		<URL>http://www.doubleaught.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dr. Brain</COMPANY>		<URL>http://www.drbrain.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DreamStone Entertainment</COMPANY>		<URL>http://www.dreamstone.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DreamWorks Interactive</COMPANY>		<URL>http://www.dreamworksgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dungeon Crawl Software Limited</COMPANY>		<URL>http://www.dungeon-crawl.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DynoTech Software</COMPANY>		<URL>http://www.dynotech.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Eagle Rock Enterprises, Inc.</COMPANY>		<URL>http://www.eaglerock.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Eclipse Software Development</COMPANY>		<URL>http://www.esdev.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>EdUGames</COMPANY>		<URL>http://www.edugames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Eidetic, Inc</COMPANY>		<URL>http://www.eidetic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Electric Eggplant Entertainment</COMPANY>		<URL>http://www.nbn.com/~eeggplnt</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Electric Planet Interactive</COMPANY>		<URL>http://www.e-planet.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Electric Prism</COMPANY>		<URL>http://www.electricprism.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>ElectroMagnetic Poetry</COMPANY>		<URL>http://www.emagpoe.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Electrotech Multimedia</COMPANY>		<URL>http://www.electrotech.ru</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Emerald Software</COMPANY>		<URL>http://www.emeraldsw.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Empire Interactive [UK]</COMPANY>		<URL>http://www.empire.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Empire Interactive [US]</COMPANY>		<URL>http://www.empire-us.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>EMWare Productions</COMPANY>		<URL>http://www.geocities.com/TimesSquare/3109</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Enlight Software</COMPANY>		<URL>http://www.enlight.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Enterprising Ideas</COMPANY>		<URL>http://www.enterprisingideas.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Epic MegaGames</COMPANY>		<URL>http://www.epicgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Escape Ventures</COMPANY>		<URL>http://ev.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>ESP Software</COMPANY>		<URL>http://www.espsoftware.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Eurocom Developments Ltd.</COMPANY>		<URL>http://www.eurodltd.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Eutechnyx On-line</COMPANY>		<URL>http://www.eutechnyx.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Factor 5</COMPANY>		<URL>http://www.factor5.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Falcom</COMPANY>		<URL>http://www.falcom.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Fenris Wolf</COMPANY>		<URL>http://www.fenriswolf.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Firaxis Software</COMPANY>		<URL>http://www.firaxis.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Flight Sim Central</COMPANY>		<URL>http://www.fscentral.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Flying Mikros Interactive</COMPANY>		<URL>http://www.flyingmikros.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Flying Muffin Enterprises</COMPANY>		<URL>http://www.cris.com/~Flymuff</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Focus Studios</COMPANY>		<URL>http://www.lemmings.com/index.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Forgotten Sages Games</COMPANY>		<URL>http://www.fsgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Fox Sports Interactive</COMPANY>		<URL>http://www.foxsportsinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Foxchange Productions</COMPANY>		<URL>http://www.foxchange.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>freeVerse Software</COMPANY>		<URL>http://www.freeverse.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Game Experience Inc., The</COMPANY>		<URL>http://www.gamex.com/index_.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Game Players Service</COMPANY>		<URL>http://home.navisoft.com/gameplayersservice</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GameAgents</COMPANY>		<URL>http://www.gameagents.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GameFX Technology, Inc.</COMPANY>		<URL>http://www.gamefx.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GameLogic, Inc.</COMPANY>		<URL>http://www.gamelogic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Gameplay Company</COMPANY>		<URL>http://www.gameplayco.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Games Galore Software</COMPANY>		<URL>http://freespace.virgin.net/simon.walker4/home.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GameTraxx</COMPANY>		<URL>http://www.gametraxx.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Gamos</COMPANY>		<URL>http://www.gamos.ru</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Garsonix Computer Software</COMPANY>		<URL>http://www.garsonix.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Gee Whiz! Entertainment</COMPANY>		<URL>http://www.geewhiz.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GeminiSoftware</COMPANY>		<URL>http://members.tripod.com/~GemSoft</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Girl Games, Inc.</COMPANY>		<URL>http://www.girlgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Go Assistant</COMPANY>		<URL>http://go.airsltd.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Golden Point Multimedia</COMPANY>		<URL>http://www.goldenpoint.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GOTO Software</COMPANY>		<URL>http://www.goto.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Graphic Simulations Corporation</COMPANY>		<URL>http://www.graphsim.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Gray Design Associates</COMPANY>		<URL>http://www.dgray.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Green Dragon Creations</COMPANY>		<URL>http://www.greendragon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Greenleaf Online Store</COMPANY>		<URL>http://www.vpm.com/greenleaf</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Gremlin Interactive</COMPANY>		<URL>http://www.gremlin.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Grolier Interactive Games</COMPANY>		<URL>http://gi.grolier.com/gi/products/games/docs/maingame.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ground Up</COMPANY>		<URL>http://www.groundup.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GT Interactive Software</COMPANY>		<URL>http://www.gtinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GTI Software</COMPANY>		<URL>http://www.gtisoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Guillion Brothers Shareware</COMPANY>		<URL>http://members.aol.com/GBShare</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>GW Press</COMPANY>		<URL>http://www.gwpress.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hamster Republic</COMPANY>		<URL>http://hamsterrepublic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Happy Capitalist Productions</COMPANY>		<URL>http://www.happycapitalist.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hasbro Interactive, Inc.</COMPANY>		<URL>http://www.hasbro-interactive.com/http://www.hasbro-interactive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Her Interactive</COMPANY>		<URL>http://herinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Heuristic Park, Inc</COMPANY>		<URL>http://www.heuristicpark.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>High Performance Games</COMPANY>		<URL>http://www.hipergames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>High Voltage Software, Inc.</COMPANY>		<URL>http://www.high-voltage.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hobbs Consulting</COMPANY>		<URL>http://members.aol.com/linkrunner</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Holistic Design</COMPANY>		<URL>http://www.holistic-design.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hollis Research</COMPANY>		<URL>http://www.hollis.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hoopy Entertainment Inc. ARC</COMPANY>		<URL>http://www.hoopy.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hot Rod Games</COMPANY>		<URL>http://www.hotrodgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>HPS Simulations</COMPANY>		<URL>http://www.hpssims.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hughes Training/ LINK Division</COMPANY>		<URL>http://www.hti.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Hypnovista Software</COMPANY>		<URL>http://www.hypno.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>I-Motion</COMPANY>		<URL>http://www.imotion.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>I.D.E.A. Software</COMPANY>		<URL>http://www.ideasoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Id Software, Inc.</COMPANY>		<URL>http://www.idsoftware.com/http://www.idsoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Idiots With Sticks</COMPANY>		<URL>http://www.idiots.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ikarion Software</COMPANY>		<URL>http://www.ikarion.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Illusion Softworks</COMPANY>		<URL>http://www.illusionsoftworks.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Imagination Unlimited</COMPANY>		<URL>http://iu.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Indigo Games</COMPANY>		<URL>http://www.indigogames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Indigo Moon Productions, Inc.</COMPANY>		<URL>http://www.imoon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Inferno Interactive</COMPANY>		<URL>http://inferno.3dportal.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Infinite Monkey Systems</COMPANY>		<URL>http://www.imonkey.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Infogrames Entertainment</COMPANY>		<URL>http://www.infogrames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Intelligent Games</COMPANY>		<URL>http://www.igl.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Interactive Creations, Inc.</COMPANY>		<URL>http://www.icigames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>I-Magic Games</COMPANY>		<URL>http://www.imagicgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Interplay Productions</COMPANY>		<URL>http://www.interplay.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Intracorp Entertainment</COMPANY>		<URL>http://www.intracorp.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ion Storm</COMPANY>		<URL>http://www.ionstorm.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Iota Entertainment</COMPANY>		<URL>http://www.geocities.com/TimesSquare/7987</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>IPC Software</COMPANY>		<URL>http://www.ipc-software.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>IT Software</COMPANY>		<URL>http://www.cbpu.com/tjcossairt/it.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Jumpin' Jack Software, Inc.</COMPANY>		<URL>http://www.jumpinjack.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>JV Enterprises</COMPANY>		<URL>http://www.jvgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Kalisto</COMPANY>		<URL>http://www.kalisto.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Kaos Kontrol</COMPANY>		<URL>http://www.kaoskontrol.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Katana Software</COMPANY>		<URL>http://www.katanasoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Kellogg Creek Software</COMPANY>		<URL>http://www.kelloggcreek.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Kitt Peak</COMPANY>		<URL>http://www.kittpeak.co.jp</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>KO Interactive, Inc.</COMPANY>		<URL>http://www.ko-interactive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Koei</COMPANY>		<URL>http://www.koeigames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Konami</COMPANY>		<URL>http://www.konami.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>LatticeWork Software, Inc.</COMPANY>		<URL>http://www.latticeworksw.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>LavaMind</COMPANY>		<URL>http://www.lavamind.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Leaping Lizard Software, Inc</COMPANY>		<URL>http://www.lplizard.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Legacy Interactive Software</COMPANY>		<URL>http://www.legacyinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Legend Entertainment Company</COMPANY>		<URL>http://www.legendent.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Lernsoftware Spiele Loesungshefte</COMPANY>		<URL>http://users.aol.com/AWill18307/index.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Leryx Longsoft</COMPANY>		<URL>http://www.leryxlongsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Lionhead Studios Ltd.</COMPANY>		<URL>http://www.lionhead.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Logicware</COMPANY>		<URL>http://www.logicware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Loki Entertainment Software</COMPANY>		<URL>http://www.lokigames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Looking Glass Technologies</COMPANY>		<URL>http://www.lglass.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Lud IQ</COMPANY>		<URL>http://www.ludiq.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Lupine Games</COMPANY>		<URL>http://www.lupinegames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Macaw GamePoint</COMPANY>		<URL>http://www.gamepoint.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mad Catz, Inc.</COMPANY>		<URL>http://www.madcatz.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mad Genius Software</COMPANY>		<URL>http://www.madgenius.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mad Opal Pseudo Corporate Page</COMPANY>		<URL>http://enteract.com/~madopal</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MagiCastle</COMPANY>		<URL>http://www.magicastle.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Malachite</COMPANY>		<URL>http://www.csua.berkeley.edu/~alexz</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Martignoni, Andy</COMPANY>		<URL>http://www.siue.edu/~amartig</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Masque Publishing</COMPANY>		<URL>http://www.masque.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mattel Media</COMPANY>		<URL>http://www.mattelmedia.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Maxis</COMPANY>		<URL>http://www.maxis.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mazin Software</COMPANY>		<URL>http://www.mazin.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mecca Electronic Industries, Inc.</COMPANY>		<URL>http://www.mecca1.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mechanical Doughnut Productions</COMPANY>		<URL>http://mdp.webjump.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MediaSoft Co., Ltd.</COMPANY>		<URL>http://www.mediasoft.co.kr</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mega Tech Software</COMPANY>		<URL>http://www.megatechsoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Megablast Software</COMPANY>		<URL>http://www.chesworth.com/megablast</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Megamedia</COMPANY>		<URL>http://www.megamed.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Megatech Software</COMPANY>		<URL>http://www.megatech-software.com/index.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MGM Interactive</COMPANY>		<URL>http://www.mgminteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Micro Forte</COMPANY>		<URL>http://www.microforte.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MicroProse</COMPANY>		<URL>http://www.microprose.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Micronds</COMPANY>		<URL>http://www.microids.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Midway Games Inc.</COMPANY>		<URL>http://www.midway.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Military Simulations Inc.</COMPANY>		<URL>http://www.military-sim.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mind Interactive</COMPANY>		<URL>http://www.mindinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mindscape</COMPANY>		<URL>http://www.mindscape.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Mixed Metaphor Software</COMPANY>		<URL>http://www.mixedmetaphor.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Monolith Productions Inc.</COMPANY>		<URL>http://www.lith.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MonsterSoft</COMPANY>		<URL>http://www.monstersoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Monte Cristo Multimedia</COMPANY>		<URL>http://www.montecristo-multi.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>MoriSoft</COMPANY>		<URL>http://morisoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Motorsims</COMPANY>		<URL>http://www.motorsims.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Multimedia Terminal Production</COMPANY>		<URL>http://mtprod.citeweb.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Murder of Crows</COMPANY>		<URL>http://www.murderofcrows.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>n-Space, Inc.</COMPANY>		<URL>http://www.n-space.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Namco</COMPANY>		<URL>http://www.namco.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Naughty Dog, Inc</COMPANY>		<URL>http://www.naughtydog.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>NecroBones Headquarters</COMPANY>		<URL>http://www.gl.umbc.edu/~etoton1</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Nerve Lab Software</COMPANY>		<URL>http://www.nervelab.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>NerveNob</COMPANY>		<URL>http://www.nervenob.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Nessysoft</COMPANY>		<URL>http://www.ping.at/users/nessysoft</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Neuron Entertainment</COMPANY>		<URL>http://www.neuronentertainment.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Neversoft Entertainment</COMPANY>		<URL>http://www.neversoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>New Generation Software</COMPANY>		<URL>http://www.newgsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>New World Computing</COMPANY>		<URL>http://www.nwcomputing.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>NewKidCo</COMPANY>		<URL>http://www.newkidco.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Nichimen Graphics</COMPANY>		<URL>http://www.nichimen.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Nival Interactive</COMPANY>		<URL>http://www.nival.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>NovaLogic, Inc</COMPANY>		<URL>http://www.novalogic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Oasya SA</COMPANY>		<URL>http://www.oasya.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ocean</COMPANY>		<URL>http://www.oceanltd.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>OmegaTech Software</COMPANY>		<URL>http://www.otsoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>One Reality</COMPANY>		<URL>http://www.onereality.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>oP Group</COMPANY>		<URL>http://www.op-group.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Orange Games</COMPANY>		<URL>http://www.orangegames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Origin Systems, Inc.</COMPANY>		<URL>http://www.origin.ea.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Osiris Studios</COMPANY>		<URL>http://www.osirisstudios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>OSP Entertainment</COMPANY>		<URL>http://osp.simplenet.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Other 90% Technologies, Inc., The</COMPANY>		<URL>http://www.other90.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Oxford Softworks</COMPANY>		<URL>http://www.oxford-softworks.com/index.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pandemic Watch</COMPANY>		<URL>http://www.pandemicstudios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Papyrus</COMPANY>		<URL>http://www.papy.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Paradigm Entertainment</COMPANY>		<URL>http://www.pe-i.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Parallax Software</COMPANY>		<URL>http://www.pxsoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Particle Systems</COMPANY>		<URL>http://www.particle-systems.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pely, Istvan</COMPANY>		<URL>http://www.charm.net/~ipely/index.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Perception PTY LTD</COMPANY>		<URL>http://www.perception.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>PF. Magic</COMPANY>		<URL>http://www.pfmagic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Phaeton</COMPANY>		<URL>http://www.phaeton.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pie in the Sky Software</COMPANY>		<URL>http://www.catalog.com/psky</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Piranha Interactive Publishing</COMPANY>		<URL>http://www.piranhainteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Plaid World Software</COMPANY>		<URL>http://www.plaidworld.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Planet Moon Studios</COMPANY>		<URL>http://www.planetmoon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Player 1, Inc.</COMPANY>		<URL>http://www.player1.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>PlayMaker, Inc.</COMPANY>		<URL>http://www.playmaker.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Playtesters</COMPANY>		<URL>http://www.playtesters.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pop Rocket, Inc.</COMPANY>		<URL>http://www.poprocket.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pop Top Software</COMPANY>		<URL>http://www.poptopsoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Post Linear</COMPANY>		<URL>http://www.postlinear.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Presage Software</COMPANY>		<URL>http://www.presage.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Presto Studios, Inc.</COMPANY>		<URL>http://www.prestostudios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Primitive Itch</COMPANY>		<URL>http://members.aol.com/primitch/index.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Probe Entertainment</COMPANY>		<URL>http://www.probe.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Proletariat Entertainment, Inc.</COMPANY>		<URL>http://www.proletariat.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Prolific Publishing</COMPANY>		<URL>http://www.prolific.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Propellerhead</COMPANY>		<URL>http://www.propellerhead-phd.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pseudo Interactive</COMPANY>		<URL>http://www.pseudointeractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Psygnosis</COMPANY>		<URL>http://www.psygnosis.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Pulse Entertainment, Inc.</COMPANY>		<URL>http://www.pulsenetwork.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Qualia, Incorporated</COMPANY>		<URL>http://www.qualia.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Quantic Dream</COMPANY>		<URL>http://www.quanticdream.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Quarter Note Software</COMPANY>		<URL>http://www.qnote.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>RAD Game Tools</COMPANY>		<URL>http://www.radgametools.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Radical Entertainment</COMPANY>		<URL>http://www.radical.ca</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rage Software PLC</COMPANY>		<URL>http://www.rage.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Random Games</COMPANY>		<URL>http://www.randomgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rat Bag Games</COMPANY>		<URL>http://www.ratbaggames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rat Loop</COMPANY>		<URL>http://www.ratloop.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Raven Software</COMPANY>		<URL>http://www.ravensoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rayland Interactive</COMPANY>		<URL>http://www.rayland.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Reakktor Media Group</COMPANY>		<URL>http://www.reakktor.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Reality Bytes, Inc.</COMPANY>		<URL>http://www.realbytes.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Reality Containment Software</COMPANY>		<URL>http://www.rcsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rebel Boat Rocker</COMPANY>		<URL>http://www.rebelboatrocker.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rebellion</COMPANY>		<URL>http://www.rebellion.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Recombinant Limited</COMPANY>		<URL>http://www.recombinant.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Red Lemon Studios</COMPANY>		<URL>http://www.redlemon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Red Orb Entertainment</COMPANY>		<URL>http://www.redorb.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Red Storm Entertainment</COMPANY>		<URL>http://www.redstorm.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Reflexive Entertainment</COMPANY>		<URL>http://www.reflexive.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Reldni Productions</COMPANY>		<URL>http://www.reldni.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Revolution Software Ltd</COMPANY>		<URL>http://www.revolution.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Riedel Software Productions, Inc.</COMPANY>		<URL>http://www.rspinc.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ripcord Games</COMPANY>		<URL>http://www.ripcordgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ripstream Studios</COMPANY>		<URL>http://www.ripstream-studios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ritual Entertainment</COMPANY>		<URL>http://www.ritual.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>River Rock Sight &amp; Sound</COMPANY>		<URL>http://www.halcyon.com/riverock</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rogue Entertainment</COMPANY>		<URL>http://www.rogue-ent.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ronin Entertainment</COMPANY>		<URL>http://www.roningames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Rotation Corporation</COMPANY>		<URL>http://www.rotation.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Running With Scissors</COMPANY>		<URL>http://www.runningwithscissors.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Russpack</COMPANY>		<URL>http://www.latypov.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Saffire Corporation</COMPANY>		<URL>http://www.saffire.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sanctuary Woods Multimedia</COMPANY>		<URL>http://www.theatrix.com/sw.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sandbox Studios</COMPANY>		<URL>http://www.sandboxstudios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>SCi Games</COMPANY>		<URL>http://www.sci.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Science Fact Interactive</COMPANY>		<URL>http://www.mixnmojo.com/sciencefact</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sega Ozisoft</COMPANY>		<URL>http://www.segaozisoft.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Semicolon Software</COMPANY>		<URL>http://www.opendoor.com/Rick/Semicolon.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>SFS</COMPANY>		<URL>http://members.aol.com/umilde/sfs.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Shadow Island Games</COMPANY>		<URL>http://www.pbm.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Shiny Entertainment</COMPANY>		<URL>http://www.shiny.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Silicon Commander Games</COMPANY>		<URL>http://www.silicmdr.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Silicon Dreams Studio Ltd</COMPANY>		<URL>http://www.sdstudio.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Silly Cow Valley Software</COMPANY>		<URL>http://www.sillycowvalley.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Silmarils</COMPANY>		<URL>http://www.silmarils.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Silver Creek Entertainment</COMPANY>		<URL>http://www.silvercrk.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sim-Flite Australia</COMPANY>		<URL>http://www.simflite.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>SingleTrac</COMPANY>		<URL>http://www.singletrac.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sinister Games</COMPANY>		<URL>http://www.sinistergames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sir-tech Software</COMPANY>		<URL>http://www.sir-tech.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sleepless Software</COMPANY>		<URL>http://www.sleepless.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Soap Bubble Productions (SBP)</COMPANY>		<URL>http://www.soapbubble.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Softdisk Publishing</COMPANY>		<URL>http://www.softdisk.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Softhead Productions</COMPANY>		<URL>http://users.aol.com/softheadp/soft.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Software Dynamics GameWorld</COMPANY>		<URL>http://www.cadvision.com/inspace/sdi.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Software First</COMPANY>		<URL>http://www.softwarefirst.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Software Refinery Ltd</COMPANY>		<URL>http://www.refinery.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Softworld Advance Electronics Inc.</COMPANY>		<URL>http://www.chinesegames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>SolStar Media</COMPANY>		<URL>http://www.solstarmedia.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Some Interactive</COMPANY>		<URL>http://www.somezone.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Songbird Productions</COMPANY>		<URL>http://songbird.atari.org</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sound Source Interactive</COMPANY>		<URL>http://www.soundsourceinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>SouthPeak Interactive</COMPANY>		<URL>http://www.southpeak.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sphynx Software Inc.</COMPANY>		<URL>http://www.magmacom.com/~dferguso/sphynx</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sprintronics Video Games</COMPANY>		<URL>http://www.sprint.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Square</COMPANY>		<URL>http://www.squareusa.com/http://www.squareusa.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Stagecast Software, Inc.</COMPANY>		<URL>http://www.stagecast.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Stan Allen Import - Export</COMPANY>		<URL>http://www.motormem.ca</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Stancliff Spectrum Ltd.</COMPANY>		<URL>http://www.boink.net/ssl/ssl.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Stanley Associates</COMPANY>		<URL>http://www.stanleyassoc.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Star Graphics</COMPANY>		<URL>http://www.teleport.com/~sgc</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Starhill</COMPANY>		<URL>http://www.starhill.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>StarPlay</COMPANY>		<URL>http://www.starplay.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Starsphere Interactive, Inc.</COMPANY>		<URL>http://www.starsphere.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Starting Line Software</COMPANY>		<URL>http://www.startingline1.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Steven Spielberg's Director's Chair</COMPANY>		<URL>http://www.directorschair.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Stormfront Studios, Inc.</COMPANY>		<URL>http://www.stormfrontstudios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Strat-O-Matic Game Co.</COMPANY>		<URL>http://www.strat-o-matic.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Strategic Simulations Inc. (SSI)</COMPANY>		<URL>http://www.ssionline.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Strategic Studies Group</COMPANY>		<URL>http://www.ssgus.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Strategic Studies Group (SSG)</COMPANY>		<URL>http://www.ssg.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Strategist Checkers</COMPANY>		<URL>http://members.aol.com/agcrump/checkers.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Strike-Net</COMPANY>		<URL>http://www.strike-net.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Stromlo Entertainment</COMPANY>		<URL>http://www.stromlo.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sucker Punch Productions</COMPANY>		<URL>http://www.suckerpunch.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sunsoft</COMPANY>		<URL>http://www.sunsoft-games.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sunsoft Europe</COMPANY>		<URL>http://www.sunsoft.demon.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sunstorm Interactive</COMPANY>		<URL>http://www.sunstorm.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Synthetic Reality, Co.</COMPANY>		<URL>http://www.cris.com/~Cdrom/NetSpade.shtml</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>System Solutions</COMPANY>		<URL>http://www.ssolutions.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Syzygy Cult</COMPANY>		<URL>http://gossamer.wheatonma.edu/users/bcote/syzgycult/home.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tactical Soft</COMPANY>		<URL>http://www.tacticalsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Taff System</COMPANY>		<URL>http://www.taff.co.kr</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Take 2 Interactive</COMPANY>		<URL>http://www.take2games.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>TalonSoft, Inc.</COMPANY>		<URL>http://www.talonsoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tasc B.V.</COMPANY>		<URL>http://www.tasc.nl</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>TC Cons Software</COMPANY>		<URL>http://www.tccons.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Team Evil</COMPANY>		<URL>http://www.pt.hk-r.se/~pt94rfe/TeamEvil/TeamEvil.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Team Evolve</COMPANY>		<URL>http://www.teamevolve.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Team17 Software Ltd.</COMPANY>		<URL>http://www.team17.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>TEBID</COMPANY>		<URL>http://www.xnet.com/~mdalinis/tebid.html</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tecmo</COMPANY>		<URL>http://www.tecmoinc.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Telegames</COMPANY>		<URL>http://www.telegames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Telemedia Roadhouse</COMPANY>		<URL>http://www.telemedia.de</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Terminal Reality</COMPANY>		<URL>http://www.terminalreality.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tetris Company</COMPANY>		<URL>http://www.tetris.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>THQ, Inc.</COMPANY>		<URL>http://www.thq.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Thunderbear Software Creations</COMPANY>		<URL>http://www.thunderbear.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tiertex</COMPANY>		<URL>http://www.tiertex.demon.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Timeline Studios</COMPANY>		<URL>http://www.timelinestudios.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Titus Software Corporation</COMPANY>		<URL>http://www.titusgames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Top Gun Entertainment</COMPANY>		<URL>http://www.topgun.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Totally Games</COMPANY>		<URL>http://www.totallygames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Totobit Informatica</COMPANY>		<URL>http://www.totobit.it</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Train Dispatcher Railroad Computer Game</COMPANY>		<URL>http://www.usaor.net/signal</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Trecision</COMPANY>		<URL>http://www.trecision.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Trilobyte</COMPANY>		<URL>http://www.tbyte.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Triton Entertainment</COMPANY>		<URL>http://www.geocities.com/TimesSquare/Arcade/5663</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tronix Multimedia Corp</COMPANY>		<URL>http://www.tronixweb.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Tsunami Media, Inc.</COMPANY>		<URL>http://www.tsunamimedia.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Turbine Entertainment Software Inc.</COMPANY>		<URL>http://www.turbinegames.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Twilight Zone Software</COMPANY>		<URL>http://www.tzsoft.no</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ubi Soft</COMPANY>		<URL>http://www.ubisoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Ubi Soft France</COMPANY>		<URL>http://www.ubisoft.fr</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>UDS</COMPANY>		<URL>http://www.uds.se</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Utopia Technologies</COMPANY>		<URL>http://www.utopiatech.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Valve</COMPANY>		<URL>http://www.valvesoftware.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Vicarious Visions, Inc.</COMPANY>		<URL>http://www.vvisions.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Vipah Interactive</COMPANY>		<URL>http://www.vipah.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Virgin Interactive Entertainment</COMPANY>		<URL>http://www.vie.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Virtual Adventures Domain</COMPANY>		<URL>http://www.virtuadv.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Virtual Management</COMPANY>		<URL>http://www.cabs.de</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Virtual Studios Ltd</COMPANY>		<URL>http://www.vrworlds.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Vision Software NZ</COMPANY>		<URL>http://www.vision.co.nz</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Vortigern Strategic Software</COMPANY>		<URL>http://vortigern.com.au</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Vulcan Software Limited</COMPANY>		<URL>http://www.vulcan.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Wahoo Software</COMPANY>		<URL>http://www.wahoo.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>WayForward</COMPANY>		<URL>http://www.wayforward.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Web.Works Interactive</COMPANY>		<URL>http://webworks.inet.net.my</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Westlake Interactive</COMPANY>		<URL>http://www.westlakeinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Westwood</COMPANY>		<URL>http://www.westwood.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Wihlborg Entertainment</COMPANY>		<URL>http://www.wihlborg.se</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Wilson Software</COMPANY>		<URL>http://www.wilsonsw.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Windward Studios, Inc.</COMPANY>		<URL>http://www.windward.net</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>WizardWorks Group, Inc</COMPANY>		<URL>http://www.wizworks.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>WizBang! Software Productions</COMPANY>		<URL>http://www.wizbang.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Working Designs</COMPANY>		<URL>http://www.workingdesigns.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Worldwide MicroTronics, Inc.</COMPANY>		<URL>http://www.microtronics.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>ZED Software</COMPANY>		<URL>http://www.orst.edu/~paynee/index.htm</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Zed Two</COMPANY>		<URL>http://www.zedtwo.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Zenda Studio</COMPANY>		<URL>http://www.zenda.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Zetha</COMPANY>		<URL>http://www.zetha.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Zombie Virtual Reality Entertainment</COMPANY>		<URL>http://www.zombie.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>DelphineSoft</COMPANY>		<URL>http://www.delphinesoft.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>IE</COMPANY>		<URL>http://www.interactive-entertainment.co.uk</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>The Digital Village</COMPANY>		<URL>http://www.tdv.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Interplay Sports</COMPANY>		<URL>http://www.interplaysports.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>3DO</COMPANY>		<URL>http://www.3DO.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>EA SPORTS</COMPANY>		<URL>http://www.easports.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>LK Avalon</COMPANY>		<URL>http://www.lkavalon.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>OT Sports</COMPANY>		<URL>http://www.otsports.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Dynamix</COMPANY>		<URL>http://www.dynamix.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Orbital Studios</COMPANY>		<URL>http://www.orbitalsi.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Fox Interactive</COMPANY>		<URL>http://www.foxinteractive.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Sega Entertainment</COMPANY>		<URL>http://www.sega.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+ <PUBLISHER> <INDEX> XXX </INDEX> <COMPANY>Razorworks</COMPANY>		<URL>http://www.razorworks.com</URL> <STATUS>TBD</STATUS> </PUBLISHER>
+</GAMEPUBLISHERS>
+
+<GAMETITLELIST>
+	<TITLE>
+		<INDEX>XXX</INDEX>
+		<PUBLISHERIDX>XXXX</PUBLISHERIDX>
+		<COMPANY>Microsoft Bundled Games</COMPANY>
+		<DISPLAYNAME>FreeCell</DISPLAYNAME>	
+		<DESCRIPTION>FreeCell</DESCRIPTION>	
+		<LAUNCHFILE>freecell.lnk</LAUNCHFILE> 
+		<UNINSTALLREG></UNINSTALLREG>	
+		<BANNER></BANNER>		
+		<URL>http://www.microsoft.com/games</URL>
+		<ICONINFO>bundled freecell.gif</ICONINFO>
+		<STATUS>TBD</STATUS>
+	</TITLE>
+	<TITLE>
+		<INDEX>XXX</INDEX>
+		<PUBLISHERIDX>XXXX</PUBLISHERIDX>
+		<COMPANY>Microsoft Bundled Games</COMPANY>
+		<DISPLAYNAME>Hearts</DISPLAYNAME>	
+		<DESCRIPTION>Hearts</DESCRIPTION>	
+		<LAUNCHFILE>Hearts.lnk</LAUNCHFILE> 
+		<UNINSTALLREG></UNINSTALLREG>	
+		<BANNER></BANNER>		
+		<URL>http://www.microsoft.com/games</URL>
+		<ICONINFO>bundled MsHearts.gif</ICONINFO>
+		<STATUS>TBD</STATUS>
+	</TITLE>
+	<TITLE>
+		<INDEX>XXX</INDEX>
+		<PUBLISHERIDX>XXXX</PUBLISHERIDX>
+		<COMPANY>Microsoft Bundled Games</COMPANY>
+		<DISPLAYNAME>MineSweeper</DISPLAYNAME>	
+		<DESCRIPTION>MineSweeper</DESCRIPTION>	
+		<LAUNCHFILE>MineSweeper.lnk</LAUNCHFILE> 
+		<UNINSTALLREG></UNINSTALLREG>	
+		<BANNER></BANNER>		
+		<URL>http://www.microsoft.com/games</URL>
+		<ICONINFO>bundled WinMine.gif</ICONINFO>
+		<STATUS>TBD</STATUS>
+	</TITLE>
+	<TITLE>
+		<INDEX>XXX</INDEX>
+		<PUBLISHERIDX>XXXX</PUBLISHERIDX>
+		<COMPANY>Microsoft Bundled Games</COMPANY>
+		<DISPLAYNAME>Solitaire</DISPLAYNAME>	
+		<DESCRIPTION>Solitaire</DESCRIPTION>	
+		<LAUNCHFILE>Solitaire.lnk</LAUNCHFILE> 
+		<UNINSTALLREG></UNINSTALLREG>	
+		<BANNER></BANNER>		
+		<URL>http://www.microsoft.com/games</URL>
+		<ICONINFO>bundled sol.gif</ICONINFO>
+		<STATUS>TBD</STATUS>
+	</TITLE>
+</GAMETITLELIST>
+
+<EXCLUDELIST>
+		<EXCLUDE>uninstall</EXCLUDE>
+		<EXCLUDE>readme</EXCLUDE>
+		<EXCLUDE>read me</EXCLUDE>
+		<EXCLUDE>setup</EXCLUDE>
+		<EXCLUDE>utility</EXCLUDE>
+		<EXCLUDE>utilities</EXCLUDE>
+		<EXCLUDE>notes</EXCLUDE>
+		<EXCLUDE>install</EXCLUDE>
+		<EXCLUDE>remove</EXCLUDE>
+		<EXCLUDE>registration</EXCLUDE>
+		<EXCLUDE>hardware</EXCLUDE>
+		<EXCLUDE>view </EXCLUDE>
+		<EXCLUDE>register</EXCLUDE>
+
+</EXCLUDELIST>
+
+
+<FILTERLIST>
+		<FILTER>play</FILTER>
+</FILTERLIST>
+</GACMASTER>
