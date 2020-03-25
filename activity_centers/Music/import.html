@@ -1,0 +1,238 @@
+<html>
+<HEAD>
+<LINK REL="stylesheet" TYPE="text/css" HREF="music.css"></LINK>
+<TITLE> Import Music </TITLE>
+<SCRIPT SRC="musicctr.js"> </SCRIPT>
+    <script>
+        function OnReadyStateComplete()
+        {
+            if ((document.readyState == "complete") && (external.setting("BrowseForFiles") == null))
+            {
+                external.setting("BrowseForFiles") = true;
+                DoSearch("::{20D04FE0-3AEA-1069-A2D8-08002B30309D}");
+            }
+        }
+
+        function DoBrowse()
+        {
+            var L_Title_Text =    "Choose Directory to search";
+            var folder = external.shell.BrowseForFolder(0,L_Title_Text, 0);
+
+            if (folder)
+            {
+                var fldritem  =  folder.Self;
+
+                if (fldritem)
+                {
+                    var where = fldritem.Path;
+
+                    if (where)
+                    {
+                        DoSearch(where);
+                    }
+                }              
+            }
+            return false;
+        }
+
+        function DoSearch(where)
+        {   
+            FindCommand.AddConstraint("LookIn", where);
+            FindCommand.AddConstraint("Named", "*.MP3;*.wma");
+            FindCommand.Execute("", "", 1);
+            return false;
+        }
+
+        //Set the handler for ready state complete
+        document.onreadystatechange = OnReadyStateComplete;
+
+    </script>
+
+    <script FOR=WebBrowser EVENT=DocumentComplete>
+        FolderViewEvents.SetFolderView(WebBrowser.Document);
+    </script>
+
+    <script FOR=FindCommand EVENT=ProgressTextChanged>
+        Progress.innerHTML = FindCommand.ProgressText;
+        Count.innerHTML =  WebBrowser.Document.Folder.Items().Count + " files found";
+    </script>
+
+    <script FOR=FindCommand EVENT=SearchComplete>
+        WebBrowser.Document.Folder.Items().InvokeVerbEx("Add to Music");
+        Progress.innerHTML =  "Total of " + WebBrowser.Document.Folder.Items().Count + "files found";
+        Count.innerHTML =  "";
+    </script>    
+</HEAD>
+<BODY scroll=no>
+    <DIV CLASS="bottomleftimage">
+    <TABLE CLASS="fullpage" ONRESIZE="PositionPlayer();">
+        <TR STYLE="WIDTH:100%;">
+            <TD CLASS="aligntop" STYLE="WIDTH:100%;">
+                <TABLE STYLE="WIDTH:100%;">
+                    <!-- Top Empty Row -->
+                     <TR style="height:25px;">
+                        <TD style="width:46px;">
+                        </TD>
+                     </TR>
+                
+                     <!-- Main Content Row -->
+                     <TR CLASS="rowaboveplayer">
+                         <!-- Skip Column -->
+                         <TD>
+                         </TD>
+                    
+                        <!-- Main Content Cell -->
+                        <TD>
+                            <TABLE>
+                            
+            			        <TR>
+            			            <TD>
+            			            
+            			    	        <SPAN CLASS="commandtitle"> 
+            			    		        <ID id="choosethe"> Choose where to search for music  </ID>
+            			    	        </SPAN>
+            			    	    </TD>
+            			        </TR>
+
+            			    <TR STYLE="height:15px">
+            			    	<TD>
+            			    	</TD>
+            			    </TR>
+            			    
+            			    <TR>
+            			        <TD>
+            			            <TABLE>
+            			                <TR>
+            			                    <TD>
+                                                <SPAN CLASS="tasktitle">
+                                                    <ID ID="AutomaticSearch">
+                                                        To automatically search My Computer for music to add to My Music,click:
+                                                    </ID>
+                                                </SPAN>
+                                                <BR>
+                                                <SPAN CLASS ="tasksubtitle">
+                                                    <A OnClick="return DoSearch('::{20D04FE0-3AEA-1069-A2D8-08002B30309D}');" HREF="">
+                                                        <ID ID="SearchMyComp">Search My Computer</ID>
+                                                    </A>
+                                                </SPAN>
+                                            </TD>			                
+            			                </TR>
+                                        
+                                        <TR style="height:15px">
+                                            <TD>
+                                            </TD>
+                                        </TR>
+                                        
+                                        <TR>
+                                            <TD>
+                                                <SPAN CLASS="tasktitle">                                
+                                                    <ID ID="AllowsToBrowse">
+                                                        To search a specific folder for music files click:
+                                                    </ID>
+                                                </SPAN>
+                                                <BR>                                
+                                                <SPAN CLASS ="tasksubtitle">
+                                                    <A OnClick="return DoBrowse();" HREF="">
+                                                        <ID ID="BrowseSearch">Browse for folder</ID>
+                                                    </A>
+                                                </SPAN>
+                                            
+                                                <OBJECT ID=FolderViewEvents classid="CLSID:9BA05971-F6A8-11CF-A442-00A0C90A8F39">
+                                                </OBJECT>
+
+                                                <object id=FindCommand classid="clsid:B005E690-678D-11d1-B758-00A0C90564FE">
+                                                </object>
+
+                                            </TD>
+                                        </TR>
+                                        
+                                        <TR style="height:15px;">
+                                            <TD>
+                                            </TD>
+                                        </TR>
+                                        
+                                        <TR>
+                                            <TD>
+                                                <DIV ID=Progress>&nbsp             &nbsp</DIV>
+                                            </TD>
+                                        </TR>
+
+                                        <TR style="height:15px;">
+                                            <TD>
+                                            </TD>
+                                        </TR>
+
+                                        <TR>
+                                            <TD>
+                                                <DIV ID=Count>&nbsp      &nbsp</DIV>
+                                            </TD>
+                                        </TR>
+                                        
+                                        <TR>
+                                            <TD>
+                                                <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" id=WebBrowser style="DISPLAY: none; HEIGHT: 100%; LEFT: 0px; TOP: 0px; WIDTH: 100%">
+                                                        <PARAM NAME="ExtentX" VALUE="25479">
+                                                        <PARAM NAME="ExtentY" VALUE="15371">
+                                                        <PARAM NAME="ViewMode" VALUE="4">
+                                                        <PARAM NAME="Offline" VALUE="0">
+                                                        <PARAM NAME="Silent" VALUE="0">
+                                                        <PARAM NAME="RegisterAsBrowser" VALUE="0">
+                                                        <PARAM NAME="RegisterAsDropTarget" VALUE="0">
+                                                        <PARAM NAME="AutoArrange" VALUE="-1">
+                                                        <PARAM NAME="NoClientEdge" VALUE="-1">
+                                                        <PARAM NAME="AlignLeft" VALUE="0">
+                                                        <PARAM NAME="NoWebView" VALUE="-1">
+                                                        <PARAM NAME="HideFileNames" VALUE="0">
+                                                        <PARAM NAME="SingleClick" VALUE="0">
+                                                        <PARAM NAME="SingleSelection" VALUE="0">
+                                                        <PARAM NAME="NoFolders" VALUE="0">
+                                                        <PARAM NAME="Transparent" VALUE="0">
+                                                        <PARAM NAME="ViewID" VALUE="{137E7700-3573-11CF-AE69-08002B2E1262}">
+                                                        <PARAM NAME="Location" VALUE="file:///::%7BE17D4FC0-5564-11D1-83F2-00A0C90DC849%7D"></OBJECT>                                
+                                            </TD>
+                                        </TR>
+                                        
+                                        <TR STYLE="height: 30px;">
+                                            <TD>
+                                            </TD>
+                                        </TR>
+                                    
+                                        <TR>
+                                            <TD>
+                                                <DIV CLASS="smallinstructionstitle">
+                                                    <ID ID=idYouCanAlso>You can also:</ID>
+                                                </DIV>
+                                                <DIV CLASS="alsotext">
+                                                    <DIV>
+                                                        <A ID=idPlaySomeSongs ONCLICK="return GoTo('AutoJukeBox')" HREF=""><ID ID="PlaySome">Play quick selections randomly</ID></A>
+                                                    </DIV>
+                                                    <DIV>
+                                                        <A ID=idCreateAPlayList ONCLICK="return OnCreateNewPlaylist()" HREF=""><ID ID="CreateAPlayList">Create a playlist</ID></A>
+                                                    </DIV>
+                                                    <DIV>
+                                                        <A ID=idOpenMyMusicFolder  CLASS="alsotextdisabled" ONCLICK="return GoTo('')" HREF=""><ID ID="OpenMyMusic">Open My Music folder</ID></A>
+                                                    </DIV>
+                                                </DIV>
+                                            </TD>
+                                        </TR>
+            			                
+            			            </TABLE>			            
+            			        </TD>
+            			    </TR>            			    
+                          </TABLE>
+                        </TD>            
+                     </TR>        
+                    </TABLE>
+                </TD>
+            </TR>
+            <TR>
+                <TD>
+                    <DIV ID=Master CLASS="playercell">
+                    </DIV>
+                </TD>
+            </TR>
+    </TABLE>
+</BODY>
+
+
+</html>

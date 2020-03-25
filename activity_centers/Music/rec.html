@@ -1,0 +1,322 @@
+<HTML>
+    <HEAD>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="music.css">
+        </LINK>
+        <TITLE>
+            CD Home Page
+        </TITLE>
+        <SCRIPT SRC="musicctr.js">
+        </SCRIPT>
+    </HEAD>
+    
+    <BODY SCROLL="no" ONLOAD="OnCDRecordPanelLoad();">
+
+        <!-- background images -->
+        <DIV CLASS="bottomleftimage">
+
+        <!-- the main table -->
+        <TABLE CLASS="fullpage" ONRESIZE="PositionPlayer();">
+            <TR STYLE="WIDTH:100%;">
+                <TD CLASS="aligntop" STYLE="WIDTH:100%;">
+                    <TABLE STYLE="WIDTH:100%;">
+
+                        <!-- padding on the left and top -->
+                        <TR STYLE="height: 25px;">
+                            <TD STYLE="width: 46px;">
+                            </TD>
+                        </TR>
+
+                        <!-- page content -->
+                        <TR CLASS="rowaboveplayer">
+
+                            <!-- skip the column -->
+                            <TD>
+                            </TD>
+                            
+                            <TD>
+                            
+                                <!-- the title "CD" -->
+                                <TABLE>
+
+                                    <!-- display this when there is no CD in the drive -->
+                                    <TR ID=idNoCD STYLE="display: none;">
+                                        <TD>
+                                            <TABLE>
+                                                <TR>
+                                                    <TD>
+                                                        <DIV CLASS="commandtitle">
+                                                            <ID ID=idInsertCD>Insert the CD you want to record</ID>
+                                                        </DIV>
+                                                    </TD>
+                                                </TR>
+                                                <TR STYLE="height: 15px;">
+                                                    <TD>
+                                                    </TD>
+                                                </TR>
+                                                <TR>
+                                                    <TD>
+                                                        <DIV CLASS="instructiontext">
+                                                            <DIV>
+                                                                <ID ID=idThereIsNoCD>There is no CD in the CD drive.</ID>
+                                                            </DIV>
+                                                            <DIV>
+                                                                <ID ID=idInsertItNow>Insert it now.</ID>
+                                                            </DIV>
+                                                        </DIV>
+                                                    </TD>
+                                                </TR>
+
+                                                <TR STYLE="height: 30px;">
+                                                    <TD>
+                                                    </TD>
+                                                </TR>
+
+                                                <!-- You can also: -->
+                                                <TR>
+                                                    <TD>
+                                                        <DIV STYLE="height: 100%;">
+                                                            <DIV CLASS="smallinstructionstitle">
+                                                                <ID ID=idYouCanAlso>You can also:</ID>
+                                                            </DIV>
+                                                            <DIV CLASS="alsotext">
+                                                                <DIV>
+                                                                    <A ID=idRecordCDs CLASS="alsotextdisabled" ONCLICK="return GoTo('')" HREF=""><ID ID="CustomRecord">Customize recording settings</ID></A>
+                                                                </DIV>
+                                                                <DIV>
+                                                                    <A ID=idChangeCDPlayList ONCLICK="return GoTo('CD')" HREF=""><ID ID="PlayACD">Play a CD</ID></A>
+                                                                </DIV>
+                                                            </DIV>
+                                                        </DIV>
+                                                    </TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                    </TR>
+
+                                    <!-- display this when the CD inserted is not a music CD -->
+                                    <TR ID=idInvalidCD STYLE="display: none;">
+                                        <TD>
+                                            <TABLE>
+                                                <TR>
+                                                    <TD>
+                                                        <DIV CLASS="commandtitle">
+                                                            <ID ID=idCantPlayCD>The Current CD is not a music CD. Please insert another.</ID>
+                                                        </DIV>
+                                                    </TD>
+                                                </TR>
+                                                <TR>
+                                                    <TD>
+                                                        <TABLE>
+                                                            <TR STYLE="height: 100px;">
+                                                                <TD STYLE="width: 100px;">
+                                                                </TD>
+                                                            </TR>
+                                                            <TR>
+                                                            
+                                                                <!-- skip the column -->
+                                                                <TD>
+                                                                </TD>
+                                                                <TD>
+                                                                    <DIV CLASS="tasksub">
+                                                                        <A ID=idEjectCD HREF=""><ID ID="EjectCD">Eject CD</ID></A>
+                                                                    </DIV>
+                                                                </TD>
+                                                            </TR>
+                                                        </TABLE>
+                                                    </TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                    </TR>
+                                    
+                                    <!-- display this when we are playing an album,
+                                            but we don't have meta data for it -->
+                                    <TR ID=idNewAlbum STYLE="display: none;">
+                                        <TD>
+                                            <TABLE>
+                                                <TR>
+                                                    <TD>
+                                                        <DIV ID=idNowPlaying CLASS="commandtitle">Confirm your selections and start recording</DIV>
+                                                    </TD>
+                                                </TR>
+                                                <TR STYLE="height: 15px;">
+                                                    <TD>
+                                                    </TD>
+                                                </TR>
+                                                <TR>
+                                                    <TD>
+                                                        <TABLE>
+                                                            <TD STYLE="width: 50%;">
+                                                                <TABLE STYLE="height: 100%;">
+                                                                    <TR>
+                                                                        <TD>
+                                                                            <DIV ID=idStartRecordingInstructions CLASS="smallinstructionstitle">Make sure these are the tracks you want. Click Start Recording to begin.</DIV>
+                                                                        </TD>
+                                                                    </TR>
+                                                                    <TR STYLE="height: 15px;">
+                                                                        <TD>
+                                                                        </TD>
+                                                                    </TR>
+                                                                    <TR>
+                                                                        <TD>
+                                                                            <BUTTON ID=idbuttonStartRecording ONCLICK="OnStartRecording(0);">
+                                                                                <ID ID=idStartRecording>Start Recording</ID>
+                                                                            </BUTTON>
+                                                                            <BUTTON ID=idbuttonCancelRecording STYLE="display: none;" ONCLICK="OnCancelRecording();">
+                                                                                <ID ID=idCancelRecording>Cancel Recording</ID>
+                                                                            </BUTTON>
+                                                                        </TD>
+                                                                    </TR>
+                                                                    <TR STYLE="height: 30px;">
+                                                                        <TD>
+                                                                        </TD>
+                                                                    </TR>
+                                                                    
+                                                                    <!-- You can also: -->
+                                                                    <TR>
+                                                                        <TD>
+                                                                            <DIV STYLE="height: 100%;">
+                                                                                <DIV CLASS="smallinstructionstitle">
+                                                                                    <ID ID=idYouCanAlso2>You can also:</ID>
+                                                                                </DIV>
+                                                                                <DIV CLASS="alsotext">
+                                                                                    <DIV>
+                                                                                        <A ID=idCustomizeRecordingSettings CLASS="alsotextdisabled" ONCLICK="return GoTo('')" HREF=""><ID ID="CustomRecordSet">Customize recording settings</ID></A>
+                                                                                    </DIV>
+                                                                                    <DIV>
+                                                                                        <A ID=idPlayACD ONCLICK="return GoTo('CD')" HREF=""><ID ID="PlayCD2">Play a CD</ID></A>
+                                                                                    </DIV>
+                                                                                </DIV>
+                                                                            </DIV>
+                                                                        </TD>
+                                                                    </TR>
+                                                                    <!-- pad the remaining portion at the bottom -->
+                                                                    <TR STYLE="height: 100%;">
+                                                                        <TD>
+                                                                        </TD>
+                                                                    </TR>
+                                                                </TABLE>
+                                                            </TD>
+
+                                                            <TD STYLE="width: expression(document.body.clientWidth);">
+                                                            </TD>
+                                                            
+                                                            <!-- the r.h.s. info area -->
+                                                            <TD>
+                                                                <TABLE STYLE="height: 100%;">
+                                                                    <TR>
+                                                                        <TD>
+                                                                        
+                                                                            <!-- Album & Artist names -->
+                                                                            <TABLE>
+                                                                                <TR>
+                                                                                    <TD STYLE="width: 10px;">
+                                                                                    </TD>
+                                                                                    <TD>
+                                                                                        <DIV ID=idNewAlbumNameTitle CLASS="unknowninfotitle">Album name:</DIV>
+                                                                                    </TD>
+                                                                                    <TD STYLE="width: 10px;">
+                                                                                    </TD>
+                                                                                    <TD>
+                                                                                        <DIV ID=idAlbumName CLASS="contentsubtitle">Unknown</DIV>
+                                                                                    </TD>
+                                                                                </TR>
+                                                                                <TR>
+                                                                                    <TD STYLE="width: 10px;">
+                                                                                    </TD>
+                                                                                    <TD>
+                                                                                        <DIV ID=idNewArtistNameTitle CLASS="unknowninfotitle">Artist:</DIV>
+                                                                                    </TD>
+                                                                                    <TD STYLE="width: 10px;">
+                                                                                    </TD>
+                                                                                    <TD>
+                                                                                        <DIV ID=idArtistName CLASS="contentsubtitle">Unknown</DIV>
+                                                                                    </TD>
+                                                                                </TR>
+                                                                            </TABLE>
+                                                                        </TD
+                                                                    </TR>
+
+                                                                    <!-- padding line -->
+                                                                    <TR STYLE="height: 10px;">
+                                                                        <TD>
+                                                                        </TD>
+                                                                    </TR>
+
+                                                                    <TR>
+                                                                    
+                                                                        <!-- the tracks list -->
+                                                                        <TD>
+                                                                            <DIV CLASS="newtrackdiv">
+                                                                                <TABLE ID=idNewTracks CLASS="newtracks">
+                                                                                    <TBODY VALIGN="top">
+                                                                                    </TBODY>
+                                                                                </TABLE>
+                                                                            </DIV>
+                                                                        </TD>
+                                                                    </TR>
+
+                                                                    <!-- padding line -->
+                                                                    <TR STYLE="height: 10px;">
+                                                                        <TD>
+                                                                        </TD>
+                                                                    </TR>
+
+                                                                    <TR>
+                                                                        <TD>
+                                                                            <TABLE>
+                                                                                <TD>
+                                                                                    <DIV ID=idSavingTo CLASS="contentsubtitle">Saving to:</DIV>
+                                                                                </TD>
+                                                                                <TD STYLE="width: 10px;">
+                                                                                </TD>
+                                                                                <TD>
+                                                                                    <DIV ID=idSavingLocation CLASS="smallinstructionstitle">My Music</DIV>
+                                                                                </TD>
+                                                                                <TD STYLE="width: 10px;">
+                                                                                </TD>
+                                                                                <TD>
+                                                                                    <DIV ID=idFolder CLASS="contentsubtitle">folder</DIV>
+                                                                                </TD>
+                                                                                <TD STYLE="width: 40px;">
+                                                                                </TD>
+                                                                                <TD>
+                                                                                    <DIV CLASS="alsotext">
+                                                                                        <A ID=idChangeLocation CLASS="alsotextdisabled" ONCLICK="return GoTo('')" HREF=""><ID ID="ChangeLoc">Change Location</ID></A>
+                                                                                    </DIV>
+                                                                                </TD>
+                                                                            </TABLE>
+                                                                        </TD>
+                                                                    </TR>
+
+                                                                    <!-- pad the remaining portion at the bottom -->
+                                                                    <TR STYLE="height: 100%;">
+                                                                        <TD>
+                                                                        </TD>
+                                                                    </TR>
+                                                               </TABLE>
+                                                            </TD>
+                                                        </TABLE>
+                                                    </TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                        <TD STYLE="width: 20px;">
+                                        </TD>
+                                    </TR>
+                                </TABLE>
+                            </TD>
+                        </TR>
+                    </TABLE>
+                </TD>
+            </TR>
+            <TR>
+                <TD>
+                    <DIV ID=Master CLASS="playercell">
+                    </DIV>
+                </TD>
+            </TR>
+       </TABLE>
+    </BODY>
+</HTML>
+

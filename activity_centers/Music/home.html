@@ -1,0 +1,194 @@
+<HTML>
+    <HEAD>
+        <TITLE>
+            <ID=idTitle>Music Home</ID>
+        </TITLE>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="music.css">
+        </LINK>
+        <SCRIPT SRC="musicctr.js">
+        </SCRIPT>
+    </HEAD>
+    
+    <BODY SCROLL="no" ONLOAD="OnHomePanelLoad();">
+
+        <!-- background images -->
+        <DIV CLASS="bottomleftimage">
+        <DIV CLASS="bottomrightimage">
+
+        <!-- the main table -->
+        <TABLE CLASS="fullpage" ONRESIZE="PositionPlayer();">
+            <TR>
+                <TD CLASS="aligntop">
+                    <TABLE>
+
+                        <!-- padding on the left and top -->
+                        <TR STYLE="height: 25px;">
+                            <TD STYLE="width: 46px;">
+                            </TD>
+                        </TR>
+
+                        <!-- page content -->
+                        <TR CLASS="rowaboveplayer">
+
+                            <!-- skip the column -->
+                            <TD>
+                            </TD>
+                            
+                            <!-- page title -->
+                            <TD>
+                                <TABLE>
+                                    <TR>
+                                        
+                                        <!-- "Music" -->
+                                        <TD>
+                                            <SPAN CLASS="musictext">
+                                                <ID ID=idMusicText>Music</ID>
+                                            </SPAN>
+                                        </TD>
+                                    </TR>
+
+                                    <TR>
+                                        <TD>
+                                            <TABLE STYLE="width: 100%;">
+                                            
+                                                <!-- blank -->
+                                                <TR STYLE="height: 22px;">
+                                                    <TD>
+                                                    </TD>
+                                                </TR>
+
+                                                <!-- page subtitle -->
+                                                <TR>
+                                                    <TD>
+                                                        <SPAN CLASS="pagesubtitle">
+                                                            <ID ID=idPageSubTitle>What do you want to do?</ID>
+                                                        </SPAN>
+                                                    </TD>
+                                                </TR>
+                                                
+                                                <TR>
+                                                
+                                                    <TD>
+                                                        <TABLE STYLE="width: 100%;">
+                                                        
+                                                            <!-- blank -->
+                                                            <TR STYLE="height: 15px;">
+                                                                <TD>
+                                                                </TD>
+                                                            </TR>
+
+                                                            <!-- tasks -->
+                                                            <TR>
+                                                                <TD>
+                                                                    <TABLE>
+                                                                        <TR>
+                                                                            <TD STYLE="width: 250px;">
+                                                                                <DIV STYLE="height: 100%;">
+                                                                                    <DIV CLASS="tasktitle">
+                                                                                        <ID ID=idPlayMusic>Play music</ID>
+                                                                                    </DIV>
+                                                                                    <DIV CLASS="tasksub" STYLE="height: 100%;">
+                                                                                        <DIV>
+                                                                                            <A ID=idPlayACD ONCLICK="return GoTo('CD');" HREF=""><ID ID="PlayAcd">Play a CD</ID></A>
+                                                                                        </DIV>
+                                                                                        <DIV>
+                                                                                            <A ID=idAutoJukebox ONCLICK="return GoTo('AutoJukeBox');" HREF=""><ID ID="AutoJuke">Play quick selections randomly</ID></A>
+                                                                                        </DIV>
+                                                                                        <DIV>
+                                                                                            <A ID=idRandomPlayMyMusic ONCLICK="OnRandomPlay(); return GoTo('');" HREF=""><ID ID="Random">Play My Music randomly</ID></A>
+                                                                                        </DIV>
+                                                                                        <DIV>
+                                                                                            <A ID=idListenToInternetRadio CLASS="tasksubdisabled" ONCLICK="return GoTo('');" HREF=""><ID ID="Listen">Listen to Internet radio</ID></A>
+                                                                                        </DIV>
+                                                                                    </DIV>
+                                                                                </DIV>
+                                                                            </TD>
+                                                                            <TD STYLE="width: 250px;">
+                                                                                <DIV STYLE="height: 100%;">
+                                                                                    <DIV CLASS="tasktitle">
+                                                                                        <ID ID=idGetMusic>Get music</ID>
+                                                                                    </DIV>
+                                                                                    <DIV CLASS="tasksub">
+                                                                                        <DIV>
+                                                                                            <A ID=idImport ONCLICK="return GoTo('Import Music');" HREF=""><ID ID="Import">Search for music</ID></A>
+                                                                                        </DIV>
+                                                                                        <DIV>
+                                                                                            <A ID=idRecordCDs ONCLICK="return GoTo('CDRecord');" HREF=""><ID ID="RecordCd">Record from CDs</ID></A>
+                                                                                        </DIV>
+                                                                                        <DIV>
+                                                                                            <A ID=idFindMusicOnTheInternet CLASS="tasksubdisabled" ONCLICK="return GoTo('');" HREF="">
+                                                                                                <ID ID="FindMus">Find music on the Internet</ID>
+                                                                                            </A>
+                                                                                        </DIV>
+                                                                                    </DIV>
+                                                                                </DIV>
+                                                                            </TD>
+                                                                        </TR>
+                                                                    </TABLE>
+                                                                </TD>
+                                                            </TR>
+                                                            
+                                                            <!-- blank -->
+                                                            <TR STYLE="height: 10px;">
+                                                                <TD>
+                                                                </TD>
+                                                            </TR>
+
+                                                            <!-- You can also: -->
+                                                            <TR>
+                                                                <TD>
+                                                                    <TABLE>
+                                                                        <TD STYLE="width: 250px;">
+                                                                            <DIV>
+                                                                                <DIV CLASS="smallinstructionstitle">
+                                                                                    <ID ID=idYouCanAlso>You can also:</ID>
+                                                                                </DIV>
+                                                                                <DIV CLASS="alsotext">
+                                                                                    <DIV>
+                                                                                        <A ID=idCreateAPlayList ONCLICK="return OnCreateNewPlaylist();" HREF=""><ID ID="CreatePlay">Create a playlist</ID></A>
+                                                                                    </DIV>
+                                                                                    <DIV>
+                                                                                        <A ID=idGoToMyMusicFolder ONCLICK="return GoTo('MyMusic');" HREF=""><ID ID="GotoMusic">Go to My Music folder</ID></A>
+                                                                                    </DIV>
+                                                                                    <DIV>
+                                                                                        <A ID=idCustomizeThePlayer CLASS="alsotextdisabled" ONCLICK="return GoTo('');" HREF=""><ID ID="CustomPlayer">Customize the player</ID></A>
+                                                                                    </DIV>
+                                                                                    <DIV>
+                                                                                        <A ID=idCustomizeSoundSettings CLASS="alsotextdisabled" ONCLICK="return GoTo('');" HREF=""><ID ID="CustomSound">Customize your sound settings</ID></A>
+                                                                                    </DIV>
+                                                                                    <DIV>
+                                                                                        <A ID=idCustomizeRecordingSettings CLASS="alsotextdisabled" ONCLICK="return GoTo('');" HREF=""><ID ID="CustomRecord">Customize recording settings</ID></A>
+                                                                                    </DIV>
+                                                                                </DIV>
+                                                                            </DIV>
+                                                                        </TD>
+                                                                        <TD VALIGN="bottom">
+                                                                            <DIV>
+                                                                                <A ID=idCustomizeThisPage CLASS="tasksubdisabled" ONCLICK="return GoTo('');" HREF=""><ID ID="CustomizeThisPage">Click here to customize this page</ID></A>
+                                                                            </DIV>
+                                                                        </TD>
+                                                                    </TABLE>
+                                                                </TD>
+                                                            </TR>
+                                                        </TABLE>
+                                                    </TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                    </TR>
+                                </TABLE>
+                            </TD>
+                        </TR>
+                    </TABLE>
+                </TD>
+            </TR>
+            <TR>
+                <TD>
+                    <DIV ID=Master CLASS="playercell">
+                    </DIV>
+                </TD>
+            </TR>
+        </TABLE>
+    </BODY>
+</HTML>
+

@@ -1,0 +1,255 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" TYPE="text/css" HREF="music.css"></LINK>
+<TITLE>Auto Juke Box </TITLE>
+<SCRIPT SRC="musicctr.js"></SCRIPT>
+
+<SCRIPT>
+    var eleSelected = 0;
+    var idSelected = -1;
+    
+    function OnTransitionComplete(from, to)
+    {
+        // We need to refresh the namespace control everytime we transition to this page because 
+        // the content could have changed in other places.
+        if(to == "AutoJukeBox")
+            Navigate(idSelected);  //To refresh, we navigate to the current view itself.
+    }
+
+    function Init()
+    {
+        eleSelected = idArtist;
+        eleSelected.className = "SelectorBlockCurrent";
+        idSelected = -1;
+        external.event.registerSink("Place.TransitionComplete", OnTransitionComplete, true);
+        //To refresh the namespace control, we Navigate once at the begining.
+        Navigate(idSelected);
+    }
+
+    function Navigate(id)
+    {
+        eleSelected.className = "SelectorBlock";
+        
+        switch(id)
+        {
+            case -1 :
+                eleSelected = idArtist;
+                break;
+                
+            case 0 :
+                eleSelected = idAlbum ;
+                break;
+            
+            case 1 :
+                eleSelected = idStyle;
+                break;
+            case 2 :
+                eleSelected = idTrack;
+                break;
+            
+            case 3 :
+                eleSelected = idPlaylist;
+                break;                        
+            
+        }        
+        eleSelected.className = "SelectorBlockCurrent";
+        idSelected = id; //Save the id of the view we are switching to!
+        return ChangeView(id)
+    }
+
+function OnDone()
+{
+    var player = external.Property("Player");
+    var playlist = player.NewPlaylist;
+    var items = NameSpace.SelectedItems();
+
+    if (items)
+    {
+        for (var i=0; i < items.Count; i++)
+        {
+            var item = items.Item(i);
+
+            if (item.IsFolder)
+            {
+                var fldr = item.GetFolder;
+                var fldritems = fldr.Items();
+                var count   = fldritems.Count;
+                
+                for ( var j=0; j < count ; j++)
+                {
+                    var item = fldritems.Item(j);
+                    playlist.InsertTrack(item.path, -1);
+                }               
+            }
+            else
+            {
+                playlist.InsertTrack(item.path, -1);
+            }
+        }
+        player.stop();
+        player.SetMusicPlaylist(playlist);
+        player.play();
+        player.PlayerMode = 4; // Random
+    }
+    return false;
+}
+
+function OnClearAll()
+{
+    NameSpace.UnselectAll();
+    return false;
+}
+</SCRIPT>
+
+</HEAD>
+<BODY SCROLL="no" onload="Init();">
+<DIV CLASS="bottomleftimage">
+
+<TABLE CLASS="fullpage" ONRESIZE="PositionPlayer();">
+    <TR STYLE="WIDTH:100%;">
+        <TD CLASS="aligntop" STYLE="WIDTH:100%;">
+            <TABLE STYLE="WIDTH:100%;">
+                <TR style="height: 25px;">
+                    <TD style="width: 46px;">
+                    </TD>
+                </TR>
+                
+                <TR CLASS="rowaboveplayer">
+                    <TD>
+                    </TD>
+                    
+                    <TD>
+                        <TABLE style="height:100%;width:100%;">       
+                            <TR>
+                                <TD>
+                                    <SPAN CLASS="commandtitle"> 
+                                        <ID id="choosethe"> Choose the music you want to play  </ID>
+                                    </SPAN>
+                                </TD>
+                            </TR>
+                            <TR STYLE="height:15px">
+                                <TD>
+                                </TD>
+                            </TR>
+
+                            <TR>
+                                <TD>
+                                    <TABLE style="height:100%;width:100%;" >
+                                        <TR>
+                                            <TD style="width:50%">
+                                                <TABLE style="height:100%;width:100%;" >
+                                                    <TR>
+                                                        <TD class="tasktitle" valign="top">                                            
+                                                            <ID ID="SelectMsg">Select the music you want to listen to. Your selections will begin playing in random order after you click Done.</ID>
+                                                        </TD>
+                                                     </TR>
+                                                     
+                                                     <TR style="height:30px">
+                                                        <TD>
+                                                        </TD>
+                                                      </TR>
+                                                      
+                                                      <TR>
+                                                        <TD>
+                                                            <DIV CLASS="smallinstructionstitle">
+                                                                <ID ID=idYouCanAlso>You can also:</ID>
+                                                            </DIV>
+                                                            <DIV CLASS="alsotext">
+                                                                <DIV>
+                                                                    <A ID=idCreateAPlayList ONCLICK="return OnCreateNewPlaylist()" HREF=""><ID ID="CreateAlist">Create a playlist.</ID></A>
+                                                                </DIV>
+                                                                <DIV>
+                                                                    <A ID=idOpenMyMusicFolder CLASS="alsotextdisabled" ONCLICK="return GoTo('')" HREF=""><ID ID="OPenMyMusic">Open My Music folder.</ID></A>
+                                                                </DIV>
+                                                            </DIV>
+                                                        </TD>
+                                                      </TR>
+                                                </TABLE>
+                                            </TD>                         
+                                            <TD style="width:50%">
+                                                <TABLE style="height:100%;width:100%;" >
+                                                    <TR>
+                                                        <TD ID="ChooseHowTo" class="tasktitle" colspan=5>Choose how to view your music:</TD>
+                                                    </TR>
+
+                                                    <TR STYLE="height:15px">
+                                                        <TD>
+                                                        </TD>
+                                                    </TR>
+
+                                                    <TR>
+                                                        <TD colspan=5>
+                                                            <TABLE style="Width:100%;height:100%" CLASS="Selector" CELLSPACING=0 CELLPADDING=0>
+                                                                <TR>
+                                                                    <TD ID=idArtist CLASS="SelectorBlock">
+                                                                        <A ID=idArtistText CLASS="SelectorItem" ONCLICK="return Navigate(-1);" HREF=""><ID ID="ID_idArtistText">Artist</ID></A>
+                                                                    </TD>
+                                                                    <TD ID=idAlbum CLASS="SelectorBlock">
+                                                                        <A ID=idAlbumText CLASS="SelectorItem" ONCLICK="return Navigate(0);" HREF=""><ID ID="ID_idAlbumText">Album</ID></A>
+                                                                    </TD>
+                                                                    <TD ID=idStyle CLASS="SelectorBlock">
+                                                                        <A ID=idStyleText CLASS="SelectorItem" ONCLICK="return Navigate(1);" HREF=""><ID ID="ID_idStyleText">Style</ID></A>
+                                                                    </TD>
+                                                                    <TD ID=idTrack CLASS="SelectorBlock">
+                                                                        <A ID=idTrackText CLASS="SelectorItem" ONCLICK="return Navigate(2);" HREF=""><ID ID="ID_idTrackText">Track</ID></A>
+                                                                    </TD>
+                                                                    <TD ID=idPlaylist CLASS="SelectorBlock">
+                                                                        <A ID=idPlaylistText CLASS="SelectorItem" ONCLICK="return Navigate(3);" HREF=""><ID ID="ID_idPlaylistText">Playlist</ID></A>
+                                                                    </TD>
+                                                                </TR>
+                                                             </TABLE>
+                                                        </TD>
+                                                    </TR>
+                                                    <TR style="height:100%;width:100%;">
+                                                        <TD colspan=5>
+                                                            <OBJECT ID=NameSpace CLASSID="clsid:55136805-B2DE-11D1-B9F2-00A0C98BC547" WIDTH=100% height=100%>
+                                                                <PARAM NAME="root" VALUE="shell:::{A77BADF8-BD51-4b4d-B224-21802ED9695D}"> 
+                                                                <PARAM NAME="mode" VALUE="9"> 
+                                                                <PARAM NAME="flags" VALUE="11"> 
+                                                                <PARAM NAME="enumoptions" VALUE="32">
+                                                            </OBJECT>                        
+                                                        </TD>
+                                                    </TR>
+                                                    <TR STYLE="height:15px">
+                                                        <TD>
+                                                        </TD>
+                                                    </TR>
+                                                    
+                                                    <TR>
+                                                        <TD>
+                                                            <BUTTON OnClick="return OnClearAll();" id=button1 name=button1>
+                                                                <ID ID="ClearAll">Clear All</ID>
+                                                            </BUTTON>
+                                                        </TD>
+                                                        <TD>
+                                                        </TD>
+                                                        <TD>
+                                                            <BUTTON OnClick="return OnDone()" id=button2 name=button2>
+                                                                <ID ID="Done">Done</ID>
+                                                            </BUTTON>
+                                                        </TD>
+                                                    </TR>
+
+
+                                                </TABLE>
+                                            </TD>
+                                        </TR>
+                                     </TABLE>
+                                </TD>
+                            </TR>
+                       </TABLE>        
+                    </TD>
+                </TR>
+            </TABLE>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <DIV ID=Master CLASS="playercell">
+            </DIV>
+        </TD>
+    </TR>
+</TABLE>
+        
+</BODY>
+</HTML>

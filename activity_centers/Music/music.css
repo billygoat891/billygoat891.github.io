@@ -1,0 +1,811 @@
+<!-- CSS Template for Music Center -->
+
+<!-- import the shared activity center CSS template -->
+
+@import url("../common/activity.css");
+
+<!-- alterations to default styles of HTML elements -->
+
+A
+{
+    text-decoration:none;
+    color:  blue;
+}
+
+A:Visited
+{
+    
+}
+
+A:Active
+{
+    text-decoration:none;
+}
+
+A:Hover
+{
+    text-decoration:underline;
+}
+
+BODY
+{
+    margin:         0;
+    background-color:#A8D0FB;
+}
+
+TABLE, TR, TD, IMG
+{
+    padding:        0;
+    margin:         0;
+    <!--
+    border-collapse:collapse;
+    -->
+}
+
+BUTTON
+{
+    /* style for button text, color, and margins */
+    font-family:    arial;
+    font-size:      10pt;
+    font-weight:    normal;
+    color:          WHITE;
+    background-color:#6CA2E3;
+    padding-top:    3;
+    padding-left:   8;
+    padding-right:  8;
+    margin-right:   8;
+}
+
+<!-- NavBar specific classes -->
+
+.NavBarBody
+{
+    margin:         3px 4px;
+    overflow:       hidden;
+    background-color:#6CA2E3;
+}
+
+.NavBar
+{
+    width:          100%;
+    height:         100%;
+    border:         0;
+    text-align:     center;
+    vertical-align: middle;
+    text-decoration:none;
+}
+
+.NavBarBlock
+{
+    background-color:#6CA2E3;
+    width:          14.25%;
+}
+
+.NavBarBlockCurrent
+{
+    background-color:#A8D0FB;
+    width:          14.25%;
+}
+
+.NavBarItem
+{
+    font-family:    Arial;
+    font-size:      10pt;
+    text-decoration:none;
+    color:          white;
+}
+
+.NavBarItem:Active
+{
+    color:          white;
+}
+
+.NavBarItem:Hover
+{
+    font-weight:    normal;
+    text-decoration:underline;
+    color:          black;
+}
+
+.NavBarItem:Visited
+{
+    color:          white;
+    text-decoration:none;
+}
+
+.NavBarItemDisabled
+{
+    font-family:    Tahoma;
+    font-size:      10pt;
+    text-decoration:none;
+    cursor:         default;
+    color:          gray;
+}
+
+.NavBarItemDisabled:Hover
+{
+    color:          gray;
+    text-decoration:none;
+}
+
+<!-- custom classes used by the music center -->
+
+<!-- Home page classes -->
+
+.stretchedbackground
+{
+    position:       absolute;
+    left:           0px;
+    top:            0px;
+    width:          expression(document.body.offsetWidth);
+    height:         expression(document.body.offsetHeight);
+    z-index:        -10;
+}
+
+.bottomleftimage
+{
+    background:     transparent no-repeat url(images/music_stripes.gif) bottom left;
+    left:           0px;
+    top:            0px;
+    width:          expression(document.body.offsetWidth);
+    height:         expression(document.body.offsetHeight);
+    z-index:        -9;
+}
+
+.bottomrightimage
+{
+    background:     transparent no-repeat url(images/cdimagery.gif) bottom right;
+    left:           0px;
+    top:            0px;
+    width:          expression(document.body.offsetWidth);
+    height:         expression(document.body.offsetHeight);
+    z-index:        -8;
+}
+
+.musictext
+{
+    font-size:      24pt;
+    font-family:    Verdana;
+    font-weight:    bold;
+}
+
+.pagesubtitle
+{
+    font-family:    Trebuchet MS;
+    font-size:      16pt;
+    color:          black;
+    font-weight:    bold;
+}
+
+.tasktitle
+{
+    font-family:    Trebuchet MS;
+    font-size:      12pt;
+    font-weight:    bold;
+    color:          black;
+}
+
+.tasksub /* == tasks_secondary in photo.css */
+{
+    font-family:    Arial;
+    font-size:      10pt;
+}
+
+.tasksubtitle
+{
+    font-family:  Arial;
+    font-size:    10pt;
+    color:        black;
+    padding-right:  10px;
+}
+
+.tasksubdisabled
+{
+    font-family:    Arial;
+    font-size:      10pt;
+    color:          gray;
+    cursor:         default;
+    text-decoration:none;
+}
+
+.tasksubdisabled:HOVER
+{
+    text-decoration: none;
+}
+.smallinstructionstitle  /* You can also:  heading; header_secondary in photo.css; textPrimary */
+{
+    font-family:    Trebuchet MS;
+    font-size:      12pt;
+    font-weight:    bold;
+    color:          black;
+}
+
+.alsotext
+{
+    font-family:    Arial;
+    font-size:      10pt;
+    color:          black;
+}
+
+.alsotextdisabled
+{
+    font-family:    Arial;
+    font-size:      10pt;
+    color:          gray;
+    cursor:         default;
+    text-decoration:none;
+}
+
+.alsotextdisabled:HOVER
+{
+    text-decoration: none;
+}
+
+<!-- end Home page classes -->
+
+<!-- CD page classes -->
+
+.contenttitle
+{
+    font-family:    Trebuchet MS;
+    font-size:      11pt;
+    font-weight:    bold;
+    color:          black;
+}
+
+.commandtitle
+{
+    font-family:    Trebuchet MS;
+    font-size:      16pt;
+    font-weight:    bold;
+    color:          black;
+    line-weight:    110%;
+}
+
+.instructiontext
+{
+    font-family:    Trebuchet MS;
+    font-size:      12pt;
+    font-weight:    bold;
+    color:          black;
+}
+
+.unknowninfotitle  /* header secondary*/
+{
+    font-family:    Trebuchet MS;
+    font-size:      10pt;
+    font-weight:    bold;
+    color:          black;
+}
+
+.contentsubtitle
+{
+    font-size:      10pt;
+    font-family:    Arial;
+    font-weight:    normal;
+    color:          black;
+}
+
+.actionbutton
+{
+    border:         1pt Solid black;
+    font:           11px Trebuchet MS;
+    font-weight:    bold;
+    color:          black;
+    cursor:         default;
+}
+
+.newtrackdiv
+{
+    height:         225px;
+    width:          400px;
+    font-size:      10pt;
+    font-family:    arial
+    background-color:#B8DEF9;
+    overflow-y:     auto;
+}
+
+.newtracks
+{
+    font-size:      10pt;
+    font-family:    Arial;
+    font-weight:    normal;
+    width:          100%;
+}
+
+.indexnocolumn
+{
+    width:          5%;
+    text-align:     right;
+}
+
+.checkboxcolumn
+{
+    width:          5%;
+    text-align:     right;
+}
+
+.paddingtrackcolumn
+{
+    width:          5%;
+}
+
+.tracknamecolumn
+{
+    width:          45%;
+}
+
+.tracknamecolumnshort
+{
+    width:          35%;
+}
+
+.trackdurationcolumn
+{
+    width:          15%;
+    text-align:     right;
+}
+
+.trackrecordstatuscolumn
+{
+    width:          20%;
+}
+
+.padright
+{
+    width:          100%;
+}
+
+.padbottom
+{
+    height:         100%;
+}
+
+.trackrow
+{
+    height:         15px;
+    width:          100%;
+    background-color:#B8DEF9;
+    color:          black;
+}
+
+.playingtrackrow
+{
+    height:         15px;
+    width:          100%;
+    background-color:#000099;
+    color:          white;
+}
+
+.coverart
+{
+    left:           0px;
+    top:            0px;
+}
+
+.smallinstructions
+{
+    font-size:      10pt;
+    font-family:    Arial;
+    font-weight:    normal;
+    color:          black;
+}
+
+<!-- end CD page classes -->
+
+.PageSubTitleCell
+{
+    font-size:      16pt;
+    font-weight:    bold;
+    font-family:    Trebuchet MS;
+    padding-left:   20px;
+}
+
+.PageContentRow
+{
+    height:         100%;
+}
+
+.PageContentCell
+{
+    width:          100%;
+    height:         100%;
+    padding-top:    12;
+    padding-left:   20px;
+    padding-right:  10px;
+}
+
+.playlistcontentcell
+{
+    width:          33%;
+    height:         100%;
+    padding-top:    12;
+    padding-left:   80px;
+    padding-right:  10px;
+}
+
+.ContentDividerTable
+{
+    width:          100%;
+    height:         100%;
+}
+
+.ContentDividerRow
+{
+    width:          100%;
+    height:         50%;
+    font-size:      10pt;
+    font-family:    Arial;
+    font-weight:    normal;
+    color:          black;
+}
+
+.TopContentDividerCell
+{
+    width:          50%;
+    height:         100%;
+    padding-right:  70px;
+}
+
+.BottomContentDividerRow
+{
+    width:          100%;
+    height:         100%;
+}
+.LeftContentCell {
+    width: 50%;
+    height: 100%;
+    font-size:  12pt;
+    font-family:  Trebuchet MS;
+    font-weight:  bold;
+    color:  black;
+}
+
+.RightContentCell {
+    width: 50%;
+    height: 100%;
+    font-size:  10pt;
+    font-family:  arial;
+    font-weight:  normal;
+    color:  black;
+}
+
+.CDInfo
+{
+    width:          100%;
+    height:         55%;
+}
+
+.commandsubtitle
+{
+    font-size:      9pt;
+    font-family:    Arial;
+    color:          black;
+}
+
+.Player
+{
+    left:           0px;
+    top:            0px;
+    width:          772px;
+    height:         92px;
+}
+
+.aligntop
+{
+    vertical-align: top;
+}
+
+.rowaboveplayer
+{
+    vertical-align: top;
+    height:         expression(document.body.clientHeight - SumOffsetTop(this) - 92);
+    width:          100%;
+}
+
+.playercell
+{
+    position:       relative;
+    left:           expression((document.body.clientWidth > 772) ? ((document.body.clientWidth - 772) / 2) : 0);
+    right:          expression((document.body.clientWidth > 772) ? ((document.body.clientWidth - 772) / 2) : 0);
+    width:          772px;
+    height:         92px;
+}
+
+.fullpage
+{
+    width:          expression(document.body.clientWidth);
+    heigth:         expression(document.body.clientHeight);
+}
+
+.logo  {
+    position : absolute;
+    left : 11px;
+    top : 9px;
+}
+
+.taskpagereplacelogo  {
+    position : absolute;
+    left : 20px;
+    top : 20px;
+    font-size : 22pt;
+    font-family : Trebuchet MS;
+}
+
+.taskpagereplacetitle  {
+    position : absolute;
+    left : 100px;
+    top : 63px;
+    z-index : 01;
+    font-size : 17pt;
+    font-weight : normal;
+    font-family : Trebuchet MS;
+}
+
+.tasktitleactive  {
+    font-size : 11pt;
+    font-weight : bold;
+    font-family : Trebuchet MS;
+    color : teal;
+}
+
+.musicinstructions {
+    font-size : 12pt;
+    font-family : Trebuchet MS;
+    font-weight : bold;
+    color : black;
+}
+
+.instructionsmain  {
+    font-size : 12pt;
+    font-family : Trebuchet MS;
+    font-weight : bold;
+    color : black;
+}
+
+.verysmallinstructions {
+    font-size :8pt;
+    font-family : Arial;
+    color : black;
+    text-align : left; 
+}
+
+
+.subtitleright  {
+    font-size : 10pt;
+    font-family : Trebuchet MS;
+    font-weight : bold;
+    color : black;
+}
+
+.contentbox  {
+    position : absolute;
+    left : 439px;
+    top : 123px;
+    z-index : -1;
+}
+
+.contentframe  {
+    position : absolute;
+    left : 460px;
+    top : 123px;
+    z-index : 02;
+}
+
+
+
+DIV.ListBox
+{
+    position:           relative;
+    width:              100%;
+    height:             100%;
+    overflow-y:         scroll;
+    background-color:   #b8def9;
+    cursor:             default;
+    font-size:		10pt;
+    font-family:	arial
+}
+
+DIV.SelectedSongs
+{
+    position:           relative;
+    width:              100%;
+    height:             100%;
+    font-family:        Arial;
+    font-size:          10pt;
+    color:              black;
+    background-color:   #c8eef9;
+    overflow-y:         auto;
+}
+
+DIV.ListItem
+{
+    width:              90%;
+    padding-left:       5px;
+    padding-right:      5px;
+    color:              black;
+}
+
+DIV.ListItemSel
+{
+    padding-left:       5px;
+    padding-right:      5px;
+    background-color:   #000099;
+    color:              white;
+}
+
+.buttons  {
+    /* style for button text, color, and margins */
+    font-family : Verdana;
+    font-size : 10pt;
+    font-weight : normal;
+    color : WHITE;
+    background-color : #6CA2E3;
+    padding-top : 3;
+    padding-left : 8;
+    padding-right: 8;
+    margin-right : 8;
+}
+
+.buttons_hover  {
+    /* style for button text, color, and margins */
+    font-family : Verdana;
+    font-size : 10pt;
+    font-weight : normal;
+    color : navy;
+    background-color : #A8D0FB;
+    padding-top : 3;
+    padding-left : 8;
+    padding-right: 8;
+    margin-right : 8;
+}
+
+.buttons_disabled  {
+    /* style for button text, color, and margins */
+    font-family : Verdana;
+    font-size : 10pt;
+    font-weight : normal;
+        color: WHITE;
+    background-color : #cccccc;
+    padding-top : 3;
+    padding-left : 8;
+    padding-right: 8;
+    margin-right : 8;
+}
+
+DIV.Button
+{
+    border:             1pt Solid black;
+    padding:            1px 3px;
+    text-align:         center;
+    margin-top:         2px;
+    margin-bottom:      2px;
+    cursor:             default;
+    font:               11px Trebuchet MS;
+    font-weight:        bold;
+    color:              black;
+}
+
+DIV.ButtonDisabled
+{
+    border:             1pt Solid black;
+    padding-left:       3px;
+    padding-top:        1px;
+    padding-right:      3px;
+    padding-bottom:     1px;
+    text-align:         center;
+    margin-top:         2px;
+    margin-bottom:      2px;
+    cursor:             default;
+    width:              90px;
+    font:               11px Trebuchet MS;
+    font-weight:        bold;
+    color:              gray;
+}
+
+DIV.PlaylistButtonDisabled
+{
+    border:             1pt Solid black;
+    padding-left:       3px;
+    padding-top:        1px;
+    padding-right:      3px;
+    padding-bottom:     1px;
+    text-align:         center;
+    margin-top:         2px;
+    margin-bottom:      2px;
+    cursor:             default;
+    width:              130px;
+    font:               11px Trebuchet MS;
+    font-weight:        bold;
+    color:              gray;
+}
+
+BUTTON.PLBUTTON
+{
+    /* style for button text, color, and margins */
+    font-family:    arial;
+    font-size:      10pt;
+    font-weight:    normal;
+    color:          WHITE;
+    background-color:#6CA2E3;
+    padding-top:    3;
+    padding-left:   8;
+    padding-right:  8;
+    margin-right:   8;
+    width:          150px;
+}
+
+DIV.PlaylistButton
+{
+    border:             1pt Solid black;
+    padding-left:       3px;
+    padding-top:        1px;
+    padding-right:      3px;
+    padding-bottom:     1px;
+    text-align:         center;
+    margin-top:         2px;
+    margin-bottom:      2px;
+    cursor:             default;
+    width:              130px;
+    font:               11px Trebuchet MS;
+    font-weight:        bold;
+    color:              black;
+}
+DIV.Tools
+{
+    padding-top:        20px;
+    padding-left:       5px;
+    padding-right:      5px;
+}
+  
+
+<!-- The following classes are used in the selector for namespace control -->
+.Selector
+{
+    width:          100%;
+    height:         100%;
+    border:         0;
+    text-align:     center;
+    vertical-align: middle;
+    text-decoration:none;
+}
+
+
+.SelectorBlock
+{
+    background-color:#6CA2E3;
+    width:          14.25%;
+}
+
+.SelectorBlockCurrent
+{
+    background-color:#A8D0FB;
+    width:          20%;
+}
+
+.SelectorItem
+{
+    font-family:    Arial;
+    font-size:      10pt;
+    text-decoration:none;
+    color:          white;
+}
+
+.SelectorItem:Active
+{
+    color:          white;
+}
+
+.SelectorItem:Hover
+{
+    font-weight:    normal;
+    text-decoration:underline;
+    color:          black;
+}
+
+.SelectorItem:Visited
+{
+    color:          white;
+    text-decoration:none;
+}
+
