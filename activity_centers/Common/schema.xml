@@ -1,0 +1,50 @@
+<Schema name="MarsPanelDefinition" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+   <ElementType name="Name" content="textOnly" dt:type="string"/>
+   <AttributeType name="PanelType" dt:type="string"/>
+   <AttributeType name="Create" dt:type="string"/>
+   <AttributeType name="Trusted" />
+   <AttributeType name="Flags" />
+   <AttributeType name="TitleBar" dt:type="string"/>
+   <AttributeType name="DefaultFocusPanel" dt:type="string"/>
+   <ElementType name="StartUrl" content="textOnly" dt:type="string"/>
+   <ElementType name="Position" content="textOnly" dt:type="string"/>
+   <ElementType name="Width" content="textOnly" dt:type="ui4"/>
+   <ElementType name="Height" content="textOnly" dt:type="ui4"/>
+   <ElementType name="Left" content="textOnly" dt:type="i4"/>
+   <ElementType name="Top" content="textOnly" dt:type="i4"/>
+   <ElementType name="Layout" content="eltOnly" order="one">
+      <element type="Position"/>
+      <element type="Width" minOccurs="0"/>
+      <element type="Height" minOccurs="0"/>
+      <element type="Left" minOccurs="0"/>
+      <element type="Top" minOccurs="0"/>
+   </ElementType>
+   <ElementType name="Panel" content="eltOnly" order="one">
+      <attribute type="PanelType"/>
+      <attribute type="Create"/>
+      <attribute type="Flags"/>
+      <attribute type="Trusted"/>
+      <attribute type="TitleBar"/>
+      <element type="Name"/>
+      <element type="StartUrl"/>
+      <element type="Layout"/>
+   </ElementType>
+   <ElementType name="Panels" model="closed" order="many">
+      <element type="Panel"/>
+   </ElementType>
+   <ElementType name="PlacePanel" content="eltOnly">
+      <attribute type="DefaultFocusPanel"/>
+      <element type="Name"/>
+   </ElementType>
+   <ElementType name="Place">
+      <element type="Name"/>
+      <element type="PlacePanel" maxOccurs="*"/>
+   </ElementType>
+   <ElementType name="Places" order="many" model="closed">
+      <element type="Place"/>
+   </ElementType>
+   <ElementType name="Mars_App" order="seq" content="eltOnly" model="closed">
+      <element type="Panels"/>
+      <element type="Places"/>
+   </ElementType>
+</Schema>
