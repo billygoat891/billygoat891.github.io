@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <atom:link href="http://www.windows93.net/rss/" rel="self" type="application/rss+xml"/>
+    <title>windows93</title>
+    <link>http://www.windows93.net/</link>
+    <description>hug + hack = infinity</description>
+    <language>en-us</language>
+    <ttl>1</ttl>
+    <webMaster>contact@windows93.net (Stive Gates)</webMaster>
+    <generator>windows93 - uRSS</generator>
+    <lastBuildDate>Sun, 06 Dec 2015 08:28:42 GMT</lastBuildDate>
+    <docs>http://validator.w3.org/feed/docs/rss2.html</docs>
+    <image>
+      <url>http://www.windows93.net/logo_small.png</url>
+      <title>windows93</title>
+      <link>http://www.windows93.net/</link>
+      <width>104</width>
+      <height>85</height>
+    </image>
+    <item>
+      <title>Opening</title>
+      <link>http://www.windows93.net/</link>
+      <pubDate>Fri, 24 Oct 2014 19:00:00 GMT</pubDate>
+      <description>
+<![CDATA[
+The installation Wizard has successfully installed windows93 on your system.
+]]>
+</description>
+    </item>
+    <item>
+      <title>Keynote</title>
+      <link>http://www.windows93.net/c/files/documents/keynotes/opening/index.html</link>
+      <pubDate>Sat, 25 Oct 2014 17:58:26 GMT</pubDate>
+      <description>
+<![CDATA[
+The slides from the windows93 keynote are now in <a href="http://www.windows93.net/c/files/documents/keynotes/opening/index.html">c/files/documents/keynotes/opening/index.html</a>
+]]>
+</description>
+    </item>
+    <item>
+      <title>CodeMirror update</title>
+      <link>http://www.windows93.net/#!edit%20c/sys/lib/CodeMirror/lib/codemirror.js</link>
+      <pubDate>Wed, 29 Oct 2014 17:58:26 GMT</pubDate>
+      <description>
+<![CDATA[
+CodeMirror, the code editor has been updated to version 4.7.1 (<a href="http://codemirror.net">details</a>)
+]]>
+</description>
+    </item>
+    <item>
+      <title>Corglitch</title>
+      <link>http://www.windows93.net/</link>
+      <pubDate>Thu, 30 Oct 2014 12:02:09 GMT</pubDate>
+      <description>
+<![CDATA[
+A new application, Corglitch was successfully installed on your system.
+]]>
+</description>
+    </item>
+    <item>
+      <title>Halloween theme</title>
+      <link>http://www.windows93.net/</link>
+      <pubDate>Fri, 31 Oct 2014 07:08:25 GMT</pubDate>
+      <description>
+<![CDATA[
+Just for today, windows93 is spooky, yep just for today...
+]]>
+</description>
+    </item>
+  <item>
+      <title>Achievement unlocked</title>
+      <link>http://www.windows93.net/</link>
+      <pubDate>Sat, 01 Nov 2014 10:41:55 GMT</pubDate>
+      <description>
+<![CDATA[
+<img align="left" hspace="10" vspace="10" src="http://www.windows93.net/c/sys/ico32/trophy.gif"/>More than one million visitors on windows93.net in less than a week, thank you for the hug internet... Let's celebrate that with this RSS news/updates :)
+]]>
+</description>
+    </item>
+     <item>
+        <title>Great day for nerds</title>
+        <link>http://www.windows93.net/</link>
+        <pubDate>Mon, 08 Dec 2014 20:50:56 GMT</pubDate>
+        <description>
+<![CDATA[
+<img align="left" hspace="10" vspace="10" src="http://www.windows93.net/c/programs/games/castleGafa/icon.gif"/>Windows93 successfully installed three new applications in your system: Bytebeat, <a href="http://www.windows93.net/#!castlegafa">Castle GAFA 3D</a> & What If? Also, hidden secret album added!
+]]>
+</description>
+      </item>
+
+    <item>
+        <title>Xmas mode engaged</title>
+        <link>http://www.windows93.net/</link>
+        <pubDate>Mon, 22 Dec 2014 15:05:26 GMT</pubDate>
+        <description>
+<![CDATA[
+<img align="left" hspace="10" vspace="10" src="http://www.windows93.net/c/sys/xmas/xmas.png"/>Merry global warming<br>& Ultimate New YEAAARG 2 Everyone!
+]]>
+</description>
+      </item>
+
+    <item>
+        <title>1993 is forever</title>
+        <link>http://www.windows93.net/</link>
+        <pubDate>Fri, 02 Jan 2015 20:27:12 GMT</pubDate>
+        <description>
+<![CDATA[
+  Happy 1993 Internet ! Thanks for everything ;)
+]]>
+</description>
+      </item>
+
+    <item>
+        <title>Totally not done!</title>
+        <link>http://www.windows93.net/</link>
+        <pubDate>Sun, 08 Mar 2015 17:03:42 GMT</pubDate>
+        <description>
+<![CDATA[
+While checking the network registry hug index processing, windows93 spotted an error leading to blog posts annoncing a finally complete version! It's fortunatly not true, many updates are still coming ;)
+]]>
+</description>
+      </item><item>
+        <title>KEEP CALM AND PREPARE FOR VERSION 2.0</title>
+        <link>http://www.windows93.net/</link>
+        <pubDate>Sat, 06 Jun 2015 12:12:37 GMT</pubDate>
+        <description>
+<![CDATA[
+<iframe width="300" height="169" src="https://www.youtube.com/embed/Q6-2K-8KbqM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe><br>
+JUNE 17 2015 : FREE UPGRADE TO WINDOWS93 2.0
+]]>
+</description>
+      </item><item>
+        <title>Windows93 IRL</title>
+        <link>http://www.freesson.com/festilab.html</link>
+        <pubDate>Sun, 06 Dec 2015 08:28:42 GMT</pubDate>
+        <description>
+<![CDATA[
+<img align="left" hspace="10" vspace="10" width="32" heigth="32" src="http://www.freesson.com/festilab/img/nerd/screen.png">
+Windows93 is materializing in teh real world (Avignon - France) at the FESTILAB_FRANKENSTEIN MÉDIA (7 - 18 December) - <a target="_blank" href="http://www.freesson.com/festilab.html">http://www.freesson.com/festilab.html</a>
+]]>
+</description>
+      </item><item>
+        <title>GAY.FISH</title>
+        <link>http://gay.fish</link>
+        <pubDate>Wed, 08 Jun 2016 15:03:55 GMT</pubDate>
+        <description>
+<![CDATA[
+<a target="_blank" href="http://gay.fish"><img align="left" hspace="10" vspace="10" width="32" heigth="32" src="http://gay.fish/img/kanye.png">
+HAPPY BIRTHDAY @kanyewest http://gay.fish</a>
+]]>
+</description>
+      </item><item>
+        <title>WINDOWS93&#x2122; IZ ALSO A BAND PLAYING OVER9000 SHOWS</title>
+        <link>https://www.youtube.com/watch?v=x9xDXU2WJeY</link>
+        <pubDate>Thu, 16 Jun 2016 00:00:00 GMT</pubDate>
+        <description>
+<![CDATA[
+<iframe width="300" height="169" src="https://www.youtube.com/embed/x9xDXU2WJeY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe><br>
+PLEASE HARASS EVERYONE AROUND YOU WITH DIZ TUBE UNTIL THEY BOOK US AT prod@freesson.com ^^
+]]>
+</description>
+      </item><item>
+        <title>WWW.SKYNET.PIZZA</title>
+        <link>http://skynet.pizza</link>
+        <pubDate>Sun, 19 Feb 2017 00:28:12 GMT</pubDate>
+        <description>
+<![CDATA[
+<a target="_blank" href="http://skynet.pizza">HAS AWAKEN</a>
+]]>
+</description>
+      </item><item>
+        <title>9TH JUNE : MAJOR UPDATE</title>
+        <link>https://www.youtube.com/watch?v=sy8Utr0CvBI</link>
+        <pubDate>Sat, 03 Jun 2017 12:00:00 GMT</pubDate>
+        <description>
+<![CDATA[
+GET READY FOR VERSION v2.0!<br>
+TO CELEBRATE THIS HERE'S AN ANTHOLOGY OF WHAT YOU PEOPLE MADED WITH WINDOW93 SINCE 2 YEARS!
+<iframe width="300" height="169" src="https://www.youtube.com/embed/sy8Utr0CvBI?autoplay=1" frameborder="0" allowfullscreen></iframe><br>
+]]>
+</description>
+      </item><item>
+        <title>WELCOME TO WINDOWS93 SP2!</title>
+        <link>http://www.windows93.net/</link>
+        <pubDate>Sat, 10 Jun 2017 17:00:05 GMT</pubDate>
+        <description>
+<![CDATA[
+More power. More freedom. More fun. That’s what Windows93 brings to millions of people everywhere. Please accept this special gift edition with our compliments, and discover the world of Windows93.
+]]>
+</description>      
+</item><item>
+        <title>JANKENPOPP &#x2013; NEW ALBUM!</title>
+        <link>http:windows93.net/pls</link>
+        <pubDate>Sun, 01 Apr 2018 11:11:11 GMT</pubDate>
+        <description>
+<![CDATA[
+Happy April Fool's Day 2018!!<br>
+Teh new album of Jankenpopp is out now!!
+<iframe width="300" height="169" src="https://www.youtube.com/embed/FG2PVD984PY?autoplay=0" frameborder="0" allowfullscreen></iframe><br>
+]]>
+</description>
+</item><item>
+        <title>WELCOME TO WINDOWS93 SP3!</title>
+        <link>http://www.windows93.net</link>
+        <pubDate>Sun, 01 Apr 2019 11:11:11 GMT</pubDate>
+        <description>
+<![CDATA[
+<img align="left" hspace="10" vspace="10" src="http://www.windows93.net/c/sys/skins/w93/devices/floppyB.gif"/>Our team is proud to offer you yet another amazing service pack including moar than 13 brand new applications, tons of new medias & an exclusing goto80 album! Where we’re going, we don’t need roads: Tomorow is teh future!
+]]>
+</description>
+</item>
+
+<item>
+<title>X-MAS MODE ENGAGED</title>
+<link>http://www.windows93.net/</link>
+<pubDate>Sat, Dec 06 2019 13:13:13 GMT</pubDate>
+<description>
+<![CDATA[
+<img align="left" hspace="10" vspace="10" src="http://v1.windows93.net/c/sys/xmas/xmas.png"/>Merry X-Mass to all our fwiends around the world! We wish you all the best for this coming year :) Keep the Lulz! – Bindows's staff
+]]>
+</description>
+</item>
+
+</channel>
+</rss>

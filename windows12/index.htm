@@ -1,0 +1,896 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <title>WINDOWS93</title>
+
+  <meta name="description" content="hug + hack = infinity">
+  <meta name="author" content="jankenpopp, zombectro">
+  <meta http-equiv="Content-Language" content="en_US">
+  <meta name="google" content="notranslate">
+  <link href="rss/index.htm.xml" rel="alternate" type="application/rss+xml" title="windows93">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2.4.2">
+
+  <link rel="stylesheet" href="c/sys42.css?v=2.4.2">
+  <link rel="stylesheet" href="c/sys/skins/w93.css?v=2.4.2" id="w93_skin">
+  <link rel="stylesheet" href="sys/hotfix.css?v=2.4.2"></head>
+<body class="noscroll skin_alpha other" oncontextmenu="return false" ontouchstart="">
+
+<!--
+
+                                                 @@@@@@
+                                        @@@@@@@@@@@@@@@@@@@@@@@@
+ @                                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@    @@                       @@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@    @@   @@@@   @@@@ @@@@@@ @@@@@@::::::::::::::::::::@@@@@@@
+          @@@@  @@@@@ @@@@@@ @@@@@@ @:::::::::::::::::::::::::@@@@@@@
+,,        @     @@@   @@@@@  @@  @@ ::::::::::::::::::::::::::@@@@@@@
+     ,,,           ,, @   ,, @@@@@@ ::::::::::::::::::::::::::@@@@@@@
+     ,    ,,,,  ,,,,, ,,,,,, @@@@@@ ::::::::@@::::::@@::::::::@@@@@@@
+          ,,,,  ,,,,, ,,,,,, @@@@@@ :::::::@@@@::::@@@@:::::::@@@@@@@
+,,        ,     ,,,   ,,,,,  @@  @@ :::::::@@@@::::@@@@:::::::@@@@@@@
+     ,,,           ,, ,   ,, @@@@@@ :::::::@@@@::::@@@@:::::::@@@@@@@
+     ,    ,,,,  ,,,,, ,,,,,, @@@@@@ ::::::::@@::::::@@::::::::@@@@@@@
+ @        ,,,   ,,,,, ,,,,,, @@@@   ::::::::::::::::::::::::::@@@@@@@
+@@    @@        ,     ,,,      @@@@ ::@::::::::::::::::::::@::@@@@@@@
+     @@@    @@   @@@@   @@@@ @@@@@@ :::@::::::::::::::::::@:::@@@@@@@
+          @@@@  @@@@@ @@@@@@ @@@@@@ ::::@@::::::::::::::@@::::@@@@@@@
+,,        @     @@@   @@@@@  @@  @@ ::::::@@::::::::::@@::::::@@@@@@@
+     ,,,           ,, @   ,, @@@@@@ :::::::::@@@@@@@@:::::::::@@@@@@@
+     ,    ,,,,  ,,,,, ,,,,,, @@@@@@ ::::::::::::::::::::::::::@@@@@@@
+ ,        ,,,   ,,,,, ,,,,,, @@@@   ::::::::::::::::::::::::::@@@@@@@
+,,    ,,        ,     ,,,      @@@@ ::::::::::::::::::::::::::@@@@@@@
+     ,,,    ,,   ,,,,   ,,,, @@@@@@ ::::::@@@@@@@@@@@@@@@@@@@:@@@@@@@
+          ,,,,  ,,,,, ,,,,,, @@@@@@ :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@        ,     ,,,   ,,,,,  @@  @@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@           @@ ,   @@ @@@@@@ @@@@@@@@@              @@@@@@@@@@
+     @    @@@@  @@@@@ @@@@@@ @@@@@@ @@                           @@@@
+          @@@   @@@@@ @@@@@@ @@@@
+                @     @@@
+-->
+
+<div class="_ui_layout bbb" id="s42_screen">
+  <div id="fxinvert">
+  <div id="fxacid1">
+  <div id="fx1"><div id="fx2"><div id="fx3"><div id="fx4"><div id="fx5"><div id="fx6"><div id="fx7"><div id="fx8"><div id="fx9"><div id="fx10"><div id="fx11"><div id="fx12"><div id="fxacid2">
+
+  <div id="nofx" class="ui_layout">
+    <div class="fillspace skin_background" id="s42_background"></div>
+    <section id="s42_desktop" class="noscroll invisible" touch-action="none"></section>
+    <div class="fillspace" id="s42_canvas"></div>
+
+    <div id="s42_splashscreen" class="fillspace ui_terminal noscroll" style="white-space:normal;">
+      <div class="fillspace pa10" id="s42_bios">
+        <div>CyotekWebCopy/1.8 CyotekHTTP/2.0</div>
+        <div><script>document.write((new Date).toString())</script></div>
+
+        <div>&nbsp;</div>
+        <div><script>
+          for (var key in window.location) {
+            if (typeof window.location[key] === 'string') {
+              document.write(key + ': ' + window.location[key] + '<br>');
+            }
+          }
+        </script></div>
+        <div><script>
+          if (window.navigator && window.navigator.plugins) {
+            window.navigator.plugins.refresh(false);
+            var numPlugins = window.navigator.plugins.length;
+            for (var i = 0; i < numPlugins; i++) {
+              var plugin = window.navigator.plugins[i];
+              if (plugin) {
+                document.write(plugin.name + '<br>');
+              }
+            }
+          }
+        </script></div>
+                <br>
+        <div class="ui_log__red"><strong>WARNING</strong>: Windows93 is not tested on your browser.</div>
+        <div class="ui_log__red">Use latest Firefox or Chromium for a better experience !</div>
+        
+        <div class="delay1" id="BIOSERROR" style="white-space:pre-wrap">
+  BIOS ROM checksum error<noscript>
+  You need JavaScript to run Windows93</noscript></div>
+        <div class="delay0" id="BOOTLOG" style="white-space:pre;margin-bottom:1em"></div>
+        <div class="delay2" id="TOOLONG">BOOT IS TAKING TOO LONG ?</div>
+        <a class="delay2" id="REINSTALL" href="index.htm">> CLICK TO REPAIR BOOT</a><br>
+        <blink>_</blink>
+        <div>&nbsp;</div>
+        <div id="pressDel">Press <b>DEL</b> to enter SETUP<div>&nbsp;</div></div>
+      </div>
+    </div>
+
+    <footer class="pa0 relative">
+      <div class="ui_combo_one skin_base skin_outset_deep hide" id="s42_taskbar">
+        <button type="button" id="s42_start"><img width="16" heigth="16" src="c/sys/skins/w93/16/start.png"><span><b>Start</b></span></button>
+        <div id="s42_dock" class="ui_combo_one__main ui_window_dock"></div>
+        <div id="s42_notif" class="skin_inset">
+          <a id="s42_feed" target="_blank" href="rss/index.htm.xml"><img src="c/sys/skins/w93/16/rss.png" alt="rss"></a>
+          <span id="s42_clock"></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  </div></div></div></div></div></div></div></div></div></div></div></div></div>
+  </div>
+  </div>
+</div>
+
+<script src="error.js?v=2.4.2"></script>
+<script type="bios" id="BIOSCRIPT">
+  ___.   .__
+  \_ |__ |__| ____  ______
+  | __ \|  |/  _ \/  ___/
+  | \_\ \  (  <_> )___ \
+  |___  /__|\____/____  > v0.2.0
+      \/              \/
+
+  You see this screen because you interrupted
+  the boot sequence or something went wrong
+  during scripts execution.
+
+  <a class="ui_log__white" href="http://v1.windows93.net">> Downgrade to Windows93 v1 </a>
+  <em>Less apps and no filesystem
+  but better support for old browsers</em>
+
+  <a class="ui_log__white" href="#" id="reinstall_windows93">> Reinstall Windows93 v2</a>
+  <em>You will loose all your saved data
+  but can repair broken boot</em>
+
+  <a class="ui_log__white" href="/#safe" id="safe_mode">> Restart in Safe Mode</a>
+  <em>Disable any script or style
+  from the /a/boot/ folder</em>
+
+  <a class="ui_log__white" href="/" id="normal_boot">> Continue normal boot</a>
+</script>
+<script>
+var $boot = {
+  BIOS: document.getElementById("s42_bios"),
+  BOOTLOG: document.getElementById("BOOTLOG"),
+  BIOSERROR: document.getElementById("BIOSERROR"),
+  TOOLONG: document.getElementById("TOOLONG"),
+  REINSTALL: document.getElementById("REINSTALL"),
+  VERSION: "2.4.2"
+};
+$boot.hasError = false;
+$boot.onerror = function(e) {
+  if ($boot.BIOSERROR && window.$error && typeof window.$error === "function") {
+    var err = $error(arguments);
+    $boot.BIOSERROR.innerHTML = "";
+    $boot.BOOTLOG.innerHTML +=
+      '\n<span class="ui_log__red">' + err.html + "<span>";
+  } else if ($boot.BIOSERROR) {
+    $boot.BIOSERROR.innerHTML = "";
+    $boot.BOOTLOG.innerHTML += '\n<span class="ui_log__red">' + e + "<span>";
+  }
+  $boot.TOOLONG.className = "hide";
+  $boot.REINSTALL.className = "";
+  $boot.hasError = true;
+  if (window.system42) window.system42.stop();
+  window.onerror = null;
+};
+window.onerror = $boot.onerror;
+document.onkeydown = function(e) {
+  if (e.code === "Delete") {
+    e.preventDefault();
+    window.biosSetup();
+  }
+};
+document.onclick = function(e) {
+  e.preventDefault();
+  window.biosSetup();
+};
+window.$boot = $boot;
+window.biosSetup = function() {
+  document.onclick = null;
+  if (window.system42) window.system42.stop();
+  $boot.BIOS.className += " bios-setup";
+  $boot.BIOS.style.whiteSpace = "pre-wrap";
+  $boot.BIOS.innerHTML = document
+    .getElementById("BIOSCRIPT")
+    .innerHTML.replace("\n", "")
+    .replace(/\n/g, "<br>");
+  document.getElementById("normal_boot").focus();
+  var actions = Array.prototype.slice.call(document.querySelectorAll("a"));
+  var current = 3;
+  document.onkeydown = function(e) {
+    if (e.code === "ArrowUp") {
+      current--;
+      if (current < 0) current = 3;
+      actions[current].focus();
+    }
+    if (e.code === "ArrowDown") {
+      current++;
+      if (current > 3) current = 0;
+      actions[current].focus();
+    }
+  };
+  document.getElementById("reinstall_windows93").onclick = function(e) {
+    e.preventDefault();
+    window.localStorage.clear();
+    window.localforage.clear(function(err) {
+      window.location.reload(true);
+    });
+  };
+  document.getElementById("safe_mode").onclick = function(e) {
+    e.preventDefault();
+    window.location.href = "#safe";
+    window.location.reload(true);
+  };
+};
+</script>
+<script src="c/sys42.js?v=2.4.2"></script>
+<script src="sys/start.js?v=2.4.2"></script>
+<script src="sys/desktop.js?v=2.4.2"></script>
+<script src="sys/upgrade.js?v=2.4.2"></script>
+<script src="sys/apps.js?v=2.4.2"></script>
+<script src="sys/apps/clippy.js?v=2.4.2"></script>
+<script src="sys/apps/code.js?v=2.4.2"></script>
+<script src="sys/apps/crazy.js?v=2.4.2"></script>
+<script src="sys/apps/layer.js?v=2.4.2"></script>
+<script src="sys/apps/pony.js?v=2.4.2"></script>
+<script src="sys/apps/sp3.js?v=2.4.2"></script>
+<script src="sys/apps/g80.m3u.js?v=2.4.2"></script>
+<script>
+document.documentElement.classList.remove("no-js");
+$boot.BIOSERROR.className = "";
+$boot.BIOSERROR.innerHTML = "";
+system42.config({
+  onerror: function(e) {
+    if (!$boot.hasError) $boot.onerror(e);
+  },
+  onready: function(e) {
+    $boot.BOOTLOG.innerHTML += "\n" + e + " ... ready";
+  }
+});
+$loader.config({
+  onpass: function(e) {
+    $boot.BOOTLOG.innerHTML += "\n " + e.url.split("/").pop() + " ... ready";
+  },
+  onfail: function(e) {
+    $boot.BOOTLOG.innerHTML +=
+      '\n <span class="ui_log__red">' +
+      e.url.split("/").pop() +
+      " ... fail<span>";
+  }
+});
+</script>
+<script>
+!(function() {
+  "use strict";
+
+  var lastUpdate = {"title":"X-MAS MODE ENGAGED","link":"http:\/\/www.windows93.net\/","pubDate":"Sat, Dec 06 2019 13:13:13 GMT","description":"\n\n<img align=\"left\" hspace=\"10\" vspace=\"10\" src=\"http:\/\/v1.windows93.net\/c\/sys\/xmas\/xmas.png\"\/>Merry X-Mass to all our fwiends around the world! We wish you all the best for this coming year :) Keep the Lulz! \u2013 Bindows's staff\n\n"};
+
+  system42(
+    {
+      _apps: {},
+      _clean: {},
+      _states: { opened: {} },
+      _sound: {},
+      _init: {},
+      _events: $watch({}),
+      _path: { key: {} },
+      _get: {
+        mime: {
+          ext: {},
+          apps: []
+        },
+        ext: {
+          mime: {},
+          apps: {}
+        }
+      },
+      _dom: {
+        taskbar: document.getElementById("s42_taskbar"),
+        desktop: document.getElementById("s42_desktop"),
+        background: document.getElementById("s42_background"),
+        screen: document.getElementById("s42_screen"),
+        splash: document.getElementById("s42_splashscreen"),
+        clock: document.getElementById("s42_clock"),
+        canvas: document.getElementById("s42_canvas")
+      },
+      _settings: {
+        // version: 1,
+        // userData: {
+        //   nick: "derp",
+        //   localInit: false,
+        //   lastVisit: new Date()
+        // },
+        // skin: "w93",
+        sounds: {
+          boot: "/c/sys/sounds/BOOT.ogg",
+          alert: "/c/sys/sounds/CHORD.ogg",
+          error: "/c/sys/sounds/QUACK.ogg"
+        },
+        noSplash: false,
+        defaultApp: {
+          html: "iframe",
+          htm: "iframe",
+          php: "iframe",
+          xml: "code",
+          svg: "img",
+          gif: "img",
+          png: "img",
+          jpeg: "img",
+          jpg: "img"
+        }
+      },
+      _schemas: {
+        shortcut: {
+          icon: {
+            type: "string",
+            plugin: {
+              icon: {
+                watch: "exe"
+              }
+            }
+          },
+          exe: {
+            title: "command",
+            type: "string",
+            placeholder: "http://",
+            attributes: {
+              autofocus: true,
+              required: true
+            },
+            plugin: {
+              explorer: {
+                accept: "*",
+                path: "/"
+              }
+            }
+          },
+          title: {
+            type: "string",
+            placeholder: "Leave blank to use same name as target"
+          }
+        }
+      },
+      _temp: {
+        files: '/files.json?v=2.4.2',
+        mimetypes: "/c/mimetypes.json",
+        splash: "/c/sys/boot/splash.html",
+        init: {}
+      },
+      _icons: {
+        w: 72,
+        h: 60
+      },
+      _keyboard: { layout: {} },
+
+      debug: false,
+      devmode: false,
+      started: false
+    },
+    function(le) {
+      window.le = le;
+
+      system42(
+        "bios",
+        [
+          "settings",
+          "modules",
+          "desktop",
+          [
+            "audio",
+            "boot",
+            "apps",
+            [
+              "utils",
+              "storage",
+              "upgrade",
+              "config",
+              "exe",
+              "explorer",
+              "start"
+            ]
+          ]
+        ],
+        "splash",
+        "reveal",
+        function(le) {
+          le.canvas = {
+            layers: [],
+            ctxs: [],
+            add: function() {
+              this.cnv = document.createElement("canvas");
+              le._dom.canvas.appendChild(this.cnv);
+              this.cnv.width = window.innerWidth;
+              this.cnv.height = window.innerHeight;
+              this.layers.push(this.cnv);
+              this.ctx = this.cnv.getContext("2d");
+              this.ctxs.push(this.ctx);
+            },
+            draw: function(img, x, y) {
+              this.ctx.drawImage(img, x, y);
+            },
+            clear: function() {
+              this.ctx.clearRect(0, 0, this.cnv.width, this.cnv.height);
+            }
+          };
+          le.canvas.add();
+
+          if (le.devmode) {
+          } else {
+            if (
+              lastUpdate &&
+              Math.round(
+                (Date.now() - Date.parse(lastUpdate.pubDate)) /
+                  (1000 * 60 * 60 * 24)
+              ) < 16
+            ) {
+              setTimeout(function() {
+                $notif(lastUpdate, document.getElementById("w93_feed"));
+              }, 0);
+            }
+          }
+
+          // cleanup
+          document.onkeydown = null;
+          document.onclick = null;
+          delete le._temp;
+          delete le.devmode;
+          delete le.started;
+          if (window.system42) window.system42.stop();
+        }
+      );
+    }
+  );
+})();
+</script>
+
+<!-- SVG FX -->
+<svg id="svg_fx" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+
+<filter id="fx_neon_satan" style="color-interpolation-filters:sRGB">
+  <fegaussianblur stddeviation="0.8" result="blur" id="feGaussianBlur4700"></fegaussianblur>
+  <fecomponenttransfer in="blur" result="component" id="feComponentTransfer4702">
+    <fefuncr type="table" tablevalues="0 1 0 1 1" id="feFuncR4704"></fefuncr>
+    <fefuncg type="table" tablevalues="0 0 0 1 1" id="feFuncG4706"></fefuncg>
+    <fefuncb type="table" tablevalues="0 0 0 1 1" id="feFuncB4708"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_neon_slug" style="color-interpolation-filters:sRGB">
+  <fegaussianblur stddeviation="0.8" result="blur" id="feGaussianBlur4700"></fegaussianblur>
+  <fecomponenttransfer in="blur" result="component" id="feComponentTransfer4702">
+    <fefuncr type="table" tablevalues="0 1 0 1 1" id="feFuncR4704"></fefuncr>
+    <fefuncg type="table" tablevalues="1 0 1 1 1" id="feFuncG4706"></fefuncg>
+    <fefuncb type="table" tablevalues="-4 2 0 1 1" id="feFuncB4708"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_neon_hulk" style="color-interpolation-filters:sRGB">
+  <fegaussianblur stddeviation="0.8" result="blur" id="feGaussianBlur4700"></fegaussianblur>
+  <fecomponenttransfer in="blur" result="component" id="feComponentTransfer4702">
+    <fefuncr type="table" tablevalues="0 1 0 1 1" id="feFuncR4704"></fefuncr>
+    <fefuncg type="table" tablevalues="0 1 0 1 1" id="feFuncG4706"></fefuncg>
+    <fefuncb type="table" tablevalues="0 0 0 1 1" id="feFuncB4708"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_displacement">
+  <feoffset dy="21" dx="0" result="offset2"></feoffset>
+  <fedisplacementmap scale="42" in2="offset2" xchannelselector="R"></fedisplacementmap>
+</filter>
+
+
+<filter id="fx_aqua" inkscape:menu="Image Paint and Draw" style="color-interpolation-filters:sRGB" inkscape:label="Litho" inkscape:menu-tooltip="Create a two colors lithographic effect">
+  <fegaussianblur stddeviation="1" in="SourceGraphic" result="result0"></fegaussianblur>
+  <feturbulence result="result1" numoctaves="1" seed="488" basefrequency="0.095" type="turbulence"></feturbulence>
+  <fecomposite in="result0" in2="result1" operator="in" result="result2"></fecomposite>
+
+  <feblend mode="multiply" result="fbSourceGraphic" in2="result91"></feblend>
+  <fecolormatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 5 0"></fecolormatrix>
+  <fegaussianblur result="result0" in="fbSourceGraphicAlpha" stddeviation="3"></fegaussianblur>
+
+  <fespecularlighting specularexponent="30" specularconstant="1.2" surfacescale="1" lighting-color="rgb(111,236,253)" result="result1" in="result0">
+  <fepointlight z="20000" y="-10000" x="-5000"></fepointlight>
+  </fespecularlighting>
+  <fecomposite k2="-1" operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha"></fecomposite>
+  <fecomposite k3="1" k2="3" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2"></fecomposite>
+  <feblend mode="multiply" in2="result4"></feblend>
+</filter>
+
+
+<filter id="fx_litho" inkscape:menu="Image Paint and Draw" style="color-interpolation-filters:sRGB" inkscape:label="Litho" inkscape:menu-tooltip="Create a two colors lithographic effect">
+  <fegaussianblur stddeviation="0.01"></fegaussianblur>
+  <fecolormatrix result="fbSourceGraphic" in="fbSourceGraphic" values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 50 0 "></fecolormatrix>
+  <fecomponenttransfer result="fbSourceGraphic" in="fbSourceGraphic">
+  <fefuncr type="discrete" tablevalues="0 1 1"></fefuncr>
+  <fefuncg type="discrete" tablevalues="0 1 1"></fefuncg>
+  <fefuncb type="discrete" tablevalues="0 1 1"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_trichrome" inkscape:menu="Color" inkscape:menu-tooltip="Like Duochrome but with three colors" inkscape:label="Trichrome" style="color-interpolation-filters:sRGB;">
+  <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.21 -0.72 -0.07 1 0 " result="result1"></fecolormatrix>
+  <fecolormatrix result="result3" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 2 -1 "></fecolormatrix>
+  <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.21 0.72 0.07 0 0 " in="SourceGraphic" result="result2"></fecolormatrix>
+  <fecolormatrix result="result9" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1.5 -0.5 "></fecolormatrix>
+  <femerge result="result11">
+  <femergenode in="result3"></femergenode>
+  <femergenode in="result9"></femergenode>
+  </femerge>
+  <feflood flood-opacity="1" flood-color="rgb(186,22,91)" result="result10"></feflood>
+  <fecomposite in2="result11" result="result12" operator="out"></fecomposite>
+  <feflood flood-opacity="1" result="result13" flood-color="rgb(1,171,171)"></feflood>
+  <fecomposite in2="result3" result="result14" operator="in"></fecomposite>
+  <fecomposite in2="result12" result="result17" k3="1" k2="1" operator="arithmetic"></fecomposite>
+  <feflood flood-opacity="1" result="result15" flood-color="rgb(255,255,0)"></feflood>
+  <fecomposite in2="result9" result="result16" operator="in"></fecomposite>
+  <fecomposite in2="result17" result="result18" k3="1" k2="1" operator="arithmetic"></fecomposite>
+  <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+</filter>
+<!--
+/////////////////////////////////////////////////////////////////////////////
+ -->
+
+
+     <!--
+     http://electricbeach.org/?p=950
+     http://codepen.io/awgreenblatt/pen/Kdsfr
+     -->
+
+ <!-- <filter id="fx_none">
+ </filter> -->
+
+
+<!-- <filter id="fx_vhs2">
+  <feConvolveMatrix order="3" kernelMatrix="1 -1  1 -1 -0.01 -1 1 -1 1" edgeMode="duplicate" result="convo">
+  </feConvolveMatrix>
+</filter> -->
+
+<filter id="fx_convo">
+  <feconvolvematrix order="3" kernelmatrix="1 -1  1 -1 -0.01 -1 1 -1 1" edgemode="duplicate" result="convo">
+  </feconvolvematrix>
+</filter>
+
+<filter id="fx_convo2">
+  <feconvolvematrix order="3 3" kernelmatrix="2 -1  1 -1 -0.01 -1 1 -1 0"></feconvolvematrix>
+</filter>
+
+<filter id="fx_convo3">
+  <feconvolvematrix style="color-interpolation-filters:sRGB" order="3" kernelmatrix="0 -0.9 0   -1 4 -1   0 -1 0" preservealpha="true"></feconvolvematrix>
+</filter>
+
+<filter id="fx_convo4">
+  <feconvolvematrix style="color-interpolation-filters:sRGB" order="3" kernelmatrix="0 -1 0   -1 4 -1   0 -1.1 0" preservealpha="true"></feconvolvematrix>
+</filter>
+
+<filter id="fx_convoblur">
+  <fegaussianblur in="SourceGraphic" stddeviation="6" result="blur"></fegaussianblur>
+  <feconvolvematrix order="3" kernelmatrix="1 -1  1 -1 -0.01 -1 1 -1 1" edgemode="none" result="convo"></feconvolvematrix>
+  <femerge>
+  <femergenode in="blur"></femergenode>
+  <femergenode in="convo"></femergenode>
+  </femerge>
+</filter>
+
+<filter id="fx_postor">
+  <fecomponenttransfer>
+    <fefuncr type="discrete" tablevalues="0 1.4 -5.3 -1.8 -5.2 1"></fefuncr>
+    <fefuncg type="discrete" tablevalues="0 -5.7 0.4 5.6 0.8 1"></fefuncg>
+    <fefuncb type="discrete" tablevalues="0 0.2 0.4 0.6 -1.7 1"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_postilt">
+  <fecomponenttransfer>
+    <fefuncr type="discrete" tablevalues="0 21.4 0 0 0 1"></fefuncr>
+    <fefuncg type="discrete" tablevalues="0 133.4 0 1 0 1"></fefuncg>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_postel">
+  <fecomponenttransfer>
+    <fefuncr type="discrete" tablevalues="0.1 3.1 11 0.6 -10.2 13.8"></fefuncr>
+    <fefuncg type="discrete" tablevalues="0.2 1.5 0.4 9 4.7 8.2"></fefuncg>
+    <fefuncb type="discrete" tablevalues="0.9 -0.2 0.4 -9.7 0.8 1"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter id="fx_orton">
+  <fecolormatrix type="matrix" in="SourceGraphic" result="brighter" values="5.1 0 0 0 0.1
+            0 5.1 0 0 0.1
+            0 0 5.1 0 0.1
+            0 0 0 1 0"></fecolormatrix>
+      <fegaussianblur in="brighter" stddeviation="3" result="brightblur"></fegaussianblur>
+  <feblend mode="multiply" in="brighter" in2="brightblur"></feblend>
+</filter>
+
+<filter id="fx_santabarbara">
+  <fecolormatrix type="luminanceToAlpha" in="SourceGraphic" result="lumMap"></fecolormatrix>
+  <fecomponenttransfer in="lumMap" result="highlightMask">
+    <fefunca type="discrete" tablevalues="0 0 0 0 0 0 7 6"></fefunca>
+  </fecomponenttransfer>
+  <fecomposite operator="in" in="SourceGraphic" in2="highlightMask" result="highlights"></fecomposite>
+  <fegaussianblur in="highlights" stddeviation="6" result="highBlur"></fegaussianblur>
+  <fecomposite operator="over" in="highBlur" in2="SourceGraphic" result="final"></fecomposite>
+</filter>
+
+<filter id="fx_santabarbara2" inkscape:label="Soft Focus Lens" inkscape:menu="Image Effects" inkscape:menu-tooltip="Glowing image content without blurring it" style="color-interpolation-filters:sRGB;">
+  <fegaussianblur stddeviation="5" result="result3"></fegaussianblur>
+  <fecolormatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 28 0 " result="result7"></fecolormatrix>
+  <fecomposite operator="in" in2="SourceGraphic" result="result9"></fecomposite>
+  <fecomposite in2="result7" operator="arithmetic" in="result9" k1="0.9" k3="0.9" result="result1"></fecomposite>
+  <feblend in2="result1" result="result5" mode="screen" in="SourceGraphic"></feblend>
+  <feblend in2="result5" mode="darken" in="result5" result="result6"></feblend>
+  <fecomposite in2="SourceGraphic" operator="in" result="result8"></fecomposite>
+</filter>
+
+<filter id="fx_spectrum">
+  <feconvolvematrix filterres="100 100" style="color-interpolation-filters:sRGB" order="3" kernelmatrix="0 -1 0   -1 4 -1   0 -1 0" preservealpha="true"></feconvolvematrix>
+</filter>
+
+<filter id="fx_zombi">
+  <feflood flood-color="#c3ff00" result="A"></feflood>
+  <fecolormatrix type="matrix" in="SourceGraphic" result="B" values=" 1 0 0 0 0
+             0 0 0 0 0
+             0 1 1 0 0
+             1 1 1 0 0"></fecolormatrix>
+  <femerge>
+    <femergenode in="A"></femergenode>
+    <femergenode in="B"></femergenode>
+  </femerge>
+</filter>
+
+<!-- <filter id="fx_sepiablue" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"/>
+  <feComponentTransfer >
+    <feFuncR type="table" tableValues="0 0 0.1 1"/>
+    <feFuncG type="table" tableValues="0 .1 0.4 1"/>
+    <feFuncB type="table" tableValues="0 .2 .4 1"/>
+  </feComponentTransfer>
+</filter> -->
+
+<filter id="fx_blueray" x="0%" y="0%" width="100%" height="100%">
+  <fecolormatrix type="matrix" in="SourceGraphic" result="B" values=" -1 0 0 0 -1
+             0 -1 0 0 -1
+             -.1 1 -.1 0 0
+             0 -.1 -.2 1 0"></fecolormatrix>
+</filter>
+
+<filter id="fx_hip">
+  <fecolormatrix type="matrix" in="SourceGraphic" values=" -1 0 0 0 0
+             0 1 0 0 0
+             0 -1 1 0 0
+             0 0 0 1 0"></fecolormatrix>
+</filter>
+
+
+<filter id="fx_xray">
+  <fecolormatrix type="luminanceToAlpha" values=""></fecolormatrix>
+</filter>
+
+<filter id="fx_emboss">
+  <fecolormatrix type="luminanceToAlpha" values=""></fecolormatrix>
+  <fediffuselighting diffuseconstant="1" surfacescale="5" result="feDistantLight">
+    <fedistantlight elevation="28" azimuth="65"></fedistantlight>
+  </fediffuselighting>
+</filter>
+
+<filter id="fx_edge">
+  <feconvolvematrix order="3 3" preservealpha="true" kernelmatrix="-5 0 0 0 0 0 0 0 5"></feconvolvematrix>
+</filter>
+
+<!-- <filter id="fx_noir">
+  <feGaussianBlur stdDeviation="0" />
+  <feComponentTransfer>
+    <feFuncR type="discrete" tableValues="0 .5 1 1" />
+    <feFuncG type="discrete" tableValues="0 .5 1" />
+    <feFuncB type="discrete" tableValues="0" />
+  </feComponentTransfer>
+</filter> -->
+
+
+<!-- inkscape -->
+
+<filter id="fx_ripple" inkscape:label="Ripple" inkscape:menu="Distort" inkscape:menu-tooltip="Horizontal rippling of edges" style="color-interpolation-filters:sRGB;">
+  <feturbulence numoctaves="1" basefrequency="0.002 0.107"></feturbulence>
+  <fecolormatrix values="2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5" result="result91"></fecolormatrix>
+  <fedisplacementmap ychannelselector="A" xchannelselector="R" scale="14.3" in="SourceGraphic" in2="result91"></fedisplacementmap>
+</filter>
+
+<filter id="fx_sys42" style="color-interpolation-filters:sRGB;">
+  <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.21 -0.72 -0.07 1 0 " result="result1"></fecolormatrix>
+  <fecolormatrix result="result3" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 2 -1 "></fecolormatrix>
+  <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.21 0.72 0.07 0 0 " in="SourceGraphic" result="result2"></fecolormatrix>
+  <fecolormatrix result="result9" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1.5 -0.5 "></fecolormatrix>
+  <femerge result="result11">
+  <femergenode in="result3"></femergenode>
+  <femergenode in="result9"></femergenode>
+  </femerge>
+  <feflood flood-opacity="1" flood-color="rgb(204,255,0)" result="result10"></feflood>
+  <fecomposite in2="result11" result="result12" operator="out"></fecomposite>
+  <feflood flood-opacity="1" result="result13" flood-color="rgb(255,0,255)"></feflood>
+  <fecomposite in2="result3" result="result14" operator="in"></fecomposite>
+  <fecomposite in2="result12" result="result17" k3="1" k2="1" operator="arithmetic"></fecomposite>
+  <feflood flood-opacity="1" result="result15" flood-color="rgb(0,255,255)"></feflood>
+  <fecomposite in2="result9" result="result16" operator="in"></fecomposite>
+  <fecomposite in2="result17" result="result18" k3="1" k2="1" operator="arithmetic"></fecomposite>
+  <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+</filter>
+
+<filter id="fx_vhs">
+  <feflood flood-opacity="1" flood-color="rgb(255,255,255)" result="flood"></feflood>
+  <fecolormatrix in="SourceGraphic" values="0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 -1 0 0 1 0 " result="colormatrix1"></fecolormatrix>
+  <feoffset dy="-1" dx="-3" result="offset1"></feoffset>
+  <feblend in2="flood" mode="multiply" result="blend1"></feblend>
+  <fecolormatrix in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 -1 0 1 0 " result="colormatrix2"></fecolormatrix>
+  <feoffset dy="2" dx="-1" result="offset2"></feoffset>
+  <feblend in2="blend1" mode="multiply" result="blend2"></feblend>
+  <feoffset dy="3" dx="-2" result="offset3"></feoffset>
+  <fecolormatrix in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 -1.5 1 0 " result="colormatrix3"></fecolormatrix>
+  <feblend in2="offset3" mode="multiply" result="blend3"></feblend>
+</filter>
+
+<filter id="fx_vhs2">
+  <feturbulence numoctaves="1" basefrequency="0.002 0.107"></feturbulence>
+  <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.5 -1.9" result="result91"></fecolormatrix>
+  <fedisplacementmap ychannelselector="A" xchannelselector="R" scale="10" in="SourceGraphic" in2="result91" result="glitch"></fedisplacementmap>
+  <feflood flood-opacity="1" flood-color="rgb(255,255,255)" result="flood"></feflood>
+  <fecolormatrix in="glitch" values="0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 -1 0 0 1 0 " result="colormatrix1"></fecolormatrix>
+  <feoffset dy="-1" dx="-3" result="offset1"></feoffset>
+  <feblend in2="flood" mode="multiply" result="blend1"></feblend>
+  <fecolormatrix in="glitch" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 -1 0 1 0 " result="colormatrix2"></fecolormatrix>
+  <feoffset dy="2" dx="-1" result="offset2"></feoffset>
+  <feblend in2="blend1" mode="multiply" result="blend2"></feblend>
+  <feoffset dy="3" dx="-2" result="offset3"></feoffset>
+  <fecolormatrix in="glitch" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 -1.5 1 0 " result="colormatrix3"></fecolormatrix>
+  <feblend in2="offset3" mode="multiply" result="blend3"></feblend>
+</filter>
+
+<filter id="fx_anaglyph">
+  <feflood flood-opacity="1" flood-color="rgb(255,255,255)" result="flood"></feflood>
+  <fecolormatrix in="SourceGraphic" values="0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 -1 0 0 1 0 " result="colormatrix1"></fecolormatrix>
+  <feoffset dy="0" dx="8" result="offset1"></feoffset>
+  <feblend in2="flood" mode="multiply" result="blend1"></feblend>
+  <fecolormatrix in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 -1 0 1 0 " result="colormatrix2"></fecolormatrix>
+  <feblend in2="blend1" mode="multiply" result="blend2"></feblend>
+  <fecolormatrix in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 -1 1 0 " result="colormatrix3"></fecolormatrix>
+  <feblend in2="blend2" mode="multiply" result="blend3"></feblend>
+</filter>
+
+<filter style="color-interpolation-filters:sRGB;" inkscape:label="Electrize" id="fx_electrize">
+  <fegaussianblur stddeviation="1" result="blur" id="feGaussianBlur4700"></fegaussianblur>
+  <fecomponenttransfer in="blur" result="component" id="feComponentTransfer4702">
+    <fefuncr type="table" tablevalues="0 1 0 1 0" id="feFuncR4704"></fefuncr>
+    <fefuncg type="table" tablevalues="0 1 0 1 0" id="feFuncG4706"></fefuncg>
+    <fefuncb type="table" tablevalues="0 1 0 1 0" id="feFuncB4708"></fefuncb>
+  </fecomponenttransfer>
+</filter>
+
+<filter style="color-interpolation-filters:sRGB;" inkscape:menu="Image Paint and Draw" inkscape:label="Poster Color Fun" id="fx_poster_color_fun">
+  <fecolormatrix type="hueRotate" values="0" result="result4" id="feColorMatrix4763"></fecolormatrix>
+  <fecolormatrix result="result7" type="saturate" values="1" id="feColorMatrix4765"></fecolormatrix>
+  <fegaussianblur stddeviation="1.5" result="result3" id="feGaussianBlur4767"></fegaussianblur>
+  <fegaussianblur result="result5" stddeviation="1.5" in="result7" id="feGaussianBlur4769"></fegaussianblur>
+  <feblend in2="result3" mode="normal" id="feBlend4771"></feblend>
+  <fecomponenttransfer result="result1" id="feComponentTransfer4773">
+    <fefuncr tablevalues="0 0.5 1 0.5 0 0.5 1 0.5" type="discrete" id="feFuncR4775"></fefuncr>
+    <fefuncg tablevalues="0 0.5 1 0.5 0 0.5 1 0.5" type="discrete" id="feFuncG4777"></fefuncg>
+    <fefuncb tablevalues="0 0.5 1 0.5 0 0.5 1 0.5" type="discrete" id="feFuncB4779"></fefuncb>
+  </fecomponenttransfer>
+  <fecolormatrix type="hueRotate" values="0" id="feColorMatrix4781"></fecolormatrix>
+  <fecolormatrix type="saturate" values="1" result="result2" id="feColorMatrix4783"></fecolormatrix>
+  <fegaussianblur stddeviation="0.01" id="feGaussianBlur4785"></fegaussianblur>
+  <fecomposite in2="SourceGraphic" operator="in" result="result6" id="feComposite4787"></fecomposite>
+</filter>
+
+<!-- <filter id="fx_bump" inkscape:menu-tooltip="Same as HSL Bumps but with transparent highlights" inkscape:menu="Bumps" inkscape:label="HSL Bumps Alpha" style="color-interpolation-filters:sRGB;">
+  <feGaussianBlur result="result0" in="SourceGraphic" stdDeviation="0.5" />
+  <feColorMatrix values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4.4 -2.9 " in="result0" result="fbSourceGraphicAlpha" />
+  <feGaussianBlur stdDeviation="0.7" in="fbSourceGraphicAlpha" result="result0" />
+  <feSpecularLighting in="result0" result="result1" lighting-color="rgb(255,255,255)" surfaceScale="-2" specularConstant="1.5" specularExponent="10">
+  <feDistantLight elevation="50" azimuth="235" />
+  </feSpecularLighting>
+  <feComposite result="result4" operator="in" in="SourceGraphic" in2="result1" />
+  <feComposite operator="arithmetic" k2="1" k3="1" in2="result4" />
+</filter> -->
+
+<filter id="fx_dark_emboss" inkscape:label="Dark Emboss" inkscape:menu-tooltip="Emboss effect : 3D relief where white is replaced by black" inkscape:menu="Bumps" style="color-interpolation-filters:sRGB;">
+  <fecolormatrix result="result2" type="luminanceToAlpha"></fecolormatrix>
+  <fediffuselighting diffuseconstant="0.5" result="result1" surfacescale="-10">
+  <fedistantlight elevation="20" azimuth="225"></fedistantlight>
+  </fediffuselighting>
+  <fecomposite result="result3" k3="1" k2="1" k1="1" in="result1" operator="arithmetic" in2="SourceGraphic"></fecomposite>
+  <feblend result="result4" mode="multiply" in="result2" in2="result3"></feblend>
+  <fecomposite result="result5" operator="arithmetic" k2="1.2" in2="result4"></fecomposite>
+  <fecomposite operator="in" in="result5" in2="SourceGraphic"></fecomposite>
+</filter>
+
+<filter id="fx_onebit" inkscape:label="Image Drawing Basic" style="color-interpolation-filters:sRGB;" inkscape:menu-tooltip="Enhance and redraw color edges in 1 bit black and white" inkscape:menu="Image Paint and Draw">
+  <fecolormatrix type="saturate" values="0" result="result4"></fecolormatrix>
+  <feconvolvematrix order="3 3" kernelmatrix="0 50 0 50 -205 50 0 50 0 " in="result4" divisor="1" targetx="1" targety="1" preservealpha="true" result="result0" bias="0"></feconvolvematrix>
+  <fecolormatrix result="result3" values="0 -100 0 0 1 0 -100 0 0 1 0 -100 0 0 1 0 0 0 1 0 "></fecolormatrix>
+</filter>
+
+<filter id="fx_poster_draw" inkscape:label="Poster Draw" inkscape:menu="Image Paint and Draw" inkscape:menu-tooltip="Enhance and redraw edges around posterized areas" style="color-interpolation-filters:sRGB;">
+  <fegaussianblur in="SourceGraphic" result="result18" stddeviation="1.4"></fegaussianblur>
+  <fecolormatrix values="0" result="result17" in="result19" type="hueRotate"></fecolormatrix>
+  <fecomponenttransfer in="result17" result="component1">
+  <fefuncr type="discrete" tablevalues="0 0.125 0.25 0.275 0.5 0.625 0.750 0.875 1 1"></fefuncr>
+  <fefuncg type="discrete" tablevalues="0 0.125 0.25 0.275 0.5 0.625 0.750 0.875 1 1"></fefuncg>
+  <fefuncb type="discrete" tablevalues="0 0.125 0.25 0.275 0.5 0.625 0.750 0.875 1 1"></fefuncb>
+  </fecomponenttransfer>
+  <fecolormatrix type="saturate" values="0" result="result4" in="component1"></fecolormatrix>
+  <feconvolvematrix order="3 3" kernelmatrix="250 0 250 0 -1005 0 250 0 250 " in="result4" divisor="1" targetx="1" targety="1" preservealpha="true" result="result0" bias="0"></feconvolvematrix>
+  <fecolormatrix type="luminanceToAlpha"></fecolormatrix>
+  <fegaussianblur stddeviation="0.7"></fegaussianblur>
+  <fecolormatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -4 " result="result5"></fecolormatrix>
+  <fegaussianblur stddeviation="0.5" result="result10"></fegaussianblur>
+  <fecolormatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 15 -1.5 " result="result14"></fecolormatrix>
+  <feflood flood-color="rgb(124,0,60)" result="result8" flood-opacity="0.8"></feflood>
+  <feblend result="result16" mode="screen" in2="component1"></feblend>
+  <fecomposite in2="result14" operator="out" result="result6" in="result16"></fecomposite>
+  <fecomposite in2="result14" operator="in" in="result9" result="result7"></fecomposite>
+  <fecomposite in2="result6" result="result11" operator="arithmetic" k2="1" k3="1" in="SourceGraphic"></fecomposite>
+</filter>
+
+<filter id="fx_square" inkscape:label="Cubes" inkscape:menu="Scatter" inkscape:menu-tooltip="Scattered cubes; adjust the Morphology primitive to vary size" style="color-interpolation-filters:sRGB;">
+<feturbulence basefrequency="0.7" numoctaves="1" type="fractalNoise"></feturbulence>
+    <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -3.5 " result="result5"></fecolormatrix>
+    <fecomposite in2="result5" operator="in" in="SourceGraphic" result="result6"></fecomposite>
+    <femorphology result="result3" radius="5" operator="dilate" in="result6"></femorphology>
+    <fecomposite in2="result4" operator="arithmetic" result="result2" k1="1" k3="1"></fecomposite>
+    <feconvolvematrix order="3 3" kernelmatrix="2 0 0 0 1 0 0 0 -1 " targetx="0" targety="0" divisor="2" edgemode="duplicate"></feconvolvematrix>
+</filter>
+
+<filter id="fx_plaster" inkscape:label="Plaster Color" inkscape:menu="Bumps" inkscape:menu-tooltip="Colored plaster emboss effect" style="color-interpolation-filters:sRGB;">
+  <fegaussianblur result="result10" stddeviation="5"></fegaussianblur>
+  <fegaussianblur in="SourceGraphic" result="result4" stddeviation="1.5"></fegaussianblur>
+  <feblend mode="darken" in2="result10"></feblend>
+  <fecomposite operator="atop" in2="SourceGraphic" result="result5"></fecomposite>
+  <fecolormatrix type="saturate" values="0" result="result1" in="result5"></fecolormatrix>
+  <fecomponenttransfer result="component1" in="result1">
+  <fefuncr type="table" tablevalues="0 0.2 0.133333 0.3 0.4 0.333333 0.5 0.6 0.533333 0.7 0.8 0.733333 0.9 1 0.933333 1.1 1"></fefuncr>
+  <fefuncg type="table" tablevalues="0 0.2 0.133333 0.3 0.4 0.333333 0.5 0.6 0.533333 0.7 0.8 0.733333 0.9 1 0.933333 1.1 1"></fefuncg>
+  <fefuncb type="table" tablevalues="0 0.2 0.133333 0.3 0.4 0.333333 0.5 0.6 0.533333 0.7 0.8 0.733333 0.9 1 0.933333 1.1 1"></fefuncb>
+  </fecomponenttransfer>
+  <feflood flood-color="rgb(255,0,0)" result="result2"></feflood>
+  <feblend in2="component1" mode="screen" result="result2" in="result2"></feblend>
+  <feblend result="fbSourceGraphic" mode="multiply" in2="component1"></feblend>
+  <fecolormatrix result="result2" type="luminanceToAlpha" in="fbSourceGraphic"></fecolormatrix>
+  <fediffuselighting lighting-color="#ffffff" in="result2" diffuseconstant="1" result="result1" surfacescale="15">
+  <fedistantlight azimuth="31" elevation="10"></fedistantlight>
+  </fediffuselighting>
+  <fespecularlighting specularexponent="10" in="result2" result="result11" surfacescale="-15">
+  <fedistantlight azimuth="225" elevation="45"></fedistantlight>
+  </fespecularlighting>
+  <fecomposite operator="arithmetic" k2="0.5" k3="0.5" in2="result1" result="result12"></fecomposite>
+  <fecomposite in="result12" in2="fbSourceGraphic" result="result9" operator="arithmetic" k2="1" k3="1"></fecomposite>
+  <fecomposite in2="SourceGraphic" result="result7" operator="in"></fecomposite>
+</filter>
+
+<filter id="fx_fluorescence" inkscape:label="Fluorescence" inkscape:menu="Color" inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world" style="color-interpolation-filters:sRGB;">
+  <fecolormatrix type="hueRotate" values="18"></fecolormatrix>
+  <fecolormatrix type="saturate" values="1"></fecolormatrix>
+  <fecolormatrix type="matrix" values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "></fecolormatrix>
+</filter>
+
+<filter id="fx_plasticine" inkscape:label="Plasticine" inkscape:menu="Bumps" inkscape:menu-tooltip="Matte modeling paste emboss effect" style="color-interpolation-filters:sRGB;">
+  <fegaussianblur result="result3" stddeviation="2" in="SourceGraphic"></fegaussianblur>
+  <fecomponenttransfer in="result3" result="result1">
+  <fefuncr tablevalues="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1" type="discrete"></fefuncr>
+  <fefuncg tablevalues="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1" type="discrete"></fefuncg>
+  <fefuncb tablevalues="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1" type="discrete"></fefuncb>
+  </fecomponenttransfer>
+  <feblend in2="result1" mode="lighten" result="result6"></feblend>
+  <fecolormatrix result="result2" type="luminanceToAlpha" in="result6"></fecolormatrix>
+  <fediffuselighting lighting-color="#ffffff" in="result2" diffuseconstant="1" result="result1" surfacescale="12">
+  <fedistantlight azimuth="225" elevation="25"></fedistantlight>
+  </fediffuselighting>
+  <fecomposite in2="result6" k2="0.5" result="result3" k3="0.8" k1="0.2" in="result1" operator="arithmetic"></fecomposite>
+  <fecomposite in2="SourceGraphic" result="result7" operator="in" k2="1" in="result3"></fecomposite>
+</filter>
+
+  </defs>
+</svg>
+
+</body>
+</html>
