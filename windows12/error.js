@@ -1,5 +1,5 @@
 // This is what you are looking for:
-if(top.location.host!="www.windows93.net") location="http://www.windows93.net";
+if(top.location.host!="billygoat891.github.io/windows12") location="billygoat891.github.io/windows12";
 // fb killer
 var param = 'fbclid';
 if (location.search.indexOf(param + '=') !== -1) {
@@ -18,7 +18,7 @@ if (location.search.indexOf(param + '=') !== -1) {
 }
 // bad_app filter
 let is_bad_app = /Vinebre/.test(navigator.userAgent);
-if(is_bad_app) { location="http://www.windows93.net/private.html" }
+if(is_bad_app) { location="billygoat891.github.io/windows12/private.html" }
 
 // platform.js
 // https://github.com/bestiejs/platform.js/
