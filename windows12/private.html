@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#000;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title></title>
+</head>
+<body>
+	<button id="trigger" style="position: absolute;top: 50%;transform: translateX(-50%) translateY(-50%);left: 50%; background: #fff;">Click ME</button>
+	<video id="bringvictory" controls="controls" style="position: absolute;top: 50%;transform: translateX(-50%) translateY(-50%);left: 50%; visibility:hidden;">
+	  <source src="http://sneakytime.com/rr/rickroll.webm" type="video/webm" />
+	</video>
+	<script>
+		function go(){
+			window.navigator.vibrate(100);
+			document.getElementById('bringvictory').play();
+			document.getElementById("bringvictory").style.visibility = "initial";
+			document.getElementById("trigger").style.visibility = "hidden";
+		}
+		document.getElementById("trigger").onclick = go;
+	</script>
+</body>
+</html>
