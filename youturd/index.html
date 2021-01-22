@@ -273,7 +273,37 @@ a.view-button-selected .a, .view-button:hover .a, .inner-box-bg-color, .inner-bo
   </script>
 
       <div id="playnav-body">
-          <div id="playnav-live-event-manager" class="playnav-player-container">
+         <head>
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <source src="MY_VIDEO.mp4" type="video/mp4" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+</body>
       <div id="ls_event_manager" class="hid">
     <div id="ls_event_manager_slate_box" class="yt-www-ls-event-manager-event-slate-box inner-box-colors">
       <img class="yt-www-ls-event-manager-event-slate-img" src="../../../../20110612123410im_/https/i2.ytimg.com/i/-2Y8dQb0S6DtpxNgAKoJKA/1.jpg">
