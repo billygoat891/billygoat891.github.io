@@ -3,7 +3,7 @@ function main()
     var urlParams = new URLSearchParams(window.location.search);
     if(!urlParams.has('video'))
     {
-        document.write('invalid video<br><br><a href="yourtube.html">go home</a>');
+        document.write('invalid video<br><br><a href="mytube.html">go home</a>');
         return;
     }
 
