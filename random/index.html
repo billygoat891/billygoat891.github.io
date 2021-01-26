@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<title>Random</title>
+
+<meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+
+<center><h2>Random</h2></center>
+
+<center><button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button></center>
+
+<center><p id="demo"></p></center>
+
+<center><button onclick="myFunction()">Click Me! to Download Windows 9</button>
+
+<script>
+function myFunction() {
+  alert("Microsoft Wants to Know Your Location Press Ok to Allow");
+}
+</script></center>
+
+<center><button onclick="document.getElementById('myImage').src='img/pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="img/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='img/pic_bulboff.gif'">Turn off the light</button>
+
+<div class="jumbotron" style="padding:1px;margin-top:1px;background-color:#F1F1F1;">
+
+<h1>Here is a Random Number</h1>
+
+<p id="rnum"></p>
+
+<script>
+document.getElementById("rnum").innerHTML =
+Math.floor(Math.random() * 1000000001);
+</script>
+
+</div>
+
+</center>
+</body>
+</html> 
+
