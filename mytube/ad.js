@@ -3,7 +3,7 @@ function main()
     var urlParams = new URLSearchParams(window.location.search);
     if(!urlParams.has('video'))
     {
-        document.write('<head><meta http-equiv="refresh" content="0; URL=index.html" /></head>');
+        document.write('<head><meta http-equiv="refresh" content="1; URL=index.html" /></head>');
         return;
     }
 
