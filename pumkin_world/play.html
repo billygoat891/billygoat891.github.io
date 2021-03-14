@@ -1,5 +1,19 @@
-<center><embed src="https://billygoat891.github.io/pumkin_world/gamesmenu.swf" width="550" height="400"> </embed></center>
+<center><embed src="https://billygoat891.github.io/pumkin_world/gamesmenu.swf" width="550" height="400" id="game"> </embed></center>
 <script src="https://billygoat891.github.io/ruffle/ruffle.js"></script>
 
+<button onclick="openFullscreen();">Fullscreen Mode</button>
+
+<script>
+var elem = document.getElementById("game");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
 
 <center><p>Not Working? Please Download And Install Ruffle <a href= "https://ruffle.rs/#releases">Here</a> </p></center>
