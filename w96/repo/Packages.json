@@ -1,0 +1,19 @@
+[
+    {
+        "name": "mytube",
+        "friendlyName": "MYTUBE",
+        "description": "personal video sharing websight",
+        "author": "billygoat891",
+        "category": "entertainment",
+        "version": 1.0,
+        "feature_requirements": [],
+        "min_os_version": 2.2776,
+        "max_os_version": 9999,
+        "depends": [],
+        "iconFiles": {
+            "32x32": "$REPO_PATH$/dist/m/mytube/icon32.png",
+            "16x16": "$REPO_PATH$/dist/m/mytube/icon16.png"
+        },
+        "packageRoot": "$REPO_PATH$/dist/m/mytube"
+    },
+]

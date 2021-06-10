@@ -1,0 +1,1 @@
+// Ran upon package uninstallation
