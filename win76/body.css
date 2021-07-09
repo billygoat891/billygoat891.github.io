@@ -1,0 +1,12 @@
+body {
+    background-color: #008080;
+    background-size: calc(100vw/4) auto;
+    image-rendering: auto;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
